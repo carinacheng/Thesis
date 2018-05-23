@@ -27,7 +27,6 @@
 
 
 % Bibliography stuff:
-
 \newcommand{\newblock}{\par} % need this for some natbib internal bug
 \usepackage{natbib}
 \citestyle{aa}
@@ -53,7 +52,12 @@
 \copyrightpage
 
 \begin{abstract}
-My work is awesome. Give me a Ph.D.
+The Epoch of Reionization is one of the last unexplored eras of our Universe's history. Beginning about a billion years after the Big Bang, this epoch is characterized by the births of the first stars and galaxies, whose light subsequently altered the nature of the gas surrounding them. There are several experiments aiming to detect the phase transition of this gas as it changes from neutral hydrogen to ionized hydrogen. Such a detection would open a wealth of information about our early Universe, revealing details about the nature of the first luminous sources and the evolution of structure formation.
+
+Interferometers such as the Precision Array for Probing the Epoch of Reionization (PAPER) and the Hydrogen Epoch of Reionization Array (HERA) seek to measure the 21\,cm signal from neutral hydrogen and map its evolution over spatial and temporal scales. A successful detection of reionization, however, is a difficult measurement. Though the 21\,cm signal is a powerful topological probe of the intergalactic medium, it is easily buried underneath bright foreground signals and instrumental systematics. A clean detection of reionization is ambitious and requires analysis methods that maximize data sensitivity and increase confidence in results.
+
+The work presented in this thesis addresses many of the key challenges that face the current field of 21\,cm cosmology. This includes algorithms to locate contaminated data, methods to ensure accurate power spectrum measurements, and techniques for removing unwanted systematics while preserving the reionization signal. These developments serve as the foundation of the latest 21\,cm measurements from the PAPER-64 and PAPER-128 arrays, whose results lie at the forefront of the field. These methods are also fundamental to HERA and future experiments, as they provide a strong foundation for the continued exploration of our cosmic dawn.
+
 \end{abstract}
 
 \hypersetup{pageanchor=true}
@@ -63,7 +67,7 @@ My work is awesome. Give me a Ph.D.
 \null\vfil
 {\large
 \begin{center}
-I dedicate this dissertation to graduate students everywhere.
+\textit{to my parents}
 \end{center}}
 \null\vfil
 \end{dedication}
@@ -77,16 +81,20 @@ I dedicate this dissertation to graduate students everywhere.
 %% \addcontentsline{toc}{chapter}{List of Code Examples}
 
 \begin{acknowledgements}
-Too bad nobody helped me.
-
 % Feel free to modify or remove this acknowledgment:
-This dissertation was typeset using the
-\href{https://github.com/pkgw/ucastrothesis}{\textsf{ucastrothesis}}
-\LaTeX\ template.
+%This dissertation was typeset using the
+%\href{https://github.com/pkgw/ucastrothesis}{\textsf{ucastrothesis}}
+%\LaTeX\ template.
 
 \end{acknowledgements}
 \end{frontmatter}
 
 \include{intro/intro}
+\include{methods_PS/methods_PS}
+\include{PSA64/PSA64}
+\include{PSA128/PSA128}
+\include{HERA/HERA}
+\include{conclusion/conclusion}
 \bibliography{thesis}{}
+
 \end{document}

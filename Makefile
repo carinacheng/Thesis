@@ -9,19 +9,33 @@ default: mthesis.pdf # default target if you just type "make"
 # included to show how you can process data as you compile your thesis
 # using standard GNU make constructs.
 
-deps += intro/intro.tex intro/processed.tex
-cleans += intro/intro.aux intro/processed.tex
+deps += intro/intro.tex 
+cleans += intro/intro.aux
 
-intro/processed.tex: intro/sample.tex
-	sed -e s/terrible/wonderful/ $< >$@
-
+# intro/processed.tex: intro/sample.tex
+# 	sed -e s/terrible/wonderful/ $< >$@
 
 # Chapter Two
 
-## deps += ...
-## cleans += ...
-## etc
+deps += methods_PS/methods_PS.tex
+cleans += methods_PS/methods_PS.aux
 
+# Chapter Three
+
+deps += PSA64/PSA64.tex
+cleans += PSA64/PSA64.aux
+
+# Chapter Four
+deps += PSA128/PSA128.tex
+cleans += PSA128/PSA128.aux
+
+# Chapter Five
+deps += HERA/HERA.tex
+cleans += HERA/HERA.aux
+
+# Conclusion
+deps += conclusion/conclusion.tex
+cleans += conclusion/conclusion.aux
 
 # The thesis itself. We move the PDF to a new filename so that viewers
 # don't keep on trying to reload the file as it's being written and
