@@ -1,5 +1,10 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{15}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Barkana} \& {Loeb}(2008)}]{barkana_and_loeb2008}
+{Barkana}, R., \& {Loeb}, A. 2008,
+  \href{http://dx.doi.org/10.1111/j.1365-2966.2007.12729.x}{Monthly Notices of
+  the Royal Astronomical Society, 384, 1069}
 
 \bibitem[{{Becker} {et~al.}(2001){Becker}, {Fan}, {White}, {Strauss},
   {Narayanan}, {Lupton}, {Gunn}, {Annis}, {Bahcall}, {Brinkmann}, {Connolly},
@@ -14,6 +19,9 @@
 {Bowman}, J.~D., {Rogers}, A.~E.~E., {Monsalve}, R.~A., {Mozdzen}, T.~J., \&
   {Mahesh}, N. 2018, \href{http://dx.doi.org/10.1038/nature25792}{\nat, 555,
   67}
+
+\bibitem[{Dodelson(2003)}]{dodelson_cosmology}
+Dodelson, S. 2003, {Modern cosmology} (San Diego, CA: Academic Press)
 
 \bibitem[{{Fialkov} {et~al.}(2014){Fialkov}, {Barkana}, \&
   {Visbal}}]{fialkov_et_al2014}
@@ -30,16 +38,20 @@
   Conference Series, Vol. 181, Microwave Foregrounds, ed. A.~{de
   Oliveira-Costa} \& M.~{Tegmark}, 227
 
-\bibitem[{Hinshaw {et~al.}(2013)Hinshaw, Larson, Komatsu, Spergel, Bennett,
-  Dunkley, Nolta, Halpern, Hill, Odegard, Page, Smith, Weiland, Gold, Jarosik,
-  Kogut, Limon, Meyer, Tucker, Wollack, \& Wright}]{hinshaw_et_al2013}
-Hinshaw, G., Larson, D., Komatsu, E., {et~al.} 2013,
-  \href{http://stacks.iop.org/0067-0049/208/i=2/a=19}{The Astrophysical Journal
-  Supplement Series, 208, 19}
+\bibitem[{{Hinshaw} {et~al.}(2013){Hinshaw}, {Larson}, {Komatsu}, {Spergel},
+  {Bennett}, {Dunkley}, {Nolta}, {Halpern}, {Hill}, {Odegard}, {Page}, {Smith},
+  {Weiland}, {Gold}, {Jarosik}, {Kogut}, {Limon}, {Meyer}, {Tucker}, {Wollack},
+  \& {Wright}}]{hinshaw_et_al2013}
+{Hinshaw}, G., {Larson}, D., {Komatsu}, E., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1088/0067-0049/208/2/19}{\apjs, 208, 19}
 
 \bibitem[{{Loeb} \& {Furlanetto}(2013)}]{loeb_furlanetto_2013}
 {Loeb}, A., \& {Furlanetto}, S. 2013, The First Galaxies in the Universe
   (Princeton University Press)
+
+\bibitem[{{Morales} \& {Wyithe}(2010)}]{morales_and_wyithe2010}
+{Morales}, M.~F., \& {Wyithe}, J.~S.~B. 2010,
+  \href{http://dx.doi.org/10.1146/annurev-astro-081309-130936}{\araa, 48, 127}
 
 \bibitem[{{Planck Collaboration} {et~al.}(2016){Planck Collaboration}, {Ade},
   {Aghanim}, {Arnaud}, {Ashdown}, {Aumont}, {Baccigalupi}, {Banday},
@@ -47,10 +59,13 @@ Hinshaw, G., Larson, D., Komatsu, E., {et~al.} 2013,
 {Planck Collaboration}, {Ade}, P.~A.~R., {Aghanim}, N., {et~al.} 2016,
   \href{http://dx.doi.org/10.1051/0004-6361/201525830}{\aap, 594, A13}
 
+\bibitem[{{Pritchard} \& {Loeb}(2010)}]{pritchard_and_loeb2010}
+{Pritchard}, J.~R., \& {Loeb}, A. 2010,
+  \href{http://dx.doi.org/10.1103/PhysRevD.82.023006}{\prd, 82, 023006}
+
 \bibitem[{{Pritchard} \& {Loeb}(2012)}]{pritchard_loeb2012}
-{Pritchard}, J.~R., \& {Loeb}, A. 2012,
-  \href{http://dx.doi.org/10.1088/0034-4885/75/8/086901}{Reports on Progress in
-  Physics, 75, 086901}
+---. 2012, \href{http://dx.doi.org/10.1088/0034-4885/75/8/086901}{Reports on
+  Progress in Physics, 75, 086901}
 
 \bibitem[{{Robertson} {et~al.}(2015){Robertson}, {Ellis}, {Furlanetto}, \&
   {Dunlop}}]{robertson_et_al2015}
