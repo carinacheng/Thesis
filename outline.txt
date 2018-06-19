@@ -1,0 +1,92 @@
+Thesis Outline
+~~~~~~~~~~~~~~
+
+ABSTRACT
+--------
+
+INTRODUCTION
+------------
+
+I) The Epoch of Reionization
+    i) Overview
+    ii) Current measurements (galaxies, CMB, etc.)
+    iii) Measurements of HI (21cm signal, global signal, etc.)
+    iv) Status of limits
+    v) Future
+    vi) EoR Science
+    vii) This thesis
+
+II) INTERFEROMETRY & DATA PROCESSING
+    i) Visibility Equation
+    ii) Calibration
+    iii) Delay-filtering
+    iv) Fringe-rate filtering
+
+III) INSTRUMENTS
+    i) PAPER (21, 64, 128)
+    ii) HERA
+    iii) Other (LOFAR, MWA, SKA-Low)
+
+METHODS FOR POWER SPECTRUM ANALYSIS
+-----------------------------------
+
+I) Power spectrum overview
+    i) What is a PS? 
+    ii) Science from PS (theory)
+
+II) Signal Loss 
+
+III) Bootstrapping
+
+IV) Jack-knives
+
+PAPER-64 RESULTS
+----------------
+
+I) Overview of data
+
+II) Signal loss
+
+III) Bootstrapping
+
+IV) Jack-knives
+
+V) New limits
+
+PAPER-128 RESULTS
+-----------------
+
+I) Overview of epochs
+    i) Summary of data
+    ii) Summary of data reduction
+
+II) QA techniques
+    i) Bad days
+    ii) Cross-polarized antennas
+    iii) Bad antennas: omnical chi-squared 
+
+III) Simple PS
+
+HERA
+----
+
+I) Covariance stuff
+
+SIMULATION
+----------
+
+I) Simulating EoR in visibilities
+
+II) Comparison to data?
+
+CONCLUSION
+----------
+
+SOFTWARE
+--------
+
+REFERENCES
+----------
+
+
+

@@ -1,0 +1,64 @@
+\begin{thebibliography}{11}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Becker} {et~al.}(2001){Becker}, {Fan}, {White}, {Strauss},
+  {Narayanan}, {Lupton}, {Gunn}, {Annis}, {Bahcall}, {Brinkmann}, {Connolly},
+  {Csabai}, {Czarapata}, {Doi}, {Heckman}, {Hennessy}, {Ivezi{\'c}}, {Knapp},
+  {Lamb}, {McKay}, {Munn}, {Nash}, {Nichol}, {Pier}, {Richards}, {Schneider},
+  {Stoughton}, {Szalay}, {Thakar}, \& {York}}]{becker_et_al2001}
+{Becker}, R.~H., {Fan}, X., {White}, R.~L., {et~al.} 2001,
+  \href{http://dx.doi.org/10.1086/324231}{\aj, 122, 2850}
+
+\bibitem[{{Bowman} {et~al.}(2018){Bowman}, {Rogers}, {Monsalve}, {Mozdzen}, \&
+  {Mahesh}}]{bowman_et_al2018}
+{Bowman}, J.~D., {Rogers}, A.~E.~E., {Monsalve}, R.~A., {Mozdzen}, T.~J., \&
+  {Mahesh}, N. 2018, \href{http://dx.doi.org/10.1038/nature25792}{\nat, 555,
+  67}
+
+\bibitem[{{Fialkov} {et~al.}(2014){Fialkov}, {Barkana}, \&
+  {Visbal}}]{fialkov_et_al2014}
+{Fialkov}, A., {Barkana}, R., \& {Visbal}, E. 2014,
+  \href{http://dx.doi.org/10.1038/nature12999}{\nat, 506, 197}
+
+\bibitem[{{Furlanetto} {et~al.}(2006){Furlanetto}, {Oh}, \&
+  {Briggs}}]{furlanetto_et_al2006}
+{Furlanetto}, S.~R., {Oh}, S.~P., \& {Briggs}, F.~H. 2006,
+  \href{http://dx.doi.org/10.1016/j.physrep.2006.08.002}{\physrep, 433, 181}
+
+\bibitem[{{Haiman} \& {Knox}(1999)}]{haiman_knox_1999}
+{Haiman}, Z., \& {Knox}, L. 1999, in Astronomical Society of the Pacific
+  Conference Series, Vol. 181, Microwave Foregrounds, ed. A.~{de
+  Oliveira-Costa} \& M.~{Tegmark}, 227
+
+\bibitem[{Hinshaw {et~al.}(2013)Hinshaw, Larson, Komatsu, Spergel, Bennett,
+  Dunkley, Nolta, Halpern, Hill, Odegard, Page, Smith, Weiland, Gold, Jarosik,
+  Kogut, Limon, Meyer, Tucker, Wollack, \& Wright}]{hinshaw_et_al2013}
+Hinshaw, G., Larson, D., Komatsu, E., {et~al.} 2013,
+  \href{http://stacks.iop.org/0067-0049/208/i=2/a=19}{The Astrophysical Journal
+  Supplement Series, 208, 19}
+
+\bibitem[{{Loeb} \& {Furlanetto}(2013)}]{loeb_furlanetto_2013}
+{Loeb}, A., \& {Furlanetto}, S. 2013, The First Galaxies in the Universe
+  (Princeton University Press)
+
+\bibitem[{{Planck Collaboration} {et~al.}(2016){Planck Collaboration}, {Ade},
+  {Aghanim}, {Arnaud}, {Ashdown}, {Aumont}, {Baccigalupi}, {Banday},
+  {Barreiro}, {Bartlett}, \& et~al.}]{planck2016}
+{Planck Collaboration}, {Ade}, P.~A.~R., {Aghanim}, N., {et~al.} 2016,
+  \href{http://dx.doi.org/10.1051/0004-6361/201525830}{\aap, 594, A13}
+
+\bibitem[{{Pritchard} \& {Loeb}(2012)}]{pritchard_loeb2012}
+{Pritchard}, J.~R., \& {Loeb}, A. 2012,
+  \href{http://dx.doi.org/10.1088/0034-4885/75/8/086901}{Reports on Progress in
+  Physics, 75, 086901}
+
+\bibitem[{{Robertson} {et~al.}(2015){Robertson}, {Ellis}, {Furlanetto}, \&
+  {Dunlop}}]{robertson_et_al2015}
+{Robertson}, B.~E., {Ellis}, R.~S., {Furlanetto}, S.~R., \& {Dunlop}, J.~S.
+  2015, \href{http://dx.doi.org/10.1088/2041-8205/802/2/L19}{\apjl, 802, L19}
+
+\bibitem[{{Weisz} \& {Boylan-Kolchin}(2017)}]{weisz2017}
+{Weisz}, D.~R., \& {Boylan-Kolchin}, M. 2017,
+  \href{http://dx.doi.org/10.1093/mnrasl/slx043}{\mnras, 469, L83}
+
+\end{thebibliography}

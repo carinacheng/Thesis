@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: yahapj.bst
+A level-1 auxiliary file: setup.aux
+A level-1 auxiliary file: intro/intro.aux
+A level-1 auxiliary file: methods_PS/methods_PS.aux
+A level-1 auxiliary file: PSA64/PSA64.aux
+A level-1 auxiliary file: PSA128/PSA128.aux
+A level-1 auxiliary file: HERA/HERA.aux
+A level-1 auxiliary file: conclusion/conclusion.aux
+Database file #1: thesis.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 11 entries,
+            3201 wiz_defined-function locations,
+            749 strings with 7705 characters,
+and the built_in function-call counts, 6265 in all, are:
+= -- 482
+> -- 476
+< -- 5
++ -- 180
+- -- 169
+* -- 560
+:= -- 1121
+add.period$ -- 11
+call.type$ -- 11
+change.case$ -- 70
+chr.to.int$ -- 11
+cite$ -- 11
+duplicate$ -- 307
+empty$ -- 393
+format.name$ -- 190
+if$ -- 1254
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 10
+newline$ -- 37
+num.names$ -- 45
+pop$ -- 115
+preamble$ -- 1
+purify$ -- 70
+quote$ -- 0
+skip$ -- 191
+stack$ -- 0
+substring$ -- 271
+swap$ -- 11
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 96
+warning$ -- 0
+while$ -- 51
+width$ -- 0
+write$ -- 113
