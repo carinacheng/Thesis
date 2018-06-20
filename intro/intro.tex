@@ -102,8 +102,38 @@ In this thesis, I present work associated with data from radio interferometers s
 \section{Interferometry}
 \label{sec:interferometry}
 
+Multiple radio telescopes (i.e. an interferometer) can be used in combination to probe $21$\,cm fluctuations. A pair of antennas receives sky signal at slightly different times, with a time delay determined by the antenna spacing, or baseline orientation and length. The two voltage streams from the antennas are then correlated, with the output response having an amplitude dependent on the sky's flux density and a phase dependent on the time delay between the two elements and the frequency of the light. In other words, every pair of antennas of an interferometer measures an interference pattern, and knowledge of the entire sky can be built up by having a large number of antennas and many different types, and copies, of baselines.
+
 \subsection{The Visibility Equation}
-% how visibilities relate to Tb and power spectrum
+
+The output measurement from correlating signals between two antennas is called a \textit{visibility}. The visibility can be written as:
+
+\begin{equation}
+\label{eq:vis}
+V_{ij}(\nu) = S(\nu) e^{-2\pi i\frac{\vec{b}_{ij}\cdot \hat{s}}{\lambda}},
+\end{equation}
+where $i,j$ represent a pair of antennas, $S(\nu)$ is the sky flux density, $\vec{b}_{ij}$ is a baseline vector, $\hat{s}$ is a unit-vector in the direction of a source in the sky, and $\lambda$ is the wavelength of the signal. The fractional term in the exponential reflects the changing number of wavelengths between the two antennas as a signal goes in and out of phase as the source passes overhead, for example. The entire exponential term represents the phase of the visibility, which can also be described as the fringe pattern, or diffraction pattern, between two antenna elements. 
+
+Equation \eqref{eq:vis} represents a visibility measurement for one time integration and one direction on the sky. In practice, we compute the integrated visibility over the entire angular sky $d\Omega$:
+
+\begin{equation}
+V_{ij}(\nu,\Omega) = \int A(\nu,\Omega)I(\nu,\Omega) e^{-2\pi i\frac{\vec{b}_{ij}\cdot \hat{s}(\Omega)}{\lambda}}d\Omega,
+\end{equation}
+where the amplitude component has been broken up into a primary beam component $A(\nu,\Omega)$ and sky flux density component $I(\nu,\Omega)$. The primary beam describes the power pattern of an antenna element and determines its field of view, thus altering the power received from the sky depending on its direction.
+
+The visibility equation can be re-interpreted as the 2-dimensional Fourier-transform of the sky. In other words, the Fourier-transform of a visibility produces a \textit{dirty image} of the sky, from which the true sky can be reconstructed by de-convolving out information from the antenna beam. 
+
+In this thesis, we focus on cross-correlations, or power spectral measurements, of visibilities. Recalling that we seek to measure the differential brightness temperature on various spatial scales of the sky, we can form the quantity:
+
+\begin{equation}
+\langle \delta \tilde{T}_{b}(\vec{k})^{\ast} \delta \tilde{T}_{b}(\vec{k})\rangle = (2\pi)^{3} \delta^{D}(\vec{k}-\vec{k}')P_{21}(\vec{k}) ,
+\end{equation}
+where $\delta \tilde{T}_{b}(\vec{k})$ is the Fourier-transform of the differential sky brightness as a function of cosmological wavenumber $\vec{k}$ (i.e. our visibility measurement, up to scaling factors), $\delta^{D}$ is the Dirac-delta function, and $P_{21}$ is the $21$\,cm power spectrum quantity we are interested in eventually forming.
+
+Simply speaking, because our visibility measurements have already taken two spatial Fourier-transforms out of the three needed for a 3D power spectrum, we need only to take one last Fourier-transform (along frequency), and then multiply and average the visibilities together for a given baseline in order to compute a power spectral measurement. Having repeated baseline copies then increases the sensitivity to a given Fourier-mode on the sky, while having different types of baselines makes it possible to measure multiple Fourier-modes and build up an image of the sky. Since the EoR signal is expected to be present everywhere on the sky, in this work we focus on the former technique in order to maximize our sensitivity to the cosmological signal.
+
+The last thing to note is that the wavenumber $\vec{k}$ can be broken up into a perpendicular component $\vec{k}_{\perp}$ and a parallel component $k_{\parallel}$, where $\vec{k}_{\perp}$ is proportional to the (x,y) spatial coordinates on the sky and $k_{\parallel}$ is proportional to the line-of-sight direction on the sky (i.e. frequency). Every unique baseline probes a single $\vec{k}_{\perp}$, and it's worth noting that, because we focus on redundant baselines in the analysis to follow, most of our power spectrum sensitivity comes from the frequency-direction. Accounting for cosmological distance, a 1D wavenumber has units of Mpc$^{-1}$, so that the 3D power spectrum has units of mK$^{2}\cdot$Mpc$^{3}$. Visibility measurements typically have units of Janskys.
+
 \subsection{Calibration}
 \subsection{Foreground and Filtering}
 \subsection{Fringe-rate Filtering}
