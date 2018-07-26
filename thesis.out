@@ -9,29 +9,32 @@
 \BOOKMARK [2][-]{subsection.1.1.4}{This Thesis}{section.1.1}% 9
 \BOOKMARK [1][-]{section.1.2}{Interferometry}{chapter.1}% 10
 \BOOKMARK [2][-]{subsection.1.2.1}{The Visibility Equation}{section.1.2}% 11
-\BOOKMARK [2][-]{subsection.1.2.2}{Calibration}{section.1.2}% 12
-\BOOKMARK [2][-]{subsection.1.2.3}{Foreground and Filtering}{section.1.2}% 13
-\BOOKMARK [2][-]{subsection.1.2.4}{Fringe-rate Filtering}{section.1.2}% 14
-\BOOKMARK [1][-]{section.1.3}{Instruments}{chapter.1}% 15
-\BOOKMARK [2][-]{subsection.1.3.1}{The Precision Array for Probing the Epoch of Reionization}{section.1.3}% 16
-\BOOKMARK [2][-]{subsection.1.3.2}{The Hydrogen Epoch of Reionization Array}{section.1.3}% 17
-\BOOKMARK [2][-]{subsection.1.3.3}{Other Experiments}{section.1.3}% 18
-\BOOKMARK [0][-]{chapter.2}{Power Spectrum Methods}{}% 19
-\BOOKMARK [1][-]{section.2.1}{The 21cm Power Spectrum}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.2}{Signal Loss}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.3}{Error Estimation}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.4}{Bias}{chapter.2}% 23
-\BOOKMARK [0][-]{chapter.3}{PAPER-64}{}% 24
-\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.2}{Signal Loss}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.3}{Error Estimation}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.4}{Bias}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.5}{Power Spectrum Limits}{chapter.3}% 29
-\BOOKMARK [0][-]{chapter.4}{PAPER-128}{}% 30
-\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.2}{Quality Assurance}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.2.1}{Flagging Julian Dates}{section.4.2}% 33
-\BOOKMARK [2][-]{subsection.4.2.2}{Flagging Antennas}{section.4.2}% 34
-\BOOKMARK [0][-]{chapter.5}{HERA}{}% 35
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 36
-\BOOKMARK [0][-]{chapter*.5}{Bibliography}{}% 37
+\BOOKMARK [2][-]{subsection.1.2.2}{The 21cm Power Spectrum}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.3}{Calibration}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.4}{Foreground Filtering}{section.1.2}% 14
+\BOOKMARK [2][-]{subsection.1.2.5}{Fringe-rate Filtering}{section.1.2}% 15
+\BOOKMARK [1][-]{section.1.3}{Instruments}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.3.1}{The Precision Array for Probing the Epoch of Reionization}{section.1.3}% 17
+\BOOKMARK [2][-]{subsection.1.3.2}{The Hydrogen Epoch of Reionization Array}{section.1.3}% 18
+\BOOKMARK [2][-]{subsection.1.3.3}{Other Experiments and Status of Field}{section.1.3}% 19
+\BOOKMARK [0][-]{chapter.2}{Power Spectrum Methods}{}% 20
+\BOOKMARK [1][-]{section.2.1}{Introduction to Themes}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.2}{Signal Loss Toy Model}{chapter.2}% 22
+\BOOKMARK [1][-]{section.2.3}{Signal Loss Mathematical Framework}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.4}{Error Estimation Toy Model}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.5}{Bias Toy Model}{chapter.2}% 25
+\BOOKMARK [0][-]{chapter.3}{PAPER-64}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.2}{Signal Loss}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.3}{Error Estimation}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.4}{Bias}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.5}{Power Spectrum Limits}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{PAPER-128}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Quality Assurance}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.2.1}{Flagging Julian Dates}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.2}{Flagging Antennas}{section.4.2}% 36
+\BOOKMARK [1][-]{section.4.3}{Power Spectrum Limits}{chapter.4}% 37
+\BOOKMARK [0][-]{chapter.5}{HERA}{}% 38
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 39
+\BOOKMARK [0][-]{chapter*.5}{Bibliography}{}% 40

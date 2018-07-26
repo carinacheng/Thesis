@@ -57,7 +57,7 @@ A direct measurement of neutral hydrogen gas over time would provide a fundament
 The spin-flip transition of neutral hydrogen occurs when a hydrogen atom changes energy state between two hyperfine levels. Namely, if a hydrogen atom moves from an aligned state to an anti-aligned state, the energy difference is released in the form of a photon with a wavelength of $21$\,cm. 
 
 Because this transition has a well-defined wavelength, the signal can be directly mapped to a distance, or redshift, by measuring its wavelength upon detection. For example, a $21$\,cm photon that was initially emitted at a redshift of $z = 6$ would have expanded by a factor of ($1+z$) due to the expansion of the Universe and be $1.5$\,m long when it arrives at our telescopes. Hence, observing longer wavelengths of the hydrogen signal means that it has traveled for a greater distance (and has stretched out more) and thus comes from farther away at a higher redshift. This means that the $21$\,cm signal is a powerful tracer of 
-neutral hydrogen at any distance (i.e. as a function of time), as long as it exists. This technique is especially compelling because it allows the direct exploration of the EoR as it occurs, whereas CMB measurements and galaxy measurements surround this era from the beginning and end only, respectively (Figure \ref{fig:timeline_circle}).
+neutral hydrogen at any distance (i.e., as a function of time), as long as it exists. This technique is especially compelling because it allows the direct exploration of the EoR as it occurs, whereas CMB measurements and galaxy measurements surround this era from the beginning and end only, respectively (Figure \ref{fig:timeline_circle}).
 
 \begin{figure}
 	\centering
@@ -91,7 +91,7 @@ As the first stars in the first galaxies begin emitting Lyman-$\alpha$ photons, 
 
 Finally, even though the timing and details of reionization are unknown, UV photons from the first luminous structures are believed to eventually ionize all the neutral hydrogen, leaving no signal to be detected by a redshift of $z \sim 6$. 
 
-The shape of the global signal holds important science implications about our early Universe. For example, the position of the heating trough reveals the types of sources and energies of the x-rays doing the heating, as well as the sizes of the dark matter halos hosting those first sources (i.e. late heating and deep absorption troughs imply harder x-ray spectras, as shown in \citet{fialkov_et_al2014}). The first tentative detection of this signature from the Experiment to Detect the Global Epoch of Reionization Signature (EDGES) even suggests that known physics and commonly accepted scenarios may not be responsible for creating the absorption profile (\citealt{bowman_et_al2018}). As the field continues to investigate our cosmic dawn through HI measurements --- both the global signal and statistical fluctuations ---  we can expect to learn much about the constituents that make up the Universe and their complex interactions during this era.
+The shape of the global signal holds important science implications about our early Universe. For example, the position of the heating trough reveals the types of sources and energies of the x-rays doing the heating, as well as the sizes of the dark matter halos hosting those first sources (i.e., late heating and deep absorption troughs imply harder x-ray spectras, as shown in \citet{fialkov_et_al2014}). The first tentative detection of this signature from the Experiment to Detect the Global Epoch of Reionization Signature (EDGES) even suggests that known physics and commonly accepted scenarios may not be responsible for creating the absorption profile (\citealt{bowman_et_al2018}). As the field continues to investigate our cosmic dawn through HI measurements --- both the global signal and statistical fluctuations ---  we can expect to learn much about the constituents that make up the Universe and their complex interactions during this era.
 
 \subsection{This Thesis}
 
@@ -102,7 +102,7 @@ In this thesis, I present work associated with data from radio interferometers s
 \section{Interferometry}
 \label{sec:interferometry}
 
-Multiple radio telescopes (i.e. an interferometer) can be used in combination to probe $21$\,cm fluctuations. A pair of antennas receives sky signal at slightly different times, with a time delay determined by the antenna spacing, or baseline orientation and length. The two voltage streams from the antennas are then correlated, with the output response having an amplitude dependent on the sky's flux density and a phase dependent on the time delay between the two elements and the frequency of the light. In other words, every pair of antennas of an interferometer measures an interference pattern, and knowledge of the entire sky can be built up by having a large number of antennas and many different types, and copies, of baselines.
+Multiple radio telescopes (i.e., an interferometer) can be used in combination to probe $21$\,cm fluctuations. A pair of antennas receives sky signal at slightly different times, with a time delay determined by the antenna spacing, or baseline orientation and length, with respect to the sky. The two voltage streams from the antennas are then correlated, with the output response having an amplitude dependent on the sky's flux density and a phase dependent on the time delay between the two elements and the frequency of the light. In other words, every pair of antennas of an interferometer measures an interference pattern, and knowledge of the entire sky can be built up by having a large number of antennas and many different types, and copies, of baselines.
 
 \subsection{The Visibility Equation}
 
@@ -114,38 +114,183 @@ V_{ij}(\nu) = S(\nu) e^{-2\pi i\frac{\vec{b}_{ij}\cdot \hat{s}}{\lambda}},
 \end{equation}
 where $i,j$ represent a pair of antennas, $S(\nu)$ is the sky flux density, $\vec{b}_{ij}$ is a baseline vector, $\hat{s}$ is a unit-vector in the direction of a source in the sky, and $\lambda$ is the wavelength of the signal. The fractional term in the exponential reflects the changing number of wavelengths between the two antennas as a signal goes in and out of phase as the source passes overhead, for example. The entire exponential term represents the phase of the visibility, which can also be described as the fringe pattern, or diffraction pattern, between two antenna elements. 
 
-Equation \eqref{eq:vis} represents a visibility measurement for one time integration and one direction on the sky. In practice, we compute the integrated visibility over the entire angular sky $d\Omega$:
+Equation \eqref{eq:vis} represents a visibility measurement for one direction on the sky. In practice, we compute the integrated visibility over the entire angular sky $d\Omega$:
 
 \begin{equation}
 V_{ij}(\nu,\Omega) = \int A(\nu,\Omega)I(\nu,\Omega) e^{-2\pi i\frac{\vec{b}_{ij}\cdot \hat{s}(\Omega)}{\lambda}}d\Omega,
 \end{equation}
 where the amplitude component has been broken up into a primary beam component $A(\nu,\Omega)$ and sky flux density component $I(\nu,\Omega)$. The primary beam describes the power pattern of an antenna element and determines its field of view, thus altering the power received from the sky depending on its direction.
 
-The visibility equation can be re-interpreted as the 2-dimensional Fourier-transform of the sky. In other words, the Fourier-transform of a visibility produces a \textit{dirty image} of the sky, from which the true sky can be reconstructed by de-convolving out information from the antenna beam. 
+The visibility equation can be re-interpreted as the 2-dimensional Fourier-transform of the sky, or a sample of the \textit{uv}-plane, where $u$ and $v$ are sine-waves in a 2D image. In other words, the Fourier-transform of a visibility produces a \textit{dirty image} of the sky, from which the true sky can be reconstructed by de-convolving out information from the antenna beam. In this thesis, however, we focus on the 3D Fourier-transform of the sky, or the power spectrum (Chapter \ref{sec:PSoverview}), instead of making images. Hence, we work directly with visibilities as a starting point, which has already taken two Fourier-transforms for us. 
+
+\subsection{The $21$\,cm Power Spectrum}
+\label{sec:PSoverview}
 
 In this thesis, we focus on cross-correlations, or power spectral measurements, of visibilities. Recalling that we seek to measure the differential brightness temperature on various spatial scales of the sky, we can form the quantity:
 
 \begin{equation}
+\label{eq:PSdef}
 \langle \delta \tilde{T}_{b}(\vec{k})^{\ast} \delta \tilde{T}_{b}(\vec{k})\rangle = (2\pi)^{3} \delta^{D}(\vec{k}-\vec{k}')P_{21}(\vec{k}) ,
 \end{equation}
-where $\delta \tilde{T}_{b}(\vec{k})$ is the Fourier-transform of the differential sky brightness as a function of cosmological wavenumber $\vec{k}$ (i.e. our visibility measurement, up to scaling factors), $\delta^{D}$ is the Dirac-delta function, and $P_{21}$ is the $21$\,cm power spectrum quantity we are interested in eventually forming.
+where $\delta \tilde{T}_{b}(\vec{k})$ is the Fourier-transform of the differential sky brightness as a function of cosmological wavenumber $\vec{k}$ (i.e., our visibility measurement, up to scaling factors), $\delta^{D}$ is the Dirac-delta function, and $P_{21}$ is the $21$\,cm power spectrum quantity we are interested in eventually forming.
 
 Simply speaking, because our visibility measurements have already taken two spatial Fourier-transforms out of the three needed for a 3D power spectrum, we need only to take one last Fourier-transform (along frequency), and then multiply and average the visibilities together for a given baseline in order to compute a power spectral measurement. Having repeated baseline copies then increases the sensitivity to a given Fourier-mode on the sky, while having different types of baselines makes it possible to measure multiple Fourier-modes and build up an image of the sky. Since the EoR signal is expected to be present everywhere on the sky, in this work we focus on the former technique in order to maximize our sensitivity to the cosmological signal.
 
-The last thing to note is that the wavenumber $\vec{k}$ can be broken up into a perpendicular component $\vec{k}_{\perp}$ and a parallel component $k_{\parallel}$, where $\vec{k}_{\perp}$ is proportional to the (x,y) spatial coordinates on the sky and $k_{\parallel}$ is proportional to the line-of-sight direction on the sky (i.e. frequency). Every unique baseline probes a single $\vec{k}_{\perp}$, and it's worth noting that, because we focus on redundant baselines in the analysis to follow, most of our power spectrum sensitivity comes from the frequency-direction. Accounting for cosmological distance, a 1D wavenumber has units of Mpc$^{-1}$, so that the 3D power spectrum has units of mK$^{2}\cdot$Mpc$^{3}$. Visibility measurements typically have units of Janskys.
+We note that the wavenumber $\vec{k}$ can be broken up into a perpendicular component $\vec{k}_{\perp}$ and a parallel component $k_{\parallel}$, where $\vec{k}_{\perp}$ is proportional to the (x,y) spatial coordinates on the sky and $k_{\parallel}$ is proportional to the line-of-sight direction on the sky (i.e., frequency). Every unique baseline probes a single $\vec{k}_{\perp}$, and it's worth noting that, because we focus on redundant baselines in the analysis to follow, most of our power spectrum sensitivity comes from the frequency-direction. Accounting for cosmological distance, a 1D wavenumber has units of Mpc$^{-1}$, so that the 3D power spectrum has units of mK$^{2}\cdot$Mpc$^{3}$. Visibility measurements typically have units of Janskys.
+
+Just as the shape of the global signal provides insight about the early Universe, the shape of the cross-power spectrum, as defined by Equation \eqref{eq:PSdef}, also delivers a wealth of information. Figure \ref{fig:PS_evolution} shows the $21$\,cm ``dimensionless" power spectrum $\Delta^{2}(k)$ (units of mK), defined as:
+
+\begin{equation}
+\Delta^{2}(k) = \frac{k^{3}}{2\pi^{2}}P_{21}(k),
+\end{equation}
+as a function of the magnitude of $k$. This figure shows the expected evolution of the power spectrum, where the overall signal moves to small scales (large $k$) as more hydrogen becomes ionized (the large regions of neutral hydrogen turn into smaller and smaller pockets). This effect can be seen by both the steepening of the spectrum as the neutral fraction decreases, and the evolution of the spectrum at a specific (large) $k$.
+
+The $21$\,cm power spectrum therefore encodes important information about the spatial and temporal evolution of reionization, and the shape of the spectrum can be directly mapped to sizes of the ionized bubbles as they grow. Additionally, the power spectrum, which is a function of the differential brightness temperature, can be used to constrain $T_{\rm spin}$ via Equation \eqref{eq:Tb} (and also $T_{\rm gas}$, since they're coupled during this era). It is thus a powerful tool for unlocking the properties of the IGM.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{plots/PS_evolution.eps}
+    \caption{The theoretical evolution of the cross-$21$\,cm power spectrum for a specific model (image credit: \citet{barkana2009}), where the neutral fraction $x_{HI} = 10\%, 30\%, 50\%, 70\%, 90\%$, and $98\%$ from top to bottom at large $k$. This figure shows the expected evolution of the power spectrum which interferometers seek to measure.}
+    \label{fig:PS_evolution}
+\end{figure}
 
 \subsection{Calibration}
-\subsection{Foreground and Filtering}
+
+As discussed previously, an interferometer measures a visibility for every baseline pair and every time integration. Repeated baseline types and multi-day observations can be stacked to gain sensitivity. However, ensuring clean measurements at EoR sensitivities requires many other crucial processing steps, including calibration, which we give an overview of in this section.
+
+We've seen that the visibility measurement is dependent on the sky, baseline, and beam, but it is also affected by instrumental systematics. For example, certain components in the signal chain of an instrument can contribute variable noise, losses can arise from reflections, and blockage and scattering may occur. These are all effects that must be considered in order to accurately extract the EoR signal. 
+
+Many of these effects can be mitigated through precise calibration. There are two main types of calibration used by $21$\,cm interferometers: \textit{redundant} calibration and \textit{absolute} calibration. We will briefly describe each here.
+
+Redundant calibration is a type of calibration based on the redundant nature of baselines. For experiments like PAPER and HERA, which have many repeated copies of baselines, redundant calibration can be used to bring all identical baselines into agreement (i.e., it calibrates out deviations between baselines of the same type). This calibration is a powerful technique because it does not use any knowledge of the sky, yet can correct for instrumental-induced gain and phase effects brought on by differences in the signal chain attributable to antennas, cables, and receivers (\citealt{liu_et_al2010}).
+
+Mathematically, the visibility $v_{ij}$ of every baseline can be written as:
+
+\begin{equation}
+v_{ij} = g_{i}^{\ast}g_{j}y_{ij} + n_{ij},
+\end{equation}
+where $g_{i}$ and $g_{j}$ are the complex gains of each antenna, $y_{ij}$ is the ``true" model visibility for that particular baseline type, and $n_{ij}$ is noise. The goal of redundant calibration is to solve for the gain of each antenna and the ``true" visibility of each baseline type. This can be accomplished by setting up a system of linear equations containing every visibility measurement (the method used by PAPER and HERA is detailed in Chapter \ref{sec:PSA64overview}). If there are more measurements than the sum of the number of unique baselines and antennae, then it is a solvable system. 
+
+The complex gains can be further broken down to be written as $g_{i} = e^{\eta_{i} + i\phi_{i}}$ (\citealt{liu_et_al2010}). In other words, by solving for the gains, we are solving for both an amplitude component and a phase offset for each antenna. The gains can then be divided out of every visibility measurement, producing redundantly-calibrated measurements across the whole array.
+
+While redundant calibration is a clever technique for the internal calibration of an interferometer, the calibrated visibility measurements are still on an arbitrary gain scale that has not been matched up to the sky. Hence, absolute calibration refers to using sources in the sky of known brightness (or sky models) in order to solve for the two remaining internal degrees of freedom: an overall gain and an overall phase. Interferometers typically use a standard self-calibration routine to accomplish this, where $y_{ij}$ is known for the specific sky sources.
+
+Ultimately, calibration is a crucial step in preparing interferometric data for a power spectrum analysis. A precisely-calibrated instrument will result in cleaner data from which the EoR signal can be accessed.
+
+\subsection{Foreground Filtering}
+
+Arguably the largest challenge of processing $21$\,cm data is in removing bright foregrounds. There are several techniques to do this, which fall into two main categories: foreground subtraction and foreground avoidance. The former consists of modeling and subtracting out foreground sources, while the latter involves making EoR measurements in a domain where foregrounds are minimal. 
+
+For interferometers with imaging capabilities, foreground removal techniques include modeling approaches to spatially localize and remove contaminants (e.g., \citealt{santos_et_al2005}; \citealt{wang_et_al2006}; \citealt{jelic_et_al2008}; \citealt{liu_et_al2009}; \citealt{bowman_et_al2009}; \citealt{harker_et_al2009}; \citealt{chapman_et_al2016}). This can be done by fitting polynomials to data or by using non-parametric methods, which make fewer assumptions about the form of the foregrounds. While foreground subtraction would be ideal if done accurately, modeling is difficult and subtraction poses the risk of cosmological signal loss.
+
+The other method commonly used, foreground avoidance, is a strategy employed by both PAPER and HERA. Foreground avoidance was originally suggested as an alternate method to the subtraction method, which has stringent requirements in order to yield uncontaminated results. In order to understand foreground avoidance, we must first define the ``EoR Window".
+
+A 3D power spectrum can be split into two directions along $k_{\perp}$ and $k_{\parallel}$, which correspond to modes perpendicular to the line-of-sight and along the line-of-sight, respectively. In this two-dimensional space, there are two main regions --- one relatively free of foregrounds (the ``EoR Window") and one contaminated by foregrounds (the ``wedge"), as shown in Figure \ref{fig:wedge} (e.g., \citealt{datta_et_al2010}; \citealt{vedantham_et_al2012}). We can see this by thinking of the $k_{\parallel}$ direction to be akin to the physical time delay associated with light hitting two antennas (a good approximation, especially for short baselines). As $k_{\perp}$, which is proportional to baseline length, increases, the maximum time delay also increases because it is set by the length of the baseline (i.e., a maximum delay occurs when a source is at the horizon; therefore, the time delay is simply the time it takes for the light to travel the distance of the baseline). Hence, the ``wedge" is formed, representing a region where smooth-spectrum foregrounds are expected to be contained. 
+
+Delay-filtering is the process by which foregrounds within the wedge are filtered out, leaving a relatively clean window behind from which the cosmological signal can be extracted (\citealt{parsons_et_al2012b}). This approach limits the number of modes for which the measurement can be made and can suffer from some foreground leakage as explained in Chapter \ref{sec:BiasOverview}, but its advantages include its simplicity and conservativeness (i.e., it leaves all the cosmological signal within the window in tact).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{plots/wedge.pdf}
+    \caption{A cartoon diagram of the ``EoR Window" and ``wedge" of foreground contamination in Fourier space (image credit: \citet{dillon_et_al2015b}). A foreground avoidance approach makes power spectrum measurements in the window, while a foreground subtraction approach subtracts out foregrounds so that measurements can be made in the wedge. The overall power spectrum measurement space is limited by an interferometer's field of view and angular resolution along the horizontal axis, and spectral resolution and intrinsic foregrounds along the vertical axis.}
+    \label{fig:wedge}
+\end{figure}
+
+There have been many approaches at tackling the challenge of foregrounds (summarized in \citet{chapman_et_al2016}), but regardless of the method used, removing Galactic and extragalactic foregrounds from $21$\,cm data is a critical step for analyses seeking the EoR signal. 
+
 \subsection{Fringe-rate Filtering}
 
+The final analysis technique to introduce in this section is fringe-rate filtering, a filtering scheme carried out in a domain which is the Fourier-dual to time. This type of filtering aims to optimize the process of combining time-ordered data and has been investigated in \citet{roshi_perley2003}, \citet{parsons_backer2009}, \citet{offringa_et_al2012}, and \citet{parsons_et_al2016}.
+
+A ``fringe-rate" is the rate at which the sky moves relative to the fringe pattern of an interferometer. As sources pass overhead, they walk in and out of the interference pattern of two antennas, and the rate at which this movement happens is dependent on the source's declination and hour angle. For example, a source located near a celestial pole has a zero fringe-rate, as it does not appear to move in the sky as the Earth rotates. However, a source located on the celestial equator will have a maximum fringe-rate set by the rate of Earth's rotation. The sky can therefore be decomposed into fringe-rate bins, each of which forms a concentric circle of constant fringe-rate around the celestial sphere.
+
+One initial advantage of filtering in fringe-rate space is that it allows the filtering of noise that is not associated with movement locked on the sky (i.e., filtering out fringe-rates greater than the maximum allowed by the Earth's rotation). This excess noise can come from the instrument itself or from signals with an origin not on the sky. Additionally, one can up-weight and down-weight certain portions of the sky by choosing different linear combinations of fringe-rates (\citealt{parsons_et_al2016}). This allows what is effectively a beam-sculpting operation, where the most sensitive parts of one's beam can be up-weighted compared to others.
+
+A third advantage of this type of filtering is that it can also be used to integrate visibilities in time. Depending on the shape of the filter in the fringe-rate domain, the effect in the time domain can be an averaging operation along time. This is advantageous because it allows an optimal way to combine measurements (by weighting fringe-rates differently based on signal-to-noise ratios in each fringe-rate bin, for example) instead of a more traditional boxcar average, which does not use information from individual fringe-rate bins.
+
+Broadly, fringe-rate filtering can be thought of as a tailored filtering step that can increase the sensitivity of a measurement by differentiating between noise- and signal-like modes in data. When carefully chosen, a fringe-rate filter can enhance modes containing emission from the celestial sphere, where the $21$\,cm signal lies.
+
 \section{Instruments}
+
+The recent exploration of our cosmic dawn has led to the development of multiple experiments that are aiming to detect the $21$\,cm signal from neutral hydrogen during reionization. We will first highlight the two main radio interferometers whose data is used in this thesis, and then discuss other similar experiments along with the current status of the field.
+
 \subsection{The Precision Array for Probing the Epoch of Reionization}
+
+The Precision Array for Probing the Epoch of Reionization (PAPER) is a first generation EoR experiment. Its history dates back to 2007, when an initial four dipole antennas observed the sky from Western Australia. A year later, the array increased to eight stations and moved to Green Bank, West Virginia. These first two deployments are summarized in \citet{parsons_et_al2010} and were used to characterize important aspects of the instrument, including system performance, beam models, instrumental temperatures, and sensitivity to radio frequency interference (RFI). 
+
+PAPER then moved to the Karoo Desert in South Africa, near the Square Kilometre Array South Africa (SKA-SA). The PAPER array doubled in size each year, starting with 32 antennas in 2011 and ending with 128 a few years later. PAPER's observing seasons using these three arrays (PAPER-32, PAPER-64, and PAPER-128) have primarily been used to develop analysis techniques, understand instrumental design, and begin to place limits on the EoR and connect them to science implications.
+
+A brief overview of the PAPER instrument and digital backend follows. The PAPER dipole itself (Figure \ref{fig:paper_dipole}) is made from two rods of copper sandwiched between two aluminum disks. The sizes of each are fine-tuned to produce an antenna frequency response between 100-200\,MHz. Each PAPER antenna is sensitive to two orthogonal polarizations, those being the East/West and North/South directions (XX and YY linear polarizations) given the antenna's orientation on the ground. A grounding structure, made of wire-mesh and held in place by PVC pipes, is both underneath the dipole and surrounds it as four angled panels. The design of the antenna's framework was driven by the desire to produce spectrally and spatially smooth beam responses as discussed in \citet{parsons_et_al2010} and \citet{pober_et_al2012}. Altogether, an entire PAPER dipole measures about 2\,m on each side and sits still while the Earth's rotation moves the sky above (``drift-scan" mode). When photons hit the dipoles' copper rods, electrons are excited and their movement creates a voltage that can be measured.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{plots/paper_dipole2.jpg}
+    \caption{A PAPER antenna in the Karoo Desert in South Africa. A dual-polarization dipole sits at the center, surrounded by wire mesh panels that measure 2\,m on each side.}
+    \label{fig:paper_dipole}
+\end{figure}
+
+In short, PAPER's analog system consists of a balun attached to each dipole element (which measures the voltage and amplifies the signal) and coaxial cables which transport the antenna signals. The signals then travel to dual-channel receiver boards which are cooled inside thermal enclosures in order to prevent high gains from temperature fluctuations. The receivers both amplify and filter (in frequency) the signals before sending them to the digital system. 
+
+PAPER's digital system is housed inside a refrigerated container on the observing site. The bulk of the processing is carried out by a series of real-time digital FX correlators which cross-correlate pairs of antenna signals to form visibility measurements. More specifically, the FX correlators comprise of ``F-engines" which digitize, down-convert, and channelize antenna inputs, a switch that divides the data into frequency subsets and routes the packets, GPUs which cross-multiply signals from all antenna pairs and integrate in time (``X-engines"), and finally another switch and computer which collect the data, writes it to disk, and sends the final products over an ethernet connection as ``raw" visibility data products that are ready to be analyzed. 
+
+Much of PAPER's digital signal processing (DSP) system has been made possible due to the development of hardware by the Center for Astronomy Signal Processing and Electronics Research (CAPSER). We rely on their Field-programmable Gate Array (FPGA) processors which can quickly perform the fast Fourier-transforms required to produce visibilities. The development of FPGA's into PAPER's DSP system has been critical in allowing for the scalable expansion of the array. 
+
+PAPER's first power spectrum limits on the EoR came from a 32-element array (\citealt{parsons_et_al2014}). PAPER-32 observed in a redundantly-configured layout from 2011-2012, producing a quoted $2\sigma$ upper limit on the $21$\,cm power spectrum of (41\,mK)$^{2}$ for $k=0.27\, h$\,Mpc$^{-1}$ at $z=7.7$ (\citealt{parsons_et_al2014}). This result, while orders of magnitude above predicted EoR signals, was used to generate constraints on the brightness temperature of $21$\,cm emission for various reionization models and rule out cold reionization scenarios (i.e., some heating of the IGM is necessary by $z=7.7$ to be consistent with PAPER-32's results).
+
+PAPER expanded to 64 elements in 2012, keeping its redundant layout in order to maximize power spectrum sensitivity. The analysis and initial results for PAPER-64's observing season is outlined in \citealt{ali_et_al2015}, where a $2\sigma$ upper limit on the EoR is quoted as (22\,mK)$^{2}$ for $0.15 < k < 0.5\,h$\,Mpc$^{-1}$ at $z=8.4$. A result at this sensitivity can begin to place more interesting limits on IGM heating models and on the temperature of the IGM during this time (\citealt{pober_et_al2015}).
+
+From 2013-2015, PAPER-128 marked the last era for the PAPER experiment. The data collected with this array has not been published publicly and work is ongoing to process and analyze this data. While most of this thesis focuses on PAPER-64, specifically on analysis methods developed to revise the initial (incorrect) PAPER-64 results (Chapter \ref{c.PSmethods}) and what those new limits should be (Chapter \ref{c.PSA64}), we also present a first-look at PAPER-128 and discuss how PAPER's final observing season has influenced analysis metrics for the next generation experiment HERA (Chapter \ref{c.PSA128})
+
+The PAPER experiment as a whole has been absolutely fundamental to the growth of the field of $21$\,cm cosmology. This first generation experiment set a standard for other similar experiments and has provided countless lessons in all aspects of the signal chain. The array may be retired, but its influence will not be forgotten.
+
 \subsection{The Hydrogen Epoch of Reionization Array}
-\subsection{Other Experiments}
 
-%\nocite{*}
+The development of the Hydrogen Epoch of Reionization Array (HERA) was largely driven by the need for increased sensitivity, as even PAPER-128 lacked the collecting area for a significant detection of the EoR. HERA is a second generation EoR experiment currently being built in the Karoo. It features a staged build-out of parabolic dishes with 14\,m diameters, with construction beginning in 2015 and an eventual 350 dishes planned to be completed by the end of 2019.
 
+A HERA dish (Figure \ref{fig:hera_dish}) is made up of wire-mesh, PVC pipes, and wooden support structures. The size, shape, and total number of the dishes were determined in order to optimize sensitivity (i.e., minimize chromatic effects that would leak power into the EoR window) minimize costs, and be easily scalable and robust for a five year lifetime (\citealt{deboer_et_al2017}). While work on a new feed design (with a wider bandwidth) is ongoing, the first observations from HERA recycled PAPER dipoles. Suspended upside-down with a wire pulley-system, the PAPER dipoles are surrounded by a wire-mesh backplane structure that minimizes cross-coupling between antennas while optimizing beam efficiency, frequency response, and polarization match (\citealt{deboer_et_al2017}). Similarly, the first stages of the HERA array are using the existing PAPER signal path and hardware, while work is progressing towards an underground node-based system that will house the DSP system and minimize cable reflections by allowing shorter cable paths. 
 
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{plots/hera_dish.jpg}
+    \caption{A HERA dish in the Karoo Desert in South Africa. Wire-mesh, PVC pipes, and wooden structures serve as the foundation for the 14\,m diameter parabola. A PAPER dipole is suspended upside-down with a wire pulley-system and surrounded by a prototype wire-mesh skirt structure. HERA-350 will use an updated design for its feed; however, HERA's initial data releases use the old PAPER infrastructure as depicted here.}
+    \label{fig:hera_dish}
+\end{figure}
+
+The configuration of HERA, like PAPER, is highly redundant and optimized for a robust foreground avoidance approach. Because this power spectrum approach requires short baselines (which minimize the wedge), the HERA antennas are densely-packed next to each other into a main core. This core is segmented into three displaced sections, whose sectioning is designed to improve HERA's imaging ability (\citealt{dillon_parsons2016}). Additionally, there will be 30 additional outrigger elements in the full array, allowing a more complete \textit{uv}-plane coverage for imaging capabilities that can be leveraged for a foreground removal approach. The full HERA array is depicted in Figure \ref{fig:hera_array}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{plots/hera_array.pdf}
+    \caption{The full HERA-350 array (image credit: \citet{deboer_et_al2017}). The array is comprised of a segmented densely-packed core (to optimize redundancy for a foreground avoidance approach) and surrounding outrigger elements (for imaging capabilities).}
+    \label{fig:hera_array}
+\end{figure}
+
+The primary science goal of HERA is to make a high-significance detection of the cosmological signal in order to constrain the timing and morphology of reionization. With precision constraints on the EoR, we can begin to understand the role of the first stars and galaxies in driving reionization, their complex interactions with their environments, and the evolution of cosmic structure. With the full array and an upgraded feed sensitive from 50-250\,MHz, secondary science goals of the instrument include precision cosmology, imaging of the reionization epoch, and an investigation of the pre-reionization heating epoch (\citealt{deboer_et_al2017}). HERA, with a collecting area of $\sim0.1$\,km$^{2}$, is well-poised for these challenges (\citealt{pober_et_al2014}) and has already undergone numerous tests and simulations to ensure that its design meets specification (\citealt{neben_et_al2016}; \citealt{ewall-wice_et_al2017}; \citealt{patra_et_al2018}). As the fully realized HERA soon approaches, there is much to look forward to in the coming years from this array.
+
+\subsection{Other Experiments and Status of Field}
+
+Although this thesis focuses mostly on PAPER data and analysis methods that will be used by HERA, these two arrays are not alone in their quest for the EoR. Other radio interferometers which seek to measure statistical power spectra include the Giant Metre-wave Radio Telescope located in India (GMRT; \citealt{paciga_et_al2013}), the LOw Frequency ARray in Europe (LOFAR; \citealt{van_haarlem_et_al2013}), the Murchison Widefield Array in Australia (MWA; \citealt{tingay_et_al2013}), the 21 Centimeter Array in China (21CMA; \citealt{peterson_et_al2004}; \citealt{wu2009}), and the Square Kilometre Array in South Africa (SKA; \citealt{koopmans_et_al2015}).
+
+Several of these experiments have succeeded in placing upper limits on the EoR, including results from the 32-tile MWA (\citealt{dillon_et_al2014}), 128-tile MWA (\citealt{dillon_et_al2015}; \citealt{beardsley_et_al2016}), GMRT (\citealt{paciga_et_al2013}), and LOFAR (\citealt{patil_et_al2017}). PAPER has also previously published results using 32 antennas (\citealt{parsons_et_al2014}; \citealt{jacobs_et_al2015}) and 64 antennas (\citealt{ali_et_al2015}), though we highlight the errors found in PAPER's analysis pipeline throughout this thesis and thus refer the reader to Chapter \ref{c.PSA64} for updated results from PAPER.
+
+The work in the 21\,cm community that has led to these power spectrum limits (Figure \ref{fig:statusfield}) has largely revolved around the key challenge of controlling foregrounds and systematics. To accomplish this, significant progress has been made in all aspects of the experimental process, ranging from carefully designed interferometers (\citealt{lonsdale_et_al2009}; \citealt{parsons_et_al2012a}; \citealt{dillon_parsons2016}), to novel methods for understanding and dealing with foregrounds (e.g., \citealt{morales_et_al2006}; \citealt{datta_et_al2010}; \citealt{sullivan_et_al2012}; \citealt{moore_et_al2013}; \citealt{hazelton_et_al2013}; \citealt{pober_et_al2013b}; \citealt{liu_et_al2014a}; \citealt{liu_et_al2014b}; \citealt{thyagarajan_et_al2015}), to statistical analysis techniques for precise calibration and power spectrum estimation (e.g., \citealt{liu_et_al2010}; \citealt{trott_et_al2012}; \citealt{liu_et_al2014b}; \citealt{zheng_et_al2014}; \citealt{dillon_et_al2014}; \citealt{jacobs_et_al2016}). PAPER's foreground avoidance strategies have, in particular, led to detailed understandings of redundant calibration and the effects of filtering on the EoR window, while MWA's foreground subtraction techniques have provided complementary improvements in imaging capabilities. While the experiments with published results currently lack the sensitivities needed for an EoR detection, both the delay-filtering and map-making methods, along with hybrid approaches (\citealt{trott_et_al2016}), have set a strong foundation for controlling foregrounds by future, more sensitive interferometers.
+
+Related to the fundamental goal of simultaneously maximizing sensitivity and minimizing contaminants, some other challenges that face current $21$\,cm experiments include polarization leakage from Faraday-rotated emission (\citealt{moore_et_al2013}; \citealt{kohn_et_al2016}; \citealt{nunhokee_et_al2017}), direction-dependent beam effects, and other low level sources of chromaticity induced by the instrument or calibration. These effects will require thorough investigations as experiments approach EoR sensitivities.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{plots/statusfield.png}
+    \caption{Published upper limits on the EoR placed by different $21$\,cm experiments, prior to the work in this thesis. All PAPER results shown (PAPER-32 is in cyan and magenta, and PAPER-64 is in blue) are suspect to the errors discussed throughout this work and are superseded by the ones presented in Chapter \ref{c.PSA64}.}
+    \label{fig:statusfield}
+\end{figure}
+
+In addition to power spectrum experiments, there are several complementary experiments that aim to measure the sky-averaged global $21$\,cm signal (i.e., the mean brightness temperature of the EoR relative to the CMB). These include the Experiment to Detect the Global EoR Signature (EDGES; \citealt{bowman2010}), the Large Aperture Experiment to Detect the Dark Ages (LEDA; \citealt{bernardi_et_al2016}), the Dark Ages Radio Explorer (DARE; \citealt{burns2012}), the Sonda Cosmol\'ogica de las Islas para la Detecci\'on de Hidr\'ogeno NeutroSciHi (SCI-HI; \citealt{voytek2014}), the Broadband Instrument for Global HydrOgen ReioNisation Signal (BIGHORNS; \citealt{sokolowski2015}), and the Shaped Antenna measurement of the background RAdio Spectrum (SARAS; \citealt{patra2015}).
+
+Like the power spectrum experiments, global signal experiments also face challenges of bright foregrounds and instrumental systematics. In particular, they require extremely precise calibration in order to avoid overfitting when subtracting foregrounds, and they also face additional challenges when observing the lowest frequencies, such as ionospheric fluctuations and brighter foregrounds (\citealt{vedantham_et_al2014}; \citealt{datta_et_al2014})
+
+However, most global signal telescopes consist of single elements and can therefore be more easily constructed. Additionally, EoR sensitivities can be reached with relatively short observations. Thus, global signal experiments are actively being worked on as a complementary view into the evolution of the $21$\,cm signal. Accurate detections of the features of the global signal will delineate the different epochs in the early Universe, and their shapes will carry important implications about the nature of the IGM and the first sources.
+
+For example, the first potential detection of the $21$\,cm signal has been made by the global signal experiment EDGES (\citealt{bowman_et_al2018}). This exciting result suggests the presence of an absorption feature in the sky-averaged spectrum at 78\,MHz, thought to be the result of the absorption of CMB photons by HI gas. Because the detected feature is best-fit by an amplitude much larger than what is consistent with expectations for the $21$\,cm signal during this epoch, alternate scientific explanations have been offered, such as the influence of dark matter on baryons and the effect of their interaction on the temperature of the gas (\citealt{barkana2018}; \citealt{slatyer_wu2018}), . Measurements from other experiments in the future will certainly be informative in shaping the community's confidence in this detection, and this result marks just the beginning of many more in the field to come.
 
 
 
