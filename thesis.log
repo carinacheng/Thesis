@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 AUG 2018 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 AUG 2018 16:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -443,15 +443,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `thesis.toc'.
 
  [3]
-(./thesis.lof
-Overfull \hbox (49.86707pt too wide) in paragraph at lines 5--5
- \T1/cmr/m/n/12 (im-age credit: [][]Barkana[][] ([][]2009[][])), where the neu-
-tral frac-tion $\OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 = 10%\OML/cmm/m/it/12 ; \O
-T1/cmr/m/n/12 30%\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 50%\OML/cmm/m/it/12 ; \OT1/
-cmr/m/n/12 70%\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 90%$\T1/cmr/m/n/12 , 
- []
-
-[4
+(./thesis.lof [4
 
 ])
 \tf@lof=\write5
@@ -639,7 +631,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
 Here is how much of TeX's memory you used:
  8047 strings out of 492995
  115404 string characters out of 6132704
- 231726 words of memory out of 5000000
+ 231710 words of memory out of 5000000
  11245 multiletter control sequences out of 15000+600000
  22880 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -668,7 +660,7 @@ fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/cm-super/sfti1440.pfb>
-Output written on thesis.pdf (40 pages, 7578098 bytes).
+Output written on thesis.pdf (40 pages, 7577962 bytes).
 PDF statistics:
  1200 PDF objects out of 1200 (max. 8388607)
  1012 compressed objects within 11 object streams

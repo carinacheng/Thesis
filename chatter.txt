@@ -71,13 +71,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [2] [1] [1] (./thesis.toc
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd) [2]) [3]
-(./thesis.lof
-Overfull \hbox (49.86707pt too wide) in paragraph at lines 5--5
- \T1/cmr/m/n/12 (im-age credit: [][]Barkana[][] ([][]2009[][])), where the neu-
-tral frac-tion $\OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 = 10%\OML/cmm/m/it/12 ; \O
-T1/cmr/m/n/12 30%\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 50%\OML/cmm/m/it/12 ; \OT1/
-cmr/m/n/12 70%\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 90%$\T1/cmr/m/n/12 , 
-[4]) [5] (./thesis.lot) [6] [7] (./intro/intro.tex
+(./thesis.lof [4]) [5] (./thesis.lot) [6] [7] (./intro/intro.tex
 Chapter 1.
 [1] <plots/timeline_history.jpg, id=345, 899.0388pt x 324.2514pt>
 <use plots/timeline_history.jpg> [2 <./plots/timeline_history.jpg>] [3]
@@ -127,31 +121,29 @@ Chapter 6.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd) [29]) [30]
 (./thesis.aux (./setup.aux) (./intro/intro.aux) (./methods_PS/methods_PS.aux)
 (./PSA64/PSA64.aux) (./PSA128/PSA128.aux) (./HERA/HERA.aux)
-(./conclusion/conclusion.aux)) )
-(see the transcript file for additional information){/usr/local/texlive/2017/te
-xmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/cm-super/sfbx1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-cm-super/sfbx1728.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm
--super/sfbx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-s
-uper/sfcc1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super
-/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/s
-fss1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sft
-i1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1
-200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti144
-0.pfb>
-Output written on thesis.pdf (40 pages, 7578098 bytes).
+(./conclusion/conclusion.aux)) ){/usr/local/texlive/2017/texmf-dist/fonts/enc/d
+vips/cm-super/cm-super-t1.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx120
+0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
+Output written on thesis.pdf (40 pages, 7577962 bytes).
 Transcript written on thesis.log.
