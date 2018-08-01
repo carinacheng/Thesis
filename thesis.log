@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 JUL 2018 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 AUG 2018 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -473,41 +473,41 @@ Chapter 1.
 [1
 
 
-] <plots/timeline_history.jpg, id=336, 899.0388pt x 324.2514pt>
+] <plots/timeline_history.jpg, id=345, 899.0388pt x 324.2514pt>
 File: plots/timeline_history.jpg Graphic file (type jpg)
 
 <use plots/timeline_history.jpg>
 Package pdftex.def Info: plots/timeline_history.jpg used on input line 18.
 (pdftex.def)             Requested size: 469.75502pt x 169.42311pt.
  [2 <./plots/timeline_history.jpg>] [3]
-<plots/timeline_circle.pdf, id=384, 458.71375pt x 453.695pt>
+[4] <plots/timeline_circle.pdf, id=405, 458.71375pt x 453.695pt>
 File: plots/timeline_circle.pdf Graphic file (type pdf)
 
 <use plots/timeline_circle.pdf>
-Package pdftex.def Info: plots/timeline_circle.pdf used on input line 64.
+Package pdftex.def Info: plots/timeline_circle.pdf used on input line 65.
 (pdftex.def)             Requested size: 234.8775pt x 232.30904pt.
 
-<plots/timeline_global.pdf, id=385, 1905.1175pt x 828.09375pt>
+<plots/timeline_global.pdf, id=406, 1905.1175pt x 828.09375pt>
 File: plots/timeline_global.pdf Graphic file (type pdf)
 
 <use plots/timeline_global.pdf>
-Package pdftex.def Info: plots/timeline_global.pdf used on input line 71.
+Package pdftex.def Info: plots/timeline_global.pdf used on input line 72.
 (pdftex.def)             Requested size: 469.75502pt x 204.1799pt.
- [4] [5 <./plots/timeline_circle.pdf> <./plots/timeline_global.pdf>] [6] [7]
+ [5 <./plots/timeline_circle.pdf>] [6 <./plots/timeline_global.pdf>] [7] [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 126.
+(hyperref)                removing `math shift' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 126.
+(hyperref)                removing `math shift' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95827pt
-(hyperref)                removed on input line 126.
+(hyperref)                removed on input line 131.
 
-[8]
+[9]
 Package epstopdf Info: Source file: <plots/PS_evolution.eps>
 (epstopdf)                    date: 2008-06-10 11:43:26
 (epstopdf)                    size: 18684 bytes
@@ -516,57 +516,57 @@ Package epstopdf Info: Source file: <plots/PS_evolution.eps>
 (epstopdf)                    size: 13560 bytes
 (epstopdf)             Command: <repstopdf --outfile=plots/PS_evolution-eps-con
 verted-to.pdf plots/PS_evolution.eps>
-(epstopdf)             \includegraphics on input line 152.
+(epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
- <plots/PS_evolution-eps-converted-to.pdf, id=583, 576.1525pt x 576.1525pt>
+ <plots/PS_evolution-eps-converted-to.pdf, id=613, 576.1525pt x 576.1525pt>
 File: plots/PS_evolution-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/PS_evolution-eps-converted-to.pdf>
 Package pdftex.def Info: plots/PS_evolution-eps-converted-to.pdf used on input 
-line 152.
+line 157.
 (pdftex.def)             Requested size: 211.38832pt x 211.38843pt.
- [9] [10 <./plots/PS_evolution-eps-converted-to.pdf>] [11] <plots/wedge.pdf, id
-=640, 392.46625pt x 438.63875pt>
+ [10] [11 <./plots/PS_evolution-eps-converted-to.pdf>] [12] <plots/wedge.pdf, i
+d=672, 392.46625pt x 438.63875pt>
 File: plots/wedge.pdf Graphic file (type pdf)
 
 <use plots/wedge.pdf>
-Package pdftex.def Info: plots/wedge.pdf used on input line 194.
+Package pdftex.def Info: plots/wedge.pdf used on input line 201.
 (pdftex.def)             Requested size: 211.38832pt x 236.259pt.
- [12 <./plots/wedge.pdf>] [13]
-<plots/paper_dipole2.jpg, id=691, 1390.19376pt x 1183.42125pt>
+ [13 <./plots/wedge.pdf>] [14]
+<plots/paper_dipole2.jpg, id=720, 1390.19376pt x 1183.42125pt>
 File: plots/paper_dipole2.jpg Graphic file (type jpg)
 
 <use plots/paper_dipole2.jpg>
-Package pdftex.def Info: plots/paper_dipole2.jpg used on input line 227.
+Package pdftex.def Info: plots/paper_dipole2.jpg used on input line 234.
 (pdftex.def)             Requested size: 234.8775pt x 199.93298pt.
- [14] [15 <./plots/paper_dipole2.jpg>]
-<plots/hera_dish.jpg, id=723, 4175.6pt x 1942.25626pt>
+ [15] [16 <./plots/paper_dipole2.jpg>]
+<plots/hera_dish.jpg, id=752, 4175.6pt x 1942.25626pt>
 File: plots/hera_dish.jpg Graphic file (type jpg)
 
 <use plots/hera_dish.jpg>
-Package pdftex.def Info: plots/hera_dish.jpg used on input line 254.
+Package pdftex.def Info: plots/hera_dish.jpg used on input line 261.
 (pdftex.def)             Requested size: 469.75502pt x 218.47958pt.
 
-<plots/hera_array.pdf, id=727, 324.51598pt x 309.7134pt>
+<plots/hera_array.pdf, id=756, 324.51598pt x 309.7134pt>
 File: plots/hera_array.pdf Graphic file (type pdf)
 
 <use plots/hera_array.pdf>
-Package pdftex.def Info: plots/hera_array.pdf used on input line 263.
+Package pdftex.def Info: plots/hera_array.pdf used on input line 270.
 (pdftex.def)             Requested size: 234.8775pt x 224.1702pt.
- [16] [17 <./plots/hera_dish.jpg> <./plots/hera_array.pdf>] [18] <plots/statusf
-ield.png, id=872, 682.2288pt x 296.7888pt>
+ [17] [18 <./plots/hera_dish.jpg> <./plots/hera_array.pdf>] [19] <plots/statusf
+ield.png, id=900, 682.2288pt x 296.7888pt>
 File: plots/statusfield.png Graphic file (type png)
 
 <use plots/statusfield.png>
-Package pdftex.def Info: plots/statusfield.png used on input line 282.
+Package pdftex.def Info: plots/statusfield.png used on input line 289.
 (pdftex.def)             Requested size: 469.75502pt x 204.3588pt.
- [19 <./plots/statusfield.png>]) [20]
+ [20 <./plots/statusfield.png>]) [21]
 \openout2 = `methods_PS/methods_PS.aux'.
 
 
 (./methods_PS/methods_PS.tex
 Chapter 2.
-) [21
+) [22
 
 
 
@@ -575,7 +575,7 @@ Chapter 2.
 
  (./PSA64/PSA64.tex
 Chapter 3.
-) [22
+) [23
 
 
 
@@ -584,16 +584,23 @@ Chapter 3.
 
  (./PSA128/PSA128.tex
 Chapter 4.
-) [23
+<plots/paper128_layout.png, id=960, 949.6278pt x 516.0078pt>
+File: plots/paper128_layout.png Graphic file (type png)
+
+<use plots/paper128_layout.png>
+Package pdftex.def Info: plots/paper128_layout.png used on input line 10.
+(pdftex.def)             Requested size: 450.96797pt x 245.04326pt.
+ [24
 
 
 
-]
+]) [25 <./plots/paper128_layout.png>]
 \openout2 = `HERA/HERA.aux'.
 
- (./HERA/HERA.tex
+
+(./HERA/HERA.tex
 Chapter 5.
-) [24
+) [26
 
 
 
@@ -602,22 +609,22 @@ Chapter 5.
 
  (./conclusion/conclusion.tex
 Chapter 6.
-) [25
+) [27
 
 
 
-] (./thesis.bbl [26
+] (./thesis.bbl [28
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 290.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 296.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [27])
+) [29])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
- [28]
+ [30]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
 
 (./thesis.aux (./setup.aux) (./intro/intro.aux) (./methods_PS/methods_PS.aux)
@@ -626,17 +633,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0813C8EDB7691C6F0157BB196E8F29DF;2597.
+(rerunfilecheck)             Checksum: 4CAC70945ED2C50FB8F35328D2F7EA28;2659.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 8028 strings out of 492995
- 114996 string characters out of 6132704
- 231251 words of memory out of 5000000
- 11233 multiletter control sequences out of 15000+600000
+ 8047 strings out of 492995
+ 115404 string characters out of 6132704
+ 231726 words of memory out of 5000000
+ 11245 multiletter control sequences out of 15000+600000
  22880 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,43p,1668b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,12n,43p,1668b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -661,10 +668,10 @@ fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/cm-super/sfti1440.pfb>
-Output written on thesis.pdf (38 pages, 7512054 bytes).
+Output written on thesis.pdf (40 pages, 7578098 bytes).
 PDF statistics:
- 1159 PDF objects out of 1200 (max. 8388607)
- 976 compressed objects within 10 object streams
- 174 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1200 PDF objects out of 1200 (max. 8388607)
+ 1012 compressed objects within 11 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

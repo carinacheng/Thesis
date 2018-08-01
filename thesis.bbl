@@ -1,4 +1,4 @@
-\begin{thebibliography}{80}
+\begin{thebibliography}{82}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ali} {et~al.}(2015){Ali}, {Parsons}, {Zheng}, {Pober}, {Liu},
@@ -131,6 +131,12 @@ Dodelson, S. 2003, {Modern cosmology} (San Diego, CA: Academic Press)
   {Hewitt}}]{ewall-wice_et_al2017}
 {Ewall-Wice}, A., {Dillon}, J.~S., {Liu}, A., \& {Hewitt}, J. 2017,
   \href{http://dx.doi.org/10.1093/mnras/stx1221}{\mnras, 470, 1849}
+
+\bibitem[{Fialkov {et~al.}(2014)Fialkov, Barkana, Pinhas, \&
+  Visbal}]{fialkov_et_al2014b}
+Fialkov, A., Barkana, R., Pinhas, A., \& Visbal, E. 2014,
+  \href{http://dx.doi.org/10.1093/mnrasl/slt135}{Monthly Notices of the Royal
+  Astronomical Society: Letters, 437, L36}
 
 \bibitem[{{Fialkov} {et~al.}(2014){Fialkov}, {Barkana}, \&
   {Visbal}}]{fialkov_et_al2014}
@@ -426,6 +432,11 @@ Slatyer, T.~R., \& Wu, C.-L. 2018,
 Sullivan, I.~S., Morales, M.~F., Hazelton, B.~J., {et~al.} 2012,
   \href{http://stacks.iop.org/0004-637X/759/i=1/a=17}{The Astrophysical
   Journal, 759, 17}
+
+\bibitem[{{Thompson} {et~al.}(2001){Thompson}, {Moran}, \&
+  {Swenson}}]{thompson_et_al2001}
+{Thompson}, A.~R., {Moran}, J.~M., \& {Swenson}, Jr., G.~W. 2001,
+  {Interferometry and Synthesis in Radio Astronomy, 2nd Edition} (Springer)
 
 \bibitem[{Thyagarajan {et~al.}(2015)Thyagarajan, Jacobs, Bowman, Barry,
   Beardsley, Bernardi, Briggs, Cappallo, Carroll, Corey, de~Oliveira-Costa,

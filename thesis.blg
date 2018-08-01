@@ -11,44 +11,44 @@ A level-1 auxiliary file: HERA/HERA.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 Database file #1: thesis.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 80 entries,
+You've used 82 entries,
             3201 wiz_defined-function locations,
-            1224 strings with 37633 characters,
-and the built_in function-call counts, 51423 in all, are:
-= -- 3511
-> -- 4835
+            1237 strings with 38470 characters,
+and the built_in function-call counts, 52434 in all, are:
+= -- 3595
+> -- 4903
 < -- 20
-+ -- 1788
-- -- 1710
-* -- 5034
-:= -- 9566
-add.period$ -- 80
-call.type$ -- 80
-change.case$ -- 498
-chr.to.int$ -- 78
-cite$ -- 80
-duplicate$ -- 2248
-empty$ -- 2799
-format.name$ -- 1805
-if$ -- 10008
++ -- 1813
+- -- 1736
+* -- 5118
+:= -- 9744
+add.period$ -- 82
+call.type$ -- 82
+change.case$ -- 513
+chr.to.int$ -- 80
+cite$ -- 82
+duplicate$ -- 2295
+empty$ -- 2872
+format.name$ -- 1832
+if$ -- 10216
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 77
-newline$ -- 244
-num.names$ -- 322
-pop$ -- 798
+missing$ -- 79
+newline$ -- 250
+num.names$ -- 330
+pop$ -- 824
 preamble$ -- 1
-purify$ -- 498
+purify$ -- 513
 quote$ -- 0
-skip$ -- 1331
+skip$ -- 1362
 stack$ -- 0
-substring$ -- 2050
-swap$ -- 81
+substring$ -- 2086
+swap$ -- 82
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 714
+type$ -- 729
 warning$ -- 0
-while$ -- 358
+while$ -- 366
 width$ -- 0
-write$ -- 802
+write$ -- 822

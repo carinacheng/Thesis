@@ -79,50 +79,52 @@ T1/cmr/m/n/12 30%\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 50%\OML/cmm/m/it/12 ; \OT1/
 cmr/m/n/12 70%\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 90%$\T1/cmr/m/n/12 , 
 [4]) [5] (./thesis.lot) [6] [7] (./intro/intro.tex
 Chapter 1.
-[1] <plots/timeline_history.jpg, id=336, 899.0388pt x 324.2514pt>
+[1] <plots/timeline_history.jpg, id=345, 899.0388pt x 324.2514pt>
 <use plots/timeline_history.jpg> [2 <./plots/timeline_history.jpg>] [3]
-<plots/timeline_circle.pdf, id=384, 458.71375pt x 453.695pt>
+[4] <plots/timeline_circle.pdf, id=405, 458.71375pt x 453.695pt>
 <use plots/timeline_circle.pdf>
-<plots/timeline_global.pdf, id=385, 1905.1175pt x 828.09375pt>
-<use plots/timeline_global.pdf> [4] [5 <./plots/timeline_circle.pdf> <./plots/t
-imeline_global.pdf>] [6] [7]
+<plots/timeline_global.pdf, id=406, 1905.1175pt x 828.09375pt>
+<use plots/timeline_global.pdf> [5 <./plots/timeline_circle.pdf>] [6 <./plots/t
+imeline_global.pdf>] [7] [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 126.
+(hyperref)                removing `math shift' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 126.
+(hyperref)                removing `math shift' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95827pt
-(hyperref)                removed on input line 126.
+(hyperref)                removed on input line 131.
 
-[8] <plots/PS_evolution-eps-converted-to.pdf, id=583, 576.1525pt x 576.1525pt>
-<use plots/PS_evolution-eps-converted-to.pdf> [9] [10 <./plots/PS_evolution-eps
--converted-to.pdf>] [11] <plots/wedge.pdf, id=640, 392.46625pt x 438.63875pt>
-<use plots/wedge.pdf> [12 <./plots/wedge.pdf>] [13]
-<plots/paper_dipole2.jpg, id=691, 1390.19376pt x 1183.42125pt>
-<use plots/paper_dipole2.jpg> [14] [15 <./plots/paper_dipole2.jpg>]
-<plots/hera_dish.jpg, id=723, 4175.6pt x 1942.25626pt>
+[9] <plots/PS_evolution-eps-converted-to.pdf, id=613, 576.1525pt x 576.1525pt>
+<use plots/PS_evolution-eps-converted-to.pdf> [10] [11 <./plots/PS_evolution-ep
+s-converted-to.pdf>] [12] <plots/wedge.pdf, id=672, 392.46625pt x 438.63875pt>
+<use plots/wedge.pdf> [13 <./plots/wedge.pdf>] [14]
+<plots/paper_dipole2.jpg, id=720, 1390.19376pt x 1183.42125pt>
+<use plots/paper_dipole2.jpg> [15] [16 <./plots/paper_dipole2.jpg>]
+<plots/hera_dish.jpg, id=752, 4175.6pt x 1942.25626pt>
 <use plots/hera_dish.jpg>
-<plots/hera_array.pdf, id=727, 324.51598pt x 309.7134pt>
-<use plots/hera_array.pdf> [16] [17 <./plots/hera_dish.jpg> <./plots/hera_array
-.pdf>] [18] <plots/statusfield.png, id=872, 682.2288pt x 296.7888pt>
-<use plots/statusfield.png> [19 <./plots/statusfield.png>]) [20]
+<plots/hera_array.pdf, id=756, 324.51598pt x 309.7134pt>
+<use plots/hera_array.pdf> [17] [18 <./plots/hera_dish.jpg> <./plots/hera_array
+.pdf>] [19] <plots/statusfield.png, id=900, 682.2288pt x 296.7888pt>
+<use plots/statusfield.png> [20 <./plots/statusfield.png>]) [21]
 (./methods_PS/methods_PS.tex
 Chapter 2.
-) [21] (./PSA64/PSA64.tex
+) [22] (./PSA64/PSA64.tex
 Chapter 3.
-) [22] (./PSA128/PSA128.tex
+) [23] (./PSA128/PSA128.tex
 Chapter 4.
-) [23] (./HERA/HERA.tex
+<plots/paper128_layout.png, id=960, 949.6278pt x 516.0078pt>
+<use plots/paper128_layout.png> [24]) [25 <./plots/paper128_layout.png>]
+(./HERA/HERA.tex
 Chapter 5.
-) [24] (./conclusion/conclusion.tex
+) [26] (./conclusion/conclusion.tex
 Chapter 6.
-) [25] (./thesis.bbl [26]
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd) [27]) [28]
+) [27] (./thesis.bbl [28]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd) [29]) [30]
 (./thesis.aux (./setup.aux) (./intro/intro.aux) (./methods_PS/methods_PS.aux)
 (./PSA64/PSA64.aux) (./PSA128/PSA128.aux) (./HERA/HERA.aux)
 (./conclusion/conclusion.aux)) )
@@ -151,5 +153,5 @@ fss1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sft
 i1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1
 200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti144
 0.pfb>
-Output written on thesis.pdf (38 pages, 7512054 bytes).
+Output written on thesis.pdf (40 pages, 7578098 bytes).
 Transcript written on thesis.log.
