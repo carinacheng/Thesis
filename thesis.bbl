@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{83}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ali} {et~al.}(2015){Ali}, {Parsons}, {Zheng}, {Pober}, {Liu},
@@ -216,6 +216,21 @@ Jacobs, D.~C., Pober, J.~C., Parsons, A.~R., {et~al.} 2015,
   {Trott}}]{koopmans_et_al2015}
 {Koopmans}, L., {Pritchard}, J., {Mellema}, G., {et~al.} 2015, Advancing
   Astrophysics with the Square Kilometre Array (AASKA14), 1
+
+\bibitem[{Lenc {et~al.}(2016)Lenc, Gaensler, Sun, Sadler, Willis, Barry,
+  Beardsley, Bell, Bernardi, Bowman, Briggs, Callingham, Cappallo, Carroll,
+  Corey, de~Oliveira-Costa, Deshpande, Dillon, Dwarkanath, Emrich, Ewall-Wice,
+  Feng, For, Goeke, Greenhill, Hancock, Hazelton, Hewitt, Hindson,
+  Hurley-Walker, Johnston-Hollitt, Jacobs, Kapińska, Kaplan, Kasper, Kim,
+  Kratzenberg, Line, Loeb, Lonsdale, Lynch, McKinley, McWhirter, Mitchell,
+  Morales, Morgan, Morgan, Murphy, Neben, Oberoi, Offringa, Ord, Paul, Pindor,
+  Pober, Prabu, Procopio, Riding, Rogers, Roshi, Shankar, Sethi, Srivani,
+  Staveley-Smith, Subrahmanyan, Sullivan, Tegmark, Thyagarajan, Tingay, Trott,
+  Waterson, Wayth, Webster, Whitney, Williams, Williams, Wu, Wyithe, \&
+  Zheng}]{lenc_et_al2016}
+Lenc, E., Gaensler, B.~M., Sun, X.~H., {et~al.} 2016,
+  \href{http://stacks.iop.org/0004-637X/830/i=1/a=38}{The Astrophysical
+  Journal, 830, 38}
 
 \bibitem[{{Liu} {et~al.}(2014{\natexlab{a}}){Liu}, {Parsons}, \&
   {Trott}}]{liu_et_al2014a}

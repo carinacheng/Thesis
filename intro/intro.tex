@@ -94,7 +94,7 @@ Finally, even though the timing and details of reionization are unknown, UV phot
 
 The shape of the global signal holds important science implications about our early Universe. For example, the timing of the heating trough reveals the types of sources responsible for heating (i.e., late heating implies harder x-ray spectras for x-ray binaries, as shown in \citet{fialkov_et_al2014}). It also contains information regarding the sizes of the dark matter halos hosting those first sources and the cooling mechanisms responsible for star formation (\citealt{fialkov_et_al2014b}). The shape of the absorption feature is also dependent on a number of factors, such as x-ray and Lyman-$\alpha$ emissivities, which in turn are dependent on the nature of the first sources and properties of star formation. For high Lyman-$\alpha$ production rates, a deep trough would be present due to strong couplings between $T_{\rm spin}$ and $T_{\rm gas}$ as the gas cools. An even more pronounced absorption signature, such as the first tentative detection from the Experiment to Detect the Global Epoch of Reionization Signature (EDGES), requires additional physical explanations beyond known physics and commonly accepted scenarios (\citealt{bowman_et_al2018}). 
 
-If the global signal's primary absorption feature unlocks clues about the first sources, the reionization peak and its subsequent decay hold the key for understanding the evolution of the neutral fraction $x_{HI}$. Namely, a direct measurement of $\delta T_{b}$ during this time would shed light about the duration and rate of the reionization process, which in turn can be translated into an evolution for $x_{HI}$. A long reionization duration, for example, would yield a slowly varying neutral fraction evolution, while a more instantaneous reionization would produce a sharp drop-off feature (\citealt{pritchard_and_loeb2010}). One thing is for certain though --- as the field continues to investigate our cosmic dawn through HI measurements (both the global signal and statistical fluctuations), we can expect to learn much about the constituents that make up the Universe and their complex interactions during this era.
+If the global signal's primary absorption feature unlocks clues about the first sources, the reionization peak and its subsequent decay hold the key for understanding the evolution of the neutral fraction $x_{HI}$. Namely, a direct measurement of $\delta T_{b}$ during this time would shed light about the duration and rate of the reionization process, which in turn can be translated into an evolution for $x_{HI}$. A long reionization duration, for example, would yield a slowly varying neutral fraction evolution, while a more instantaneous reionization would produce a sharp drop-off feature (\citealt{pritchard_and_loeb2010}). One thing is for certain though --- as the field continues to investigate our cosmic dawn and the EoR through HI measurements (both the global signal and statistical fluctuations), we can expect to learn much about the constituents that make up the Universe and their complex interactions during this era.
 
 \subsection{This Thesis}
 
@@ -160,6 +160,7 @@ The $21$\,cm power spectrum therefore encodes important information about the sp
 \end{figure}
 
 \subsection{Calibration}
+\label{sec:calibration_intro}
 
 We now transition to a brief overview of key data processing steps that are often standard routines when going from visibilities to power spectra. We speak broadly about these steps in this chapter, and go into detail about them for specific experiments in later chapters.
 
@@ -174,6 +175,7 @@ Redundant calibration is a type of calibration based on the redundant nature of 
 Mathematically, the visibility $v_{ij}$ of every baseline can be written as:
 
 \begin{equation}
+\label{eq:gains}
 v_{ij} = g_{i}^{\ast}g_{j}y_{ij} + n_{ij},
 \end{equation}
 where $g_{i}$ and $g_{j}$ are the complex gains of each antenna, $y_{ij}$ is the ``true" model visibility for that particular baseline type, and $n_{ij}$ is noise. The goal of redundant calibration is to solve for the gain of each antenna and the ``true" visibility of each baseline type. This can be accomplished by setting up a system of linear equations containing every visibility measurement (the method used by PAPER and HERA is detailed in Chapter \ref{sec:PSA64overview}). If there are more measurements than the sum of the number of unique baselines and antennae, then it is a solvable system. 
@@ -185,6 +187,7 @@ While redundant calibration is a clever technique for the internal calibration o
 Ultimately, calibration is a crucial step in preparing interferometric data for a power spectrum analysis. A precisely-calibrated instrument will result in cleaner data from which the EoR signal can be accessed.
 
 \subsection{Foreground Filtering}
+\label{sec:fg_intro}
 
 Arguably the largest challenge of processing $21$\,cm data is in removing bright foregrounds. There are several techniques to do this, which fall into two main categories: foreground subtraction and foreground avoidance. The former consists of modeling and subtracting out foreground sources, while the latter involves making EoR measurements in a domain where foregrounds are minimal. 
 
@@ -206,6 +209,7 @@ Delay-filtering is the process by which foregrounds within the wedge are filtere
 Whether it's avoidance or removal, there have been many approaches at tackling the challenge of foregrounds (summarized in \citet{chapman_et_al2016}). But, regardless of the method used, removing Galactic and extragalactic foregrounds from $21$\,cm data is absolutely a critical step for analyses seeking the EoR signal. 
 
 \subsection{Fringe-rate Filtering}
+\label{sec:frf_intro}
 
 The final analysis technique to introduce in this section is fringe-rate filtering, a filtering scheme carried out in a domain which is the Fourier-dual to time. This type of filtering aims to optimize the process of combining time-ordered data and has been investigated in \citet{roshi_perley2003}, \citet{parsons_backer2009}, \citet{offringa_et_al2012}, and \citet{parsons_et_al2016}.
 
@@ -222,6 +226,7 @@ Broadly, fringe-rate filtering can be thought of as a tailored filtering step th
 The recent exploration of our cosmic dawn has led to the development of multiple experiments that are aiming to detect the $21$\,cm signal from neutral hydrogen during reionization. In this section we will first highlight the two main radio interferometers whose data is used in this thesis, and then discuss other similar experiments along with the current status of the field.
 
 \subsection{The Precision Array for Probing the Epoch of Reionization}
+\label{sec:PAPER_intro}
 
 The Precision Array for Probing the Epoch of Reionization (PAPER) is a first generation EoR experiment. Its history dates back to 2007, when an initial four dipole antennas observed the sky from Western Australia. A year later, the array increased to eight stations and moved to Green Bank, West Virginia. These first two deployments are summarized in \citet{parsons_et_al2010} and were used to characterize important aspects of the instrument, including system performance, beam models, instrumental temperatures, and sensitivity to radio frequency interference (RFI). 
 
