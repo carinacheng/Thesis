@@ -1,6 +1,6 @@
 \defcitealias{ali_et_al2015}{A15}
 
-\chapter{PAPER-64}
+\chapter{PAPER-64 Case Study}
 \label{c.PSA64}
 
 
@@ -23,9 +23,9 @@ PAPER's raw data is compressed by a factor of $\sim70$ through the use of RFI, d
 
 \begin{figure}
     \centering
-    \includegraphics[trim={0cm 4.5cm 0cm 4.5cm},width=\columnwidth]{plots/ant_layout_aspect.pdf}
+    \includegraphics[trim={0cm 0cm 0cm 0cm},width=\columnwidth]{plots/ant_layout_aspect.pdf}
     \caption{The PAPER-64 antenna layout. We use only $10$ of the $30$ m East/West baselines for the analysis in this 
-paper (i.e., a subset of the shortest horizontal spacings).}
+chapter (i.e., a subset of the shortest horizontal spacings).}
     \label{fig:ant_layout}
 \end{figure}
 
@@ -41,6 +41,7 @@ It is important to note that while {\sc Omnical} is powerful for ensuring array 
 After calibration, we combine the XX and YY linear polarization data to form pseudo-Stokes I as defined as:
 
 \begin{equation}
+\label{eq:stokes}
 V_{I} = \frac{1}{2}(V_{XX}+V_{YY})
 \end{equation}
 (\citealt{moore_et_al2013}).
@@ -67,22 +68,22 @@ on $\Delta^{2}(k)$, defined as
 \noindent of $(22.4$ mK$)^{2}$ in the range $0.15 < k < 0.5$\,$h$ Mpc$^{-1}$ at $z = 8.4$. The need to revise this limit stems mostly from previously under-estimated signal loss and under-estimated error bars, both of which we 
 address in the following sections. 
 
-For the analysis in this paper, we use $8.1$ hours of LST, namely an RA range of $0.5$-$8.6$ hours (\citetalias{ali_et_al2015} uses a slightly longer RA 
-range of $0$-$8.6$ hours; we found that some early LSTs were more severely foreground contaminated). We also use only $10$ baselines, a subset of the $51$ total East/West baselines used in \citetalias{ali_et_al2015}, in order to illustrate our revised methods. All power spectrum results are produced for a center frequency of 151\,MHz using a width of 10\,MHz ($20$ channels), identical to the analysis in \citetalias{ali_et_al2015}. In the case study in this paper, we only use one baseline type instead of the three as in 
-\citetalias{ali_et_al2015}, but Kolopanis et al. (\textit{in prep.}) uses the full dataset presented in \citetalias{ali_et_al2015} to revise the result and place limits on the EoR at multiple redshifts (using a straightforward and not lossy approach to avoid many of the issues presented in this paper).
+For the analysis in this chapter, we use $8.1$ hours of LST, namely an RA range of $0.5$-$8.6$ hours (\citetalias{ali_et_al2015} uses a slightly longer RA 
+range of $0$-$8.6$ hours; we found that some early LSTs were more severely foreground contaminated). We also use only $10$ baselines, a subset of the $51$ total East/West baselines used in \citetalias{ali_et_al2015}, in order to illustrate our revised methods. All power spectrum results are produced for a center frequency of 151\,MHz using a width of 10\,MHz ($20$ channels), identical to the analysis in \citetalias{ali_et_al2015}. In the case study in this chapter, we only use one baseline type instead of the three as in 
+\citetalias{ali_et_al2015}, but Kolopanis et al. (\textit{in prep.}) uses the full dataset presented in \citetalias{ali_et_al2015} to revise the result and place limits on the EoR at multiple redshifts (using a straightforward and not lossy approach to avoid many of the issues presented in this chapter).
 
-The most significant changes from \citetalias{ali_et_al2015} occur in our revised power spectrum analysis, which is explained in the rest of this paper, but we also note that the applied fringe-rate filter is also slightly different. In \citetalias{ali_et_al2015}, the 
+The most significant changes from \citetalias{ali_et_al2015} occur in our revised power spectrum analysis, which is explained in the rest of this chapter, but we also note that the applied fringe-rate filter is also slightly different. In \citetalias{ali_et_al2015}, the 
 applied filter was not equivalent to the optimal fringe-rate filter (which is designed to maximize power spectrum sensitivity). Instead, the optimal filter was degraded slightly by widening it in fringe-rate space. This was chosen in order to increase the number of independent 
 modes and reduce signal loss associated with the quadratic estimator, though as we will explain in the next section, this signal loss was still under-estimated. With the development of a new, 
 robust method for assessing signal loss, we choose to use the optimal filter in order to maximize sensitivity. This filter is 
 computed for a fiducial 30\,m baseline at 150\,MHz, the center frequency in our band. The filter in both the fringe-rate 
 domain and time domain is shown in Figure \ref{fig:frp}.
 
-Finally, we emphasize that the discussion that follows is solely focused on signal loss associated with empirical covariance weighting. As mentioned in Chapter \ref{sec:SiglossOverview}, there are several other ways the PAPER analysis pipeline can lead to loss, including through calibration and delay-filtering. We refer the reader to \citet{parsons_et_al2010} and \citetalias{ali_et_al2015} for discussions about these other types of signal loss, noting here that they are much less significant than the loss focused on in this paper.
+Finally, we emphasize that the discussion that follows is solely focused on signal loss associated with empirical covariance weighting. As mentioned in Chapter \ref{sec:SiglossOverview}, there are several other ways the PAPER analysis pipeline can lead to loss, including through calibration and delay-filtering. We refer the reader to \citet{parsons_et_al2010} and \citetalias{ali_et_al2015} for discussions about these other types of signal loss, noting here that they are much less significant than the loss focused on in this chapter.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\textwidth]{plots/frp.pdf}
+    \includegraphics[width=0.7\textwidth]{plots/frp.pdf}
     \caption{Top: the normalized optimal power-spectrum sensitivity weighting in fringe-rate space for our fiducial baseline and 
 Stokes I polarization beam. Bottom: the time domain convolution kernel corresponding to the top panel. Real and imaginary 
 components are illustrated in cyan and magenta, respectively, with the absolute amplitude in black. The fringe-rate filter acts as 
@@ -95,9 +96,6 @@ an integration in time, increasing sensitivity but reducing the number of indepe
 \section{Error Estimation}
 
 \section{Bias}
-
-\section{Power Spectrum Limits}
-
 
 
 

@@ -1,6 +1,6 @@
 \contentsline {chapter}{List of Figures}{iv}{chapter*.2}
-\contentsline {chapter}{List of Tables}{vii}{chapter*.3}
-\contentsline {chapter}{Acknowledgments}{viii}{chapter*.4}
+\contentsline {chapter}{List of Tables}{ix}{chapter*.3}
+\contentsline {chapter}{Acknowledgments}{x}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Epoch of Reionization}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Cosmic History}{1}{subsection.1.1.1}
@@ -18,27 +18,35 @@
 \contentsline {subsection}{\numberline {1.3.2}The Hydrogen Epoch of Reionization Array}{17}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}Other Experiments and Status of Field}{19}{subsection.1.3.3}
 \contentsline {chapter}{\numberline {2}Power Spectrum Methods}{22}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction to Themes}{22}{section.2.1}
-\contentsline {section}{\numberline {2.2}Signal Loss Toy Model}{22}{section.2.2}
-\contentsline {section}{\numberline {2.3}Signal Loss Mathematical Framework}{22}{section.2.3}
-\contentsline {section}{\numberline {2.4}Error Estimation Toy Model}{22}{section.2.4}
-\contentsline {section}{\numberline {2.5}Bias Toy Model}{22}{section.2.5}
-\contentsline {chapter}{\numberline {3}PAPER-64}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview}{23}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Observations}{23}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Data Processing}{24}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Case Study Data}{25}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Signal Loss}{26}{section.3.2}
-\contentsline {section}{\numberline {3.3}Error Estimation}{26}{section.3.3}
-\contentsline {section}{\numberline {3.4}Bias}{26}{section.3.4}
-\contentsline {section}{\numberline {3.5}Power Spectrum Limits}{26}{section.3.5}
-\contentsline {chapter}{\numberline {4}PAPER-128}{28}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}Quality Assurance}{29}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Flagging Julian Dates}{30}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Flagging Antennas}{32}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Data Processing}{35}{section.4.3}
-\contentsline {section}{\numberline {4.4}Power Spectrum Limits}{37}{section.4.4}
-\contentsline {chapter}{\numberline {5}HERA}{39}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{40}{chapter.6}
-\contentsline {chapter}{Bibliography}{41}{chapter*.24}
+\contentsline {section}{\numberline {2.1}Power Spectrum Themes and Techniques}{22}{section.2.1}
+\contentsline {section}{\numberline {2.2}Signal Loss Toy Model}{25}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The Quadratic Estimator Method}{25}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Empirical Inverse Covariance Weighting}{28}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Fringe-Rate Filtering}{32}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Other Weighting Options}{36}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Signal Loss Mathematical Framework}{39}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}A Toy Model for Inverse Covariance Weighting}{40}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}A Toy Model for Signal Loss}{41}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Error Estimation Toy Model}{43}{section.2.4}
+\contentsline {section}{\numberline {2.5}Bias Toy Model}{46}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Foreground and Noise Bias}{47}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Jackknife Tests}{48}{subsection.2.5.2}
+\contentsline {chapter}{\numberline {3}PAPER-64 Case Study}{52}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{52}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Observations}{52}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Data Processing}{53}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Case Study Data}{54}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Signal Loss}{55}{section.3.2}
+\contentsline {section}{\numberline {3.3}Error Estimation}{55}{section.3.3}
+\contentsline {section}{\numberline {3.4}Bias}{55}{section.3.4}
+\contentsline {chapter}{\numberline {4}PAPER-64 Results}{57}{chapter.4}
+\contentsline {chapter}{\numberline {5}PAPER-128}{58}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview}{58}{section.5.1}
+\contentsline {section}{\numberline {5.2}Quality Assurance}{59}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Flagging Julian Dates}{60}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Flagging Antennas}{62}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Data Processing}{65}{section.5.3}
+\contentsline {section}{\numberline {5.4}Power Spectrum Limits}{67}{section.5.4}
+\contentsline {chapter}{\numberline {6}HERA}{70}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{71}{chapter.7}
+\contentsline {chapter}{Bibliography}{72}{chapter*.35}

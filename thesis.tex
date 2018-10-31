@@ -42,6 +42,44 @@
 \usepackage{pdflscape} % allows landscape-oriented figures with PDF page rotation
 \usepackage{aasmacros,amsmath,amssymb,graphicx,caption}
 \usepackage{mydeluxetable} % deluxetable customized to play well with ucthesis
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[figuresright]{rotating}
+\usepackage{ctable}
+\usepackage{comment}
+\usepackage{bm}
+\usepackage{xparse}
+
+%Math stuff from Danny
+\NewDocumentCommand{\evalat}{sO{\big}mm}{%
+  \IfBooleanTF{#1}
+   {\mleft. #3 \mright|_{#4}}
+   {#3#2|_{#4}}%
+}
+
+% Math Shortcuts from Adrian
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\s}{\mathbf{s}}
+\newcommand{\e}{\mathbf{e}}
+\newcommand{\p}{\mathbf{p}}
+\newcommand{\phat}{\widehat{\mathbf{p}}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\Chat}{\mathbf{\widehat{C}}}
+\newcommand{\F}{\mathbf{F}}
+\newcommand{\Fhat}{\mathbf{\widehat{F}}}
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\I}{\mathbf{I}}
+
+% Math shortcuts from James
+\newcommand{\invC}{\ensuremath{\C^{-1}}}
+\newcommand{\dC}[1]{\ensuremath{\C_{,#1}}}
+\DeclareMathOperator{\Tr}{tr}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\PDeriv}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+
+% Math shortcuts from Danny
+\newcommand{\Prob}{\mathbf{P}}
 
 
 \begin{document}
@@ -94,6 +132,7 @@ This thesis may be filled with new scientific methods, exciting astronomical ins
 \include{intro/intro}
 \include{methods_PS/methods_PS}
 \include{PSA64/PSA64}
+\include{PSA64_results/PSA64_results}
 \include{PSA128/PSA128}
 \include{HERA/HERA}
 \include{conclusion/conclusion}

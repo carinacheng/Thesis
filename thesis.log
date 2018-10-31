@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 OCT 2018 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2018 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -327,25 +327,267 @@ Package: mydeluxetable
 \pt@ncol=\count119
 \pt@page=\count120
 \pt@tmpcapwidth=\dimen134
-) (./thesis.aux (./setup.aux) (./intro/intro.aux)
-(./methods_PS/methods_PS.aux) (./PSA64/PSA64.aux) (./PSA128/PSA128.aux)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count121
+\rotFPtop=\skip58
+\rotFPbot=\skip59
+\rot@float@box=\box29
+\rot@mess@toks=\toks21
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ctable/ctable.sty
+Package: ctable 2015/10/17 v1.31 ctable package for flexible typesetting of tab
+le and figure floats using key/value directives
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count122
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
+)
+\XKV@depth=\count123
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen135
+\extrarowheight=\dimen136
+\NC@list=\toks24
+\extratabsurround=\skip60
+\backup@length=\skip61
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen137
+\TX@old@table=\dimen138
+\TX@old@col=\dimen139
+\TX@target=\dimen140
+\TX@delta=\dimen141
+\TX@cols=\count124
+\TX@ftn=\toks25
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen142
+\lightrulewidth=\dimen143
+\cmidrulewidth=\dimen144
+\belowrulesep=\dimen145
+\belowbottomsep=\dimen146
+\aboverulesep=\dimen147
+\abovetopsep=\dimen148
+\cmidrulesep=\dimen149
+\cmidrulekern=\dimen150
+\defaultaddspace=\dimen151
+\@cmidla=\count125
+\@cmidlb=\count126
+\@aboverulesep=\dimen152
+\@belowrulesep=\dimen153
+\@thisruleclass=\count127
+\@lastruleclass=\count128
+\@thisrulewidth=\dimen154
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/transparent.sty
+Package: transparent 2016/05/16 v1.1 Transparency via pdfTeX's color stack (HO)
+
+)
+\@CTframesep=\dimen155
+\@dfltCTframesep=\dimen156
+\@CTframerule=\dimen157
+\@dfltCTframerule=\dimen158
+\@CTwidth=\dimen159
+\@dfltCTwidth=\dimen160
+\@CTcaptionskip=\dimen161
+\@dfltCTcaptionskip=\dimen162
+\@CTmaxwidth=\dimen163
+\@dfltCTmaxwidth=\dimen164
+\@CTmincapwidth=\dimen165
+\@dfltCTmincapwidth=\dimen166
+\@CTfooterwidth=\dimen167
+\@dfltCTfooterwidth=\dimen168
+\@CTw=\dimen169
+\@CTfloatwidth=\dimen170
+\@CToldsep=\dimen171
+\@CToldrule=\dimen172
+\CT@t=\box30
+\@CTcurftwidth=\dimen173
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/05/13 L3 programming layer (loader) 
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/05/13 L3 programming layer (code)
+\c_max_int=\count129
+\l_tmpa_int=\count130
+\l_tmpb_int=\count131
+\g_tmpa_int=\count132
+\g_tmpb_int=\count133
+\g__prg_map_int=\count134
+\c_log_iow=\count135
+\l_iow_line_count_int=\count136
+\l__iow_line_target_int=\count137
+\l__iow_one_indent_int=\count138
+\l__iow_indent_int=\count139
+\c_zero_dim=\dimen174
+\c_max_dim=\dimen175
+\l_tmpa_dim=\dimen176
+\l_tmpb_dim=\dimen177
+\g_tmpa_dim=\dimen178
+\g_tmpb_dim=\dimen179
+\c_zero_skip=\skip62
+\c_max_skip=\skip63
+\l_tmpa_skip=\skip64
+\l_tmpb_skip=\skip65
+\g_tmpa_skip=\skip66
+\g_tmpb_skip=\skip67
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count140
+\c__fp_leading_shift_int=\count141
+\c__fp_middle_shift_int=\count142
+\c__fp_trailing_shift_int=\count143
+\c__fp_big_leading_shift_int=\count144
+\c__fp_big_middle_shift_int=\count145
+\c__fp_big_trailing_shift_int=\count146
+\c__fp_Bigg_leading_shift_int=\count147
+\c__fp_Bigg_middle_shift_int=\count148
+\c__fp_Bigg_trailing_shift_int=\count149
+\c__fp_rand_size_int=\count150
+\c__fp_rand_four_int=\count151
+\c__fp_rand_eight_int=\count152
+\l__sort_length_int=\count153
+\l__sort_min_int=\count154
+\l__sort_top_int=\count155
+\l__sort_max_int=\count156
+\l__sort_true_max_int=\count157
+\l__sort_block_int=\count158
+\l__sort_begin_int=\count159
+\l__sort_end_int=\count160
+\l__sort_A_int=\count161
+\l__sort_B_int=\count162
+\l__sort_C_int=\count163
+\c_empty_box=\box31
+\l_tmpa_box=\box32
+\l_tmpb_box=\box33
+\g_tmpa_box=\box34
+\g_tmpb_box=\box35
+\l__box_top_dim=\dimen180
+\l__box_bottom_dim=\dimen181
+\l__box_left_dim=\dimen182
+\l__box_right_dim=\dimen183
+\l__box_top_new_dim=\dimen184
+\l__box_bottom_new_dim=\dimen185
+\l__box_left_new_dim=\dimen186
+\l__box_right_new_dim=\dimen187
+\l__box_internal_box=\box36
+\l__coffin_internal_box=\box37
+\l__coffin_internal_dim=\dimen188
+\l__coffin_offset_x_dim=\dimen189
+\l__coffin_offset_y_dim=\dimen190
+\l__coffin_x_dim=\dimen191
+\l__coffin_y_dim=\dimen192
+\l__coffin_x_prime_dim=\dimen193
+\l__coffin_y_prime_dim=\dimen194
+\c_empty_coffin=\box38
+\l__coffin_aligned_coffin=\box39
+\l__coffin_aligned_internal_coffin=\box40
+\l_tmpa_coffin=\box41
+\l_tmpb_coffin=\box42
+\l__coffin_display_coffin=\box43
+\l__coffin_display_coord_coffin=\box44
+\l__coffin_display_pole_coffin=\box45
+\l__coffin_display_offset_dim=\dimen195
+\l__coffin_display_x_dim=\dimen196
+\l__coffin_display_y_dim=\dimen197
+\l__coffin_bounding_shift_dim=\dimen198
+\l__coffin_left_corner_dim=\dimen199
+\l__coffin_right_corner_dim=\dimen256
+\l__coffin_bottom_corner_dim=\dimen257
+\l__coffin_top_corner_dim=\dimen258
+\l__coffin_scaled_total_height_dim=\dimen259
+\l__coffin_scaled_width_dim=\dimen260
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count164
+\l__driver_tmp_box=\box46
+))
+Package: xparse 2017/05/13 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count165
+\g__xparse_grabber_int=\count166
+\l__xparse_m_args_int=\count167
+\l__xparse_mandatory_args_int=\count168
+\l__xparse_v_nesting_int=\count169
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \evalat with sig. 'sO{\big }mm' on line 58.
+.................................................
+
+(./thesis.aux (./setup.aux) (./intro/intro.aux) (./methods_PS/methods_PS.aux)
+(./PSA64/PSA64.aux) (./PSA64_results/PSA64_results.aux) (./PSA128/PSA128.aux)
 (./HERA/HERA.aux) (./conclusion/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -381,47 +623,38 @@ LaTeX Font Info:    ... okay on input line 47.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box29
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-Package hyperref Info: Link coloring ON on input line 47.
-
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring ON on input line 85.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count121
+\c@section@level=\count170
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (./thesis.out) (./thesis.out)
-\@outlinefile=\write3
-\openout3 = `thesis.out'.
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen135
-\scratchbox=\box30
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen136
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count171
+\scratchdimen=\dimen261
+\scratchbox=\box48
+\nofMPsegments=\count172
+\nofMParguments=\count173
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count174
+\MPscratchDim=\dimen262
+\MPnumerator=\count175
+\makeMPintoPDFobject=\count176
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -440,8 +673,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Option `pageanchor' set `false' on input line 49.
+Package hyperref Info: Option `pageanchor' set `false' on input line 87.
 \openout2 = `setup.aux'.
 
 
@@ -449,7 +683,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 49.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95827pt
-(hyperref)                removed on input line 52.
+(hyperref)                removed on input line 90.
 
 [1
 
@@ -457,7 +691,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [1]
-Package hyperref Info: Option `pageanchor' set `true' on input line 63.
+Package hyperref Info: Option `pageanchor' set `true' on input line 101.
  [1] (./thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
@@ -471,29 +705,40 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2
 
 ])
-\tf@toc=\write4
-\openout4 = `thesis.toc'.
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
 
  [3]
 (./thesis.lof [4
 
 ] [5]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 21.
+Overfull \hbox (0.32065pt too wide) in paragraph at lines 18--18
+ \T1/cmr/m/n/12 toy model sim-u-la-tion --- fore-grounds only (blue), EoR only 
+(red), and the weighted 
+ []
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+
+Overfull \hbox (0.32065pt too wide) in paragraph at lines 19--19
+ \T1/cmr/m/n/12 toy model sim-u-la-tion --- fore-grounds only (blue), EoR only 
+(red), and the weighted 
+ []
+
+[6]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 33.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-\tf@lof=\write5
-\openout5 = `thesis.lof'.
+\tf@lof=\write6
+\openout6 = `thesis.lof'.
 
- [6]
+ [7] [8]
 (./thesis.lot)
-\tf@lot=\write6
-\openout6 = `thesis.lot'.
+\tf@lot=\write7
+\openout7 = `thesis.lot'.
 
- [7
+ [9
 
-] [8
+] [10
 
 ]
 \openout2 = `intro/intro.aux'.
@@ -503,21 +748,21 @@ Chapter 1.
 [1
 
 
-] <plots/timeline_history.jpg, id=419, 899.0388pt x 324.2514pt>
+] <plots/timeline_history.jpg, id=557, 899.0388pt x 324.2514pt>
 File: plots/timeline_history.jpg Graphic file (type jpg)
 
 <use plots/timeline_history.jpg>
 Package pdftex.def Info: plots/timeline_history.jpg used on input line 18.
 (pdftex.def)             Requested size: 469.75502pt x 169.42311pt.
  [2 <./plots/timeline_history.jpg>] [3]
-[4] <plots/timeline_circle.pdf, id=477, 458.71375pt x 453.695pt>
+[4] <plots/timeline_circle.pdf, id=613, 458.71375pt x 453.695pt>
 File: plots/timeline_circle.pdf Graphic file (type pdf)
 
 <use plots/timeline_circle.pdf>
 Package pdftex.def Info: plots/timeline_circle.pdf used on input line 65.
 (pdftex.def)             Requested size: 234.8775pt x 232.30904pt.
 
-<plots/timeline_global.pdf, id=478, 1905.1175pt x 828.09375pt>
+<plots/timeline_global.pdf, id=614, 1905.1175pt x 828.09375pt>
 File: plots/timeline_global.pdf Graphic file (type pdf)
 
 <use plots/timeline_global.pdf>
@@ -548,7 +793,7 @@ Package epstopdf Info: Source file: <plots/PS_evolution.eps>
 verted-to.pdf plots/PS_evolution.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
- <plots/PS_evolution-eps-converted-to.pdf, id=683, 576.1525pt x 576.1525pt>
+ <plots/PS_evolution-eps-converted-to.pdf, id=819, 576.1525pt x 576.1525pt>
 File: plots/PS_evolution-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/PS_evolution-eps-converted-to.pdf>
@@ -556,119 +801,262 @@ Package pdftex.def Info: plots/PS_evolution-eps-converted-to.pdf used on input
 line 157.
 (pdftex.def)             Requested size: 211.38832pt x 211.38843pt.
  [10] [11 <./plots/PS_evolution-eps-converted-to.pdf>] [12] <plots/wedge.pdf, i
-d=741, 392.46625pt x 438.63875pt>
+d=878, 392.46625pt x 438.63875pt>
 File: plots/wedge.pdf Graphic file (type pdf)
 
 <use plots/wedge.pdf>
 Package pdftex.def Info: plots/wedge.pdf used on input line 204.
 (pdftex.def)             Requested size: 211.38832pt x 236.259pt.
  [13 <./plots/wedge.pdf>] [14]
-<plots/paper_dipole2.jpg, id=791, 1390.19376pt x 1183.42125pt>
+<plots/paper_dipole2.jpg, id=927, 1390.19376pt x 1183.42125pt>
 File: plots/paper_dipole2.jpg Graphic file (type jpg)
 
 <use plots/paper_dipole2.jpg>
 Package pdftex.def Info: plots/paper_dipole2.jpg used on input line 239.
 (pdftex.def)             Requested size: 234.8775pt x 199.93298pt.
  [15] [16 <./plots/paper_dipole2.jpg>]
-<plots/hera_dish.jpg, id=822, 4175.6pt x 1942.25626pt>
+<plots/hera_dish.jpg, id=958, 4175.6pt x 1942.25626pt>
 File: plots/hera_dish.jpg Graphic file (type jpg)
 
 <use plots/hera_dish.jpg>
 Package pdftex.def Info: plots/hera_dish.jpg used on input line 266.
 (pdftex.def)             Requested size: 469.75502pt x 218.47958pt.
 
-<plots/hera_array.pdf, id=826, 324.51598pt x 309.7134pt>
+<plots/hera_array.pdf, id=962, 324.51598pt x 309.7134pt>
 File: plots/hera_array.pdf Graphic file (type pdf)
 
 <use plots/hera_array.pdf>
 Package pdftex.def Info: plots/hera_array.pdf used on input line 275.
 (pdftex.def)             Requested size: 234.8775pt x 224.1702pt.
  [17] [18 <./plots/hera_dish.jpg> <./plots/hera_array.pdf>] [19] <plots/statusf
-ield.png, id=970, 682.2288pt x 296.7888pt>
+ield.png, id=1107, 701.5008pt x 363.2772pt>
 File: plots/statusfield.png Graphic file (type png)
 
 <use plots/statusfield.png>
 Package pdftex.def Info: plots/statusfield.png used on input line 294.
-(pdftex.def)             Requested size: 469.75502pt x 204.3588pt.
+(pdftex.def)             Requested size: 469.75502pt x 243.2725pt.
  [20 <./plots/statusfield.png>]) [21]
 \openout2 = `methods_PS/methods_PS.aux'.
 
 
 (./methods_PS/methods_PS.tex
 Chapter 2.
-) [22
+[22
 
 
 
-]
+] [23] [24] [25] [26] [27] [28]
+<plots/toy_sigloss1.pdf, id=1355, 608.28194pt x 346.42862pt>
+File: plots/toy_sigloss1.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss1.pdf>
+Package pdftex.def Info: plots/toy_sigloss1.pdf used on input line 234.
+(pdftex.def)             Requested size: 328.82707pt x 187.2801pt.
+ [29 <./plots/toy_sigloss1.pdf>]
+<plots/toy_sigloss12.pdf, id=1421, 591.69806pt x 215.79997pt>
+File: plots/toy_sigloss12.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss12.pdf>
+Package pdftex.def Info: plots/toy_sigloss12.pdf used on input line 248.
+(pdftex.def)             Requested size: 328.82707pt x 119.92845pt.
+
+<plots/toy_sigloss13.pdf, id=1423, 608.28194pt x 355.82309pt>
+File: plots/toy_sigloss13.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss13.pdf>
+Package pdftex.def Info: plots/toy_sigloss13.pdf used on input line 249.
+(pdftex.def)             Requested size: 328.82707pt x 192.35878pt.
+
+<plots/toy_sigloss3.pdf, id=1425, 412.19308pt x 290.41939pt>
+File: plots/toy_sigloss3.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss3.pdf>
+Package pdftex.def Info: plots/toy_sigloss3.pdf used on input line 257.
+(pdftex.def)             Requested size: 220.02737pt x 155.02pt.
+
+<plots/toy_sigloss4.pdf, id=1427, 412.19308pt x 290.41939pt>
+File: plots/toy_sigloss4.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss4.pdf>
+Package pdftex.def Info: plots/toy_sigloss4.pdf used on input line 258.
+(pdftex.def)             Requested size: 220.02737pt x 155.02pt.
+ [30 <./plots/toy_sigloss12.pdf> <./plots/toy_sigloss13.pdf>]
+
+LaTeX Warning: Reference `sec:siglossmethod' on page 31 undefined on input line
+ 311.
+
+[31 <./plots/toy_sigloss3.pdf> <./plots/toy_sigloss4.pdf>]
+
+LaTeX Warning: Reference `sigloss_appendix' on page 32 undefined on input line 
+353.
+
+
+LaTeX Warning: Reference `sec:siglossmethod' on page 32 undefined on input line
+ 353.
+
+[32] [33] <plots/toy_sigloss16.pdf, id=1729, 407.72327pt x 283.7068pt>
+File: plots/toy_sigloss16.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss16.pdf>
+Package pdftex.def Info: plots/toy_sigloss16.pdf used on input line 389.
+(pdftex.def)             Requested size: 258.36668pt x 179.77951pt.
+
+<plots/toy_sigloss17.pdf, id=1732, 406.1574pt x 277.5168pt>
+File: plots/toy_sigloss17.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss17.pdf>
+Package pdftex.def Info: plots/toy_sigloss17.pdf used on input line 396.
+(pdftex.def)             Requested size: 328.82707pt x 224.67726pt.
+
+<plots/toy_sigloss5.pdf, id=1735, 608.28194pt x 346.42862pt>
+File: plots/toy_sigloss5.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss5.pdf>
+Package pdftex.def Info: plots/toy_sigloss5.pdf used on input line 403.
+(pdftex.def)             Requested size: 328.82707pt x 187.2801pt.
+ [34 <./plots/toy_sigloss16.pdf>] [35 <./plots/toy_sigloss17.pdf> <./plots/toy_
+sigloss5.pdf>]
+<plots/toy_sigloss7.pdf, id=1862, 412.19308pt x 278.29753pt>
+File: plots/toy_sigloss7.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss7.pdf>
+Package pdftex.def Info: plots/toy_sigloss7.pdf used on input line 429.
+(pdftex.def)             Requested size: 328.82707pt x 222.01408pt.
+
+<plots/toy_sigloss10.pdf, id=1867, 412.19308pt x 290.41939pt>
+File: plots/toy_sigloss10.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss10.pdf>
+Package pdftex.def Info: plots/toy_sigloss10.pdf used on input line 458.
+(pdftex.def)             Requested size: 220.02737pt x 155.02pt.
+
+<plots/toy_sigloss8.pdf, id=1869, 412.19308pt x 290.41939pt>
+File: plots/toy_sigloss8.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss8.pdf>
+Package pdftex.def Info: plots/toy_sigloss8.pdf used on input line 459.
+(pdftex.def)             Requested size: 220.02737pt x 155.02pt.
+
+<plots/toy_sigloss9.pdf, id=1871, 412.19308pt x 290.41939pt>
+File: plots/toy_sigloss9.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss9.pdf>
+Package pdftex.def Info: plots/toy_sigloss9.pdf used on input line 460.
+(pdftex.def)             Requested size: 220.02737pt x 155.02pt.
+
+<plots/toy_sigloss11.pdf, id=1873, 412.19308pt x 290.41939pt>
+File: plots/toy_sigloss11.pdf Graphic file (type pdf)
+
+<use plots/toy_sigloss11.pdf>
+Package pdftex.def Info: plots/toy_sigloss11.pdf used on input line 461.
+(pdftex.def)             Requested size: 220.02737pt x 155.02pt.
+ [36] [37 <./plots/toy_sigloss7.pdf>] [38 <./plots/toy_sigloss10.pdf> <./plots/
+toy_sigloss8.pdf> <./plots/toy_sigloss9.pdf> <./plots/toy_sigloss11.pdf>]
+
+LaTeX Warning: Reference `sec:Weight' on page 39 undefined on input line 484.
+
+[39] [40] [41] [42] [43] [44]
+<plots/toy_error1.pdf, id=2190, 403.72235pt x 281.84203pt>
+File: plots/toy_error1.pdf Graphic file (type pdf)
+
+<use plots/toy_error1.pdf>
+Package pdftex.def Info: plots/toy_error1.pdf used on input line 683.
+(pdftex.def)             Requested size: 328.82707pt x 229.55515pt.
+ [45 <./plots/toy_error1.pdf>]
+
+LaTeX Warning: Reference `sec:Boot' on page 46 undefined on input line 715.
+
+[46]
+
+LaTeX Warning: Reference `sec:Bias' on page 47 undefined on input line 763.
+
+[47]
+
+LaTeX Warning: Reference `sec:Bias' on page 48 undefined on input line 788.
+
+[48] <plots/toy_bias1.pdf, id=2365, 408.17809pt x 278.29753pt>
+File: plots/toy_bias1.pdf Graphic file (type pdf)
+
+<use plots/toy_bias1.pdf>
+Package pdftex.def Info: plots/toy_bias1.pdf used on input line 838.
+(pdftex.def)             Requested size: 305.33789pt x 208.18758pt.
+
+<plots/toy_bias2.pdf, id=2366, 408.17809pt x 278.29753pt>
+File: plots/toy_bias2.pdf Graphic file (type pdf)
+
+<use plots/toy_bias2.pdf>
+Package pdftex.def Info: plots/toy_bias2.pdf used on input line 847.
+(pdftex.def)             Requested size: 305.33789pt x 208.18758pt.
+ [49] [50 <./plots/toy_bias1.pdf> <./plots/toy_bias2.pdf
+
+pdfTeX warning: pdflatex (file ./plots/toy_bias2.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `sec:Bias' on page 51 undefined on input line 872.
+
+) [51]
 \openout2 = `PSA64/PSA64.aux'.
 
  (./PSA64/PSA64.tex
+
+Package natbib Warning: Overwriting existing alias for citation ali_et_al2015 o
+n input line 1.
+
 Chapter 3.
-[23
+[52
 
 
 
-] <plots/ant_layout_aspect.pdf, id=1034, 578.16pt x 433.62pt>
+] <plots/ant_layout_aspect.pdf, id=2526, 568.5636pt x 218.67085pt>
 File: plots/ant_layout_aspect.pdf Graphic file (type pdf)
 
 <use plots/ant_layout_aspect.pdf>
 Package pdftex.def Info: plots/ant_layout_aspect.pdf used on input line 26.
-(pdftex.def)             Requested size: 469.75502pt x 144.25514pt.
- [24 <./plots/ant_layout_aspect.pdf>] [25]
-
-LaTeX Warning: Reference `sec:SiglossOverview' on page 26 undefined on input li
-ne 81.
-
-<plots/frp.pdf, id=1106, 498.216pt x 353.21333pt>
+(pdftex.def)             Requested size: 469.75502pt x 180.67593pt.
+ [53 <./plots/ant_layout_aspect.pdf>] [54]
+<plots/frp.pdf, id=2569, 498.216pt x 353.21333pt>
 File: plots/frp.pdf Graphic file (type pdf)
  <use plots/frp.pdf>
-Package pdftex.def Info: plots/frp.pdf used on input line 85.
-(pdftex.def)             Requested size: 352.31625pt x 249.78613pt.
-) [26]
-[27 <./plots/frp.pdf>]
+Package pdftex.def Info: plots/frp.pdf used on input line 86.
+(pdftex.def)             Requested size: 328.82707pt x 233.1323pt.
+) [55]
+[56 <./plots/frp.pdf>]
+\openout2 = `PSA64_results/PSA64_results.aux'.
+
+ (./PSA64_results/PSA64_results.tex
+Chapter 4.
+) [57
+
+
+
+]
 \openout2 = `PSA128/PSA128.aux'.
 
  (./PSA128/PSA128.tex
-Chapter 4.
-<plots/paper128_layout.png, id=1153, 949.6278pt x 516.0078pt>
+Chapter 5.
+<plots/paper128_layout.png, id=2620, 949.6278pt x 516.0078pt>
 File: plots/paper128_layout.png Graphic file (type png)
 
 <use plots/paper128_layout.png>
 Package pdftex.def Info: plots/paper128_layout.png used on input line 10.
 (pdftex.def)             Requested size: 450.96797pt x 245.04326pt.
- [28
+ [58
 
 
 
 ]
 
-Package caption Warning: \label without proper reference on input line 30.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:psa128_overview' on page 29 undefined on input 
-line 21.
-
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 23.
+               Default added (so using `tbp') on input line 21.
 
 
-Overfull \hbox (19.42616pt too wide) in paragraph at lines 24--31
-[][]
+Overfull \hbox (21.82613pt too wide) in paragraph at lines 22--28
+[][] 
  []
 
-[29 <./plots/paper128_layout.png>]
-
-Package caption Warning: \label without proper reference on input line 30.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:psa128_overview' on page 30 undefined on input 
-line 46.
-
-<plots/psa128_meanVij_S1E1_before.png, id=1168, 516.7305pt x 387.3672pt>
+[59 <./plots/paper128_layout.png>]
+<plots/psa128_meanVij_S1E1_before.png, id=2635, 516.7305pt x 387.3672pt>
 File: plots/psa128_meanVij_S1E1_before.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E1_before.png>
@@ -676,7 +1064,7 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E1_before.png used on input lin
 e 50.
 (pdftex.def)             Requested size: 219.32765pt x 164.41711pt.
 
-<plots/psa128_meanVij_S1E2_before.png, id=1170, 526.1256pt x 394.5942pt>
+<plots/psa128_meanVij_S1E2_before.png, id=2637, 526.1256pt x 394.5942pt>
 File: plots/psa128_meanVij_S1E2_before.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E2_before.png>
@@ -684,7 +1072,7 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E2_before.png used on input lin
 e 51.
 (pdftex.def)             Requested size: 219.22916pt x 164.41711pt.
 
-<plots/psa128_meanVij_S1E1_after.png, id=1172, 516.7305pt x 387.3672pt>
+<plots/psa128_meanVij_S1E1_after.png, id=2639, 516.7305pt x 387.3672pt>
 File: plots/psa128_meanVij_S1E1_after.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E1_after.png>
@@ -692,7 +1080,7 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E1_after.png used on input line
  52.
 (pdftex.def)             Requested size: 219.32765pt x 164.41711pt.
 
-<plots/psa128_meanVij_S1E2_after.png, id=1174, 526.1256pt x 394.5942pt>
+<plots/psa128_meanVij_S1E2_after.png, id=2641, 526.1256pt x 394.5942pt>
 File: plots/psa128_meanVij_S1E2_after.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E2_after.png>
@@ -700,46 +1088,37 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E2_after.png used on input line
  53.
 (pdftex.def)             Requested size: 219.22916pt x 164.41711pt.
 
-<plots/psa128_badday.png, id=1176, 425.6703pt x 280.4076pt>
+<plots/psa128_badday.png, id=2643, 425.6703pt x 280.4076pt>
 File: plots/psa128_badday.png Graphic file (type png)
 
 <use plots/psa128_badday.png>
 Package pdftex.def Info: plots/psa128_badday.png used on input line 60.
 (pdftex.def)             Requested size: 375.80544pt x 247.56383pt.
- [30] [31 <./plots/psa128_meanVij_S1E1_before.png> <./plots/psa128_meanVij_S1E2
+ [60] [61 <./plots/psa128_meanVij_S1E1_before.png> <./plots/psa128_meanVij_S1E2
 _before.png> <./plots/psa128_meanVij_S1E1_after.png> <./plots/psa128_meanVij_S1
-E2_after.png>] [32 <./plots/psa128_badday.png>]
-<plots/psa128_crosspol.png, id=1202, 714.7503pt x 424.9476pt>
+E2_after.png>] [62 <./plots/psa128_badday.png>]
+<plots/psa128_crosspol.png, id=2669, 714.7503pt x 424.9476pt>
 File: plots/psa128_crosspol.png Graphic file (type png)
 
 <use plots/psa128_crosspol.png>
 Package pdftex.def Info: plots/psa128_crosspol.png used on input line 86.
 (pdftex.def)             Requested size: 450.96797pt x 268.12689pt.
- [33 <./plots/psa128_crosspol.png>]
-<plots/psa128_badants_S1E1.png, id=1214, 570.2103pt x 280.4076pt>
+ [63 <./plots/psa128_crosspol.png>]
+<plots/psa128_badants_S1E1.png, id=2680, 570.2103pt x 280.4076pt>
 File: plots/psa128_badants_S1E1.png Graphic file (type png)
 
 <use plots/psa128_badants_S1E1.png>
 Package pdftex.def Info: plots/psa128_badants_S1E1.png used on input line 97.
 (pdftex.def)             Requested size: 334.34169pt x 164.41711pt.
 
-<plots/psa128_badants_S1E2.png, id=1216, 570.2103pt x 280.4076pt>
+<plots/psa128_badants_S1E2.png, id=2682, 570.2103pt x 280.4076pt>
 File: plots/psa128_badants_S1E2.png Graphic file (type png)
 
 <use plots/psa128_badants_S1E2.png>
 Package pdftex.def Info: plots/psa128_badants_S1E2.png used on input line 98.
 (pdftex.def)             Requested size: 334.34169pt x 164.41711pt.
-
-
-Package caption Warning: \label without proper reference on input line 30.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:psa128_overview' on page 34 undefined on input 
-line 103.
-
-[34 <./plots/psa128_badants_S1E1.png> <./plots/psa128_badants_S1E2.png>]
-<plots/S1E1xx_nobadants_firstcal.pdf, id=1230, 578.16pt x 433.62pt>
+ [64 <./plots/psa128_badants_S1E1.png> <./plots/psa128_badants_S1E2.png>]
+<plots/S1E1xx_nobadants_firstcal.pdf, id=2696, 578.16pt x 433.62pt>
 File: plots/S1E1xx_nobadants_firstcal.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_nobadants_firstcal.pdf>
@@ -747,7 +1126,7 @@ Package pdftex.def Info: plots/S1E1xx_nobadants_firstcal.pdf used on input line
  109.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
 
-<plots/S1E1xx_withbadants_firstcal.pdf, id=1232, 578.16pt x 433.62pt>
+<plots/S1E1xx_withbadants_firstcal.pdf, id=2698, 578.16pt x 433.62pt>
 File: plots/S1E1xx_withbadants_firstcal.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_withbadants_firstcal.pdf>
@@ -755,7 +1134,7 @@ Package pdftex.def Info: plots/S1E1xx_withbadants_firstcal.pdf used on input li
 ne 110.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
 
-<plots/S1E1xx_nobadants_chisq.pdf, id=1234, 578.16pt x 433.62pt>
+<plots/S1E1xx_nobadants_chisq.pdf, id=2700, 578.16pt x 433.62pt>
 File: plots/S1E1xx_nobadants_chisq.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_nobadants_chisq.pdf>
@@ -763,65 +1142,65 @@ Package pdftex.def Info: plots/S1E1xx_nobadants_chisq.pdf used on input line 11
 1.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
 
-<plots/S1E1xx_withbadants_chisq.pdf, id=1236, 578.16pt x 433.62pt>
+<plots/S1E1xx_withbadants_chisq.pdf, id=2702, 578.16pt x 433.62pt>
 File: plots/S1E1xx_withbadants_chisq.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_withbadants_chisq.pdf>
 Package pdftex.def Info: plots/S1E1xx_withbadants_chisq.pdf used on input line 
 112.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
- [35] [36 <./plots/S1E1xx_nobadants_firstcal.pdf> <./plots/S1E1xx_withbadants_f
+ [65] [66 <./plots/S1E1xx_nobadants_firstcal.pdf> <./plots/S1E1xx_withbadants_f
 irstcal.pdf> <./plots/S1E1xx_nobadants_chisq.pdf> <./plots/S1E1xx_withbadants_c
 hisq.pdf>]
 
-LaTeX Warning: Reference `sec:siglossmethod' on page 37 undefined on input line
+LaTeX Warning: Reference `sec:siglossmethod' on page 67 undefined on input line
  153.
 
 
-LaTeX Warning: Reference `sec:Weight' on page 37 undefined on input line 153.
+LaTeX Warning: Reference `sec:Weight' on page 67 undefined on input line 153.
 
 
-LaTeX Warning: Reference `eq:sense' on page 37 undefined on input line 155.
+LaTeX Warning: Reference `eq:sense' on page 67 undefined on input line 155.
 
-<plots/PSA128_S1E1_80_100.pdf, id=1450, 361.35pt x 433.62pt>
+[67] <plots/PSA128_S1E1_80_100.pdf, id=2928, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E1_80_100.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E1_80_100.pdf>
-Package pdftex.def Info: plots/PSA128_S1E1_80_100.pdf used on input line 160.
+Package pdftex.def Info: plots/PSA128_S1E1_80_100.pdf used on input line 162.
 (pdftex.def)             Requested size: 205.16112pt x 234.8775pt.
 
-<plots/PSA128_S1E2_80_100.pdf, id=1452, 361.35pt x 433.62pt>
+<plots/PSA128_S1E2_80_100.pdf, id=2930, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E2_80_100.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E2_80_100.pdf>
-Package pdftex.def Info: plots/PSA128_S1E2_80_100.pdf used on input line 161.
+Package pdftex.def Info: plots/PSA128_S1E2_80_100.pdf used on input line 163.
 (pdftex.def)             Requested size: 205.16112pt x 234.8775pt.
 
-<plots/PSA128_S1E1_110_130.pdf, id=1454, 361.35pt x 433.62pt>
+<plots/PSA128_S1E1_110_130.pdf, id=2932, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E1_110_130.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E1_110_130.pdf>
-Package pdftex.def Info: plots/PSA128_S1E1_110_130.pdf used on input line 162.
+Package pdftex.def Info: plots/PSA128_S1E1_110_130.pdf used on input line 164.
 (pdftex.def)             Requested size: 199.66391pt x 234.8775pt.
 
-<plots/PSA128_S1E2_110_130.pdf, id=1456, 361.35pt x 433.62pt>
+<plots/PSA128_S1E2_110_130.pdf, id=2934, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E2_110_130.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E2_110_130.pdf>
-Package pdftex.def Info: plots/PSA128_S1E2_110_130.pdf used on input line 163.
+Package pdftex.def Info: plots/PSA128_S1E2_110_130.pdf used on input line 165.
 (pdftex.def)             Requested size: 199.66391pt x 234.8775pt.
 
 
-LaTeX Warning: Float too large for page by 7.46735pt on input line 167.
+LaTeX Warning: Float too large for page by 7.46735pt on input line 169.
 
-) [37] [38 <./plots/PSA128_S1E1_80_100.pdf> <./plots/PSA128_S1E2_80_100.pdf> <.
+) [68] [69 <./plots/PSA128_S1E1_80_100.pdf> <./plots/PSA128_S1E2_80_100.pdf> <.
 /plots/PSA128_S1E1_110_130.pdf> <./plots/PSA128_S1E2_110_130.pdf>]
 \openout2 = `HERA/HERA.aux'.
 
 
 (./HERA/HERA.tex
-Chapter 5.
-) [39
+Chapter 6.
+) [70
 
 
 
@@ -829,72 +1208,79 @@ Chapter 5.
 \openout2 = `conclusion/conclusion.aux'.
 
  (./conclusion/conclusion.tex
-Chapter 6.
-) [40
+Chapter 7.
+) [71
 
 
 
-] (./thesis.bbl [41
-
-
-]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 311.
-
+] (./thesis.bbl
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 40.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [42])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
- [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+) [72
 
-(./thesis.aux (./setup.aux) (./intro/intro.aux) (./methods_PS/methods_PS.aux)
-(./PSA64/PSA64.aux) (./PSA128/PSA128.aux) (./HERA/HERA.aux)
+
+] [73]
+[74])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+ [75]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+ (./thesis.aux (./setup.aux) (./intro/intro.aux)
+(./methods_PS/methods_PS.aux) (./PSA64/PSA64.aux)
+(./PSA64_results/PSA64_results.aux) (./PSA128/PSA128.aux) (./HERA/HERA.aux)
 (./conclusion/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AC4C14358A8997613275676AE66E2563;2864.
+(rerunfilecheck)             Checksum: EFD1DC3DC1AF420D83C39C327E0CFAAB;3528.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 9248 strings out of 492995
- 138787 string characters out of 6132704
- 257696 words of memory out of 5000000
- 12381 multiletter control sequences out of 15000+600000
- 23274 words of font info for 60 fonts, out of 8000000 for 9000
+ 18490 strings out of 492995
+ 316630 string characters out of 6132704
+ 439871 words of memory out of 5000000
+ 21377 multiletter control sequences out of 15000+600000
+ 32501 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,14n,45p,1668b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,14n,79p,10353b,616s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/cm-super/sftt1200.pfb>
-Output written on thesis.pdf (54 pages, 9283089 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/cm-super/sftt1200.pfb>
+Output written on thesis.pdf (88 pages, 10617882 bytes).
 PDF statistics:
- 1924 PDF objects out of 2073 (max. 8388607)
- 1333 compressed objects within 14 object streams
- 215 named destinations out of 1000 (max. 500000)
- 577 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3501 PDF objects out of 3580 (max. 8388607)
+ 2262 compressed objects within 23 object streams
+ 353 named destinations out of 1000 (max. 500000)
+ 781 words of extra memory for PDF output out of 10000 (max. 10000000)
 

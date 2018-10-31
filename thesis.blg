@@ -6,49 +6,50 @@ A level-1 auxiliary file: setup.aux
 A level-1 auxiliary file: intro/intro.aux
 A level-1 auxiliary file: methods_PS/methods_PS.aux
 A level-1 auxiliary file: PSA64/PSA64.aux
+A level-1 auxiliary file: PSA64_results/PSA64_results.aux
 A level-1 auxiliary file: PSA128/PSA128.aux
 A level-1 auxiliary file: HERA/HERA.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 Database file #1: thesis.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 83 entries,
+You've used 130 entries,
             3201 wiz_defined-function locations,
-            1243 strings with 39968 characters,
-and the built_in function-call counts, 53889 in all, are:
-= -- 3635
-> -- 5157
-< -- 20
-+ -- 1898
-- -- 1822
-* -- 5310
-:= -- 10055
-add.period$ -- 83
-call.type$ -- 83
-change.case$ -- 518
-chr.to.int$ -- 81
-cite$ -- 83
-duplicate$ -- 2321
-empty$ -- 2906
-format.name$ -- 1919
-if$ -- 10465
-int.to.chr$ -- 3
+            1554 strings with 62580 characters,
+and the built_in function-call counts, 87267 in all, are:
+= -- 5673
+> -- 8745
+< -- 34
++ -- 3204
+- -- 3064
+* -- 8775
+:= -- 16428
+add.period$ -- 130
+call.type$ -- 130
+change.case$ -- 798
+chr.to.int$ -- 125
+cite$ -- 130
+duplicate$ -- 3651
+empty$ -- 4535
+format.name$ -- 3226
+if$ -- 16817
+int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 80
-newline$ -- 253
-num.names$ -- 334
-pop$ -- 833
+missing$ -- 127
+newline$ -- 394
+num.names$ -- 522
+pop$ -- 1282
 preamble$ -- 1
-purify$ -- 518
+purify$ -- 798
 quote$ -- 0
-skip$ -- 1377
+skip$ -- 2159
 stack$ -- 0
-substring$ -- 2107
-swap$ -- 83
+substring$ -- 3337
+swap$ -- 134
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 738
+type$ -- 1158
 warning$ -- 0
-while$ -- 370
+while$ -- 578
 width$ -- 0
-write$ -- 832
+write$ -- 1302
