@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2018 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 NOV 2018 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,8 +570,12 @@ Package: xparse 2017/05/13 L3 Experimental document command parser
 .................................................
 
 (./thesis.aux (./setup.aux) (./intro/intro.aux) (./methods_PS/methods_PS.aux)
-(./PSA64/PSA64.aux) (./PSA64_results/PSA64_results.aux) (./PSA128/PSA128.aux)
-(./HERA/HERA.aux) (./conclusion/conclusion.aux))
+(./PSA64/PSA64.aux
+
+LaTeX Warning: Label `sec:Error' multiply defined.
+
+) (./PSA64_results/PSA64_results.aux) (./PSA128/PSA128.aux) (./HERA/HERA.aux)
+(./conclusion/conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
@@ -723,22 +727,23 @@ Overfull \hbox (0.32065pt too wide) in paragraph at lines 19--19
 (red), and the weighted 
  []
 
-[6]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 33.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+[6] [7] [8] [9] [10]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 44.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [7] [8]
+ [11] [12]
 (./thesis.lot)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [9
+ [13
 
-] [10
+] [14
 
 ]
 \openout2 = `intro/intro.aux'.
@@ -748,21 +753,21 @@ Chapter 1.
 [1
 
 
-] <plots/timeline_history.jpg, id=557, 899.0388pt x 324.2514pt>
+] <plots/timeline_history.jpg, id=798, 899.0388pt x 324.2514pt>
 File: plots/timeline_history.jpg Graphic file (type jpg)
 
 <use plots/timeline_history.jpg>
 Package pdftex.def Info: plots/timeline_history.jpg used on input line 18.
 (pdftex.def)             Requested size: 469.75502pt x 169.42311pt.
  [2 <./plots/timeline_history.jpg>] [3]
-[4] <plots/timeline_circle.pdf, id=613, 458.71375pt x 453.695pt>
+[4] <plots/timeline_circle.pdf, id=855, 458.71375pt x 453.695pt>
 File: plots/timeline_circle.pdf Graphic file (type pdf)
 
 <use plots/timeline_circle.pdf>
 Package pdftex.def Info: plots/timeline_circle.pdf used on input line 65.
 (pdftex.def)             Requested size: 234.8775pt x 232.30904pt.
 
-<plots/timeline_global.pdf, id=614, 1905.1175pt x 828.09375pt>
+<plots/timeline_global.pdf, id=856, 1905.1175pt x 828.09375pt>
 File: plots/timeline_global.pdf Graphic file (type pdf)
 
 <use plots/timeline_global.pdf>
@@ -793,43 +798,44 @@ Package epstopdf Info: Source file: <plots/PS_evolution.eps>
 verted-to.pdf plots/PS_evolution.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
- <plots/PS_evolution-eps-converted-to.pdf, id=819, 576.1525pt x 576.1525pt>
+
+<plots/PS_evolution-eps-converted-to.pdf, id=1060, 576.1525pt x 576.1525pt>
 File: plots/PS_evolution-eps-converted-to.pdf Graphic file (type pdf)
 
 <use plots/PS_evolution-eps-converted-to.pdf>
 Package pdftex.def Info: plots/PS_evolution-eps-converted-to.pdf used on input 
 line 157.
 (pdftex.def)             Requested size: 211.38832pt x 211.38843pt.
- [10] [11 <./plots/PS_evolution-eps-converted-to.pdf>] [12] <plots/wedge.pdf, i
-d=878, 392.46625pt x 438.63875pt>
+ [10] [11 <./plots/PS_evolution-eps-converted-to.pdf>] [12]
+<plots/wedge.pdf, id=1118, 392.46625pt x 438.63875pt>
 File: plots/wedge.pdf Graphic file (type pdf)
-
-<use plots/wedge.pdf>
+ <use plots/wedge.pdf>
 Package pdftex.def Info: plots/wedge.pdf used on input line 204.
 (pdftex.def)             Requested size: 211.38832pt x 236.259pt.
- [13 <./plots/wedge.pdf>] [14]
-<plots/paper_dipole2.jpg, id=927, 1390.19376pt x 1183.42125pt>
+
+[13 <./plots/wedge.pdf>] [14]
+<plots/paper_dipole2.jpg, id=1168, 1390.19376pt x 1183.42125pt>
 File: plots/paper_dipole2.jpg Graphic file (type jpg)
 
 <use plots/paper_dipole2.jpg>
 Package pdftex.def Info: plots/paper_dipole2.jpg used on input line 239.
 (pdftex.def)             Requested size: 234.8775pt x 199.93298pt.
  [15] [16 <./plots/paper_dipole2.jpg>]
-<plots/hera_dish.jpg, id=958, 4175.6pt x 1942.25626pt>
+<plots/hera_dish.jpg, id=1198, 4175.6pt x 1942.25626pt>
 File: plots/hera_dish.jpg Graphic file (type jpg)
 
 <use plots/hera_dish.jpg>
 Package pdftex.def Info: plots/hera_dish.jpg used on input line 266.
 (pdftex.def)             Requested size: 469.75502pt x 218.47958pt.
 
-<plots/hera_array.pdf, id=962, 324.51598pt x 309.7134pt>
+<plots/hera_array.pdf, id=1202, 324.51598pt x 309.7134pt>
 File: plots/hera_array.pdf Graphic file (type pdf)
 
 <use plots/hera_array.pdf>
 Package pdftex.def Info: plots/hera_array.pdf used on input line 275.
 (pdftex.def)             Requested size: 234.8775pt x 224.1702pt.
  [17] [18 <./plots/hera_dish.jpg> <./plots/hera_array.pdf>] [19] <plots/statusf
-ield.png, id=1107, 701.5008pt x 363.2772pt>
+ield.png, id=1346, 701.5008pt x 363.2772pt>
 File: plots/statusfield.png Graphic file (type png)
 
 <use plots/statusfield.png>
@@ -846,69 +852,57 @@ Chapter 2.
 
 
 ] [23] [24] [25] [26] [27] [28]
-<plots/toy_sigloss1.pdf, id=1355, 608.28194pt x 346.42862pt>
+<plots/toy_sigloss1.pdf, id=1596, 608.28194pt x 346.42862pt>
 File: plots/toy_sigloss1.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss1.pdf>
 Package pdftex.def Info: plots/toy_sigloss1.pdf used on input line 234.
 (pdftex.def)             Requested size: 328.82707pt x 187.2801pt.
  [29 <./plots/toy_sigloss1.pdf>]
-<plots/toy_sigloss12.pdf, id=1421, 591.69806pt x 215.79997pt>
+<plots/toy_sigloss12.pdf, id=1662, 591.69806pt x 215.79997pt>
 File: plots/toy_sigloss12.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss12.pdf>
 Package pdftex.def Info: plots/toy_sigloss12.pdf used on input line 248.
 (pdftex.def)             Requested size: 328.82707pt x 119.92845pt.
 
-<plots/toy_sigloss13.pdf, id=1423, 608.28194pt x 355.82309pt>
+<plots/toy_sigloss13.pdf, id=1664, 608.28194pt x 355.82309pt>
 File: plots/toy_sigloss13.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss13.pdf>
 Package pdftex.def Info: plots/toy_sigloss13.pdf used on input line 249.
 (pdftex.def)             Requested size: 328.82707pt x 192.35878pt.
 
-<plots/toy_sigloss3.pdf, id=1425, 412.19308pt x 290.41939pt>
+<plots/toy_sigloss3.pdf, id=1666, 412.19308pt x 290.41939pt>
 File: plots/toy_sigloss3.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss3.pdf>
 Package pdftex.def Info: plots/toy_sigloss3.pdf used on input line 257.
 (pdftex.def)             Requested size: 220.02737pt x 155.02pt.
 
-<plots/toy_sigloss4.pdf, id=1427, 412.19308pt x 290.41939pt>
+<plots/toy_sigloss4.pdf, id=1668, 412.19308pt x 290.41939pt>
 File: plots/toy_sigloss4.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss4.pdf>
 Package pdftex.def Info: plots/toy_sigloss4.pdf used on input line 258.
 (pdftex.def)             Requested size: 220.02737pt x 155.02pt.
- [30 <./plots/toy_sigloss12.pdf> <./plots/toy_sigloss13.pdf>]
-
-LaTeX Warning: Reference `sec:siglossmethod' on page 31 undefined on input line
- 311.
-
-[31 <./plots/toy_sigloss3.pdf> <./plots/toy_sigloss4.pdf>]
-
-LaTeX Warning: Reference `sigloss_appendix' on page 32 undefined on input line 
-353.
-
-
-LaTeX Warning: Reference `sec:siglossmethod' on page 32 undefined on input line
- 353.
-
-[32] [33] <plots/toy_sigloss16.pdf, id=1729, 407.72327pt x 283.7068pt>
+ [30 <./plots/toy_sigloss12.pdf> <./plots/toy_sigloss13.pdf>] [31 <./plots/toy_
+sigloss3.pdf> <./plots/toy_sigloss4.pdf>] [32]
+[33] <plots/toy_sigloss16.pdf, id=1973, 407.72327pt x 283.7068pt>
 File: plots/toy_sigloss16.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss16.pdf>
 Package pdftex.def Info: plots/toy_sigloss16.pdf used on input line 389.
 (pdftex.def)             Requested size: 258.36668pt x 179.77951pt.
 
-<plots/toy_sigloss17.pdf, id=1732, 406.1574pt x 277.5168pt>
+<plots/toy_sigloss17.pdf, id=1976, 406.1574pt x 277.5168pt>
 File: plots/toy_sigloss17.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss17.pdf>
 Package pdftex.def Info: plots/toy_sigloss17.pdf used on input line 396.
 (pdftex.def)             Requested size: 328.82707pt x 224.67726pt.
 
-<plots/toy_sigloss5.pdf, id=1735, 608.28194pt x 346.42862pt>
+<plots/toy_sigloss5.pdf, id=1979, 608.28194pt x 346.42862pt>
 File: plots/toy_sigloss5.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss5.pdf>
@@ -916,86 +910,68 @@ Package pdftex.def Info: plots/toy_sigloss5.pdf used on input line 403.
 (pdftex.def)             Requested size: 328.82707pt x 187.2801pt.
  [34 <./plots/toy_sigloss16.pdf>] [35 <./plots/toy_sigloss17.pdf> <./plots/toy_
 sigloss5.pdf>]
-<plots/toy_sigloss7.pdf, id=1862, 412.19308pt x 278.29753pt>
+<plots/toy_sigloss7.pdf, id=2106, 412.19308pt x 278.29753pt>
 File: plots/toy_sigloss7.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss7.pdf>
 Package pdftex.def Info: plots/toy_sigloss7.pdf used on input line 429.
 (pdftex.def)             Requested size: 328.82707pt x 222.01408pt.
 
-<plots/toy_sigloss10.pdf, id=1867, 412.19308pt x 290.41939pt>
+<plots/toy_sigloss10.pdf, id=2111, 412.19308pt x 290.41939pt>
 File: plots/toy_sigloss10.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss10.pdf>
 Package pdftex.def Info: plots/toy_sigloss10.pdf used on input line 458.
 (pdftex.def)             Requested size: 220.02737pt x 155.02pt.
 
-<plots/toy_sigloss8.pdf, id=1869, 412.19308pt x 290.41939pt>
+<plots/toy_sigloss8.pdf, id=2113, 412.19308pt x 290.41939pt>
 File: plots/toy_sigloss8.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss8.pdf>
 Package pdftex.def Info: plots/toy_sigloss8.pdf used on input line 459.
 (pdftex.def)             Requested size: 220.02737pt x 155.02pt.
 
-<plots/toy_sigloss9.pdf, id=1871, 412.19308pt x 290.41939pt>
+<plots/toy_sigloss9.pdf, id=2115, 412.19308pt x 290.41939pt>
 File: plots/toy_sigloss9.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss9.pdf>
 Package pdftex.def Info: plots/toy_sigloss9.pdf used on input line 460.
 (pdftex.def)             Requested size: 220.02737pt x 155.02pt.
 
-<plots/toy_sigloss11.pdf, id=1873, 412.19308pt x 290.41939pt>
+<plots/toy_sigloss11.pdf, id=2117, 412.19308pt x 290.41939pt>
 File: plots/toy_sigloss11.pdf Graphic file (type pdf)
 
 <use plots/toy_sigloss11.pdf>
 Package pdftex.def Info: plots/toy_sigloss11.pdf used on input line 461.
 (pdftex.def)             Requested size: 220.02737pt x 155.02pt.
  [36] [37 <./plots/toy_sigloss7.pdf>] [38 <./plots/toy_sigloss10.pdf> <./plots/
-toy_sigloss8.pdf> <./plots/toy_sigloss9.pdf> <./plots/toy_sigloss11.pdf>]
-
-LaTeX Warning: Reference `sec:Weight' on page 39 undefined on input line 484.
-
-[39] [40] [41] [42] [43] [44]
-<plots/toy_error1.pdf, id=2190, 403.72235pt x 281.84203pt>
+toy_sigloss8.pdf> <./plots/toy_sigloss9.pdf> <./plots/toy_sigloss11.pdf>] [39] 
+[40] [41] [42] [43] [44]
+<plots/toy_error1.pdf, id=2435, 403.72235pt x 281.84203pt>
 File: plots/toy_error1.pdf Graphic file (type pdf)
 
 <use plots/toy_error1.pdf>
-Package pdftex.def Info: plots/toy_error1.pdf used on input line 683.
+Package pdftex.def Info: plots/toy_error1.pdf used on input line 684.
 (pdftex.def)             Requested size: 328.82707pt x 229.55515pt.
- [45 <./plots/toy_error1.pdf>]
-
-LaTeX Warning: Reference `sec:Boot' on page 46 undefined on input line 715.
-
-[46]
-
-LaTeX Warning: Reference `sec:Bias' on page 47 undefined on input line 763.
-
-[47]
-
-LaTeX Warning: Reference `sec:Bias' on page 48 undefined on input line 788.
-
-[48] <plots/toy_bias1.pdf, id=2365, 408.17809pt x 278.29753pt>
+ [45 <./plots/toy_error1.pdf>] [46] [47] [48]
+<plots/toy_bias1.pdf, id=2612, 408.17809pt x 278.29753pt>
 File: plots/toy_bias1.pdf Graphic file (type pdf)
 
 <use plots/toy_bias1.pdf>
-Package pdftex.def Info: plots/toy_bias1.pdf used on input line 838.
+Package pdftex.def Info: plots/toy_bias1.pdf used on input line 839.
 (pdftex.def)             Requested size: 305.33789pt x 208.18758pt.
 
-<plots/toy_bias2.pdf, id=2366, 408.17809pt x 278.29753pt>
+<plots/toy_bias2.pdf, id=2613, 408.17809pt x 278.29753pt>
 File: plots/toy_bias2.pdf Graphic file (type pdf)
 
 <use plots/toy_bias2.pdf>
-Package pdftex.def Info: plots/toy_bias2.pdf used on input line 847.
+Package pdftex.def Info: plots/toy_bias2.pdf used on input line 848.
 (pdftex.def)             Requested size: 305.33789pt x 208.18758pt.
  [49] [50 <./plots/toy_bias1.pdf> <./plots/toy_bias2.pdf
 
 pdfTeX warning: pdflatex (file ./plots/toy_bias2.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
->]
-
-LaTeX Warning: Reference `sec:Bias' on page 51 undefined on input line 872.
-
-) [51]
+>]) [51]
 \openout2 = `PSA64/PSA64.aux'.
 
  (./PSA64/PSA64.tex
@@ -1008,25 +984,163 @@ Chapter 3.
 
 
 
-] <plots/ant_layout_aspect.pdf, id=2526, 568.5636pt x 218.67085pt>
+] <plots/ant_layout_aspect.pdf, id=2775, 568.5636pt x 218.67085pt>
 File: plots/ant_layout_aspect.pdf Graphic file (type pdf)
 
 <use plots/ant_layout_aspect.pdf>
 Package pdftex.def Info: plots/ant_layout_aspect.pdf used on input line 26.
 (pdftex.def)             Requested size: 469.75502pt x 180.67593pt.
  [53 <./plots/ant_layout_aspect.pdf>] [54]
-<plots/frp.pdf, id=2569, 498.216pt x 353.21333pt>
+<plots/frp.pdf, id=2818, 498.216pt x 353.21333pt>
 File: plots/frp.pdf Graphic file (type pdf)
  <use plots/frp.pdf>
 Package pdftex.def Info: plots/frp.pdf used on input line 86.
-(pdftex.def)             Requested size: 328.82707pt x 233.1323pt.
-) [55]
-[56 <./plots/frp.pdf>]
+(pdftex.def)             Requested size: 281.85587pt x 199.82999pt.
+ [55]
+[56 <./plots/frp.pdf>] [57] [58]
+<plots/sigloss_terms.pdf, id=2902, 1011.78pt x 578.16pt>
+File: plots/sigloss_terms.pdf Graphic file (type pdf)
+
+<use plots/sigloss_terms.pdf>
+Package pdftex.def Info: plots/sigloss_terms.pdf used on input line 173.
+(pdftex.def)             Requested size: 469.75502pt x 268.4358pt.
+ [59] [60 <./plots/sigloss_terms.pdf>] [61]
+Overfull \hbox (1.29883pt too wide) in paragraph at lines 252--253
+[]\T1/cmr/m/n/12 Since, for a sin-gle in-jec-tion am-pli-tude, our boot-strappe
+d $[]$ val-ues are well-approximated
+ []
+
+<plots/jeffrey_fits.pdf, id=3027, 712.62593pt x 269.77654pt>
+File: plots/jeffrey_fits.pdf Graphic file (type pdf)
+
+<use plots/jeffrey_fits.pdf>
+Package pdftex.def Info: plots/jeffrey_fits.pdf used on input line 277.
+(pdftex.def)             Requested size: 469.75502pt x 177.83899pt.
+
+<plots/jeffrey_prior.pdf, id=3033, 385.0541pt x 267.8211pt>
+File: plots/jeffrey_prior.pdf Graphic file (type pdf)
+
+<use plots/jeffrey_prior.pdf>
+Package pdftex.def Info: plots/jeffrey_prior.pdf used on input line 286.
+(pdftex.def)             Requested size: 284.52756pt x 197.91069pt.
+ [62] [63 <./plots/jeffrey_fits.pdf> <./plots/jeffrey_prior.pdf
+
+pdfTeX warning: pdflatex (file ./plots/jeffrey_prior.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] <plots/sigloss_transfercurve_posneg.pdf, id=3162, 867.24pt x 433.62pt>
+File: plots/sigloss_transfercurve_posneg.pdf Graphic file (type pdf)
+
+<use plots/sigloss_transfercurve_posneg.pdf>
+Package pdftex.def Info: plots/sigloss_transfercurve_posneg.pdf used on input l
+ine 299.
+(pdftex.def)             Requested size: 469.75502pt x 234.87912pt.
+
+<plots/ps1_data.pdf, id=3170, 361.35pt x 433.62pt>
+File: plots/ps1_data.pdf Graphic file (type pdf)
+ <use plots/ps1_data.pdf>
+Package pdftex.def Info: plots/ps1_data.pdf used on input line 312.
+(pdftex.def)             Requested size: 211.38832pt x 253.66338pt.
+
+<plots/ps2_data.pdf, id=3171, 361.35pt x 433.62pt>
+File: plots/ps2_data.pdf Graphic file (type pdf)
+ <use plots/ps2_data.pdf>
+Package pdftex.def Info: plots/ps2_data.pdf used on input line 313.
+(pdftex.def)             Requested size: 211.38832pt x 253.66338pt.
+
+[64] [65 <./plots/sigloss_transfercurve_posneg.pdf>] [66 <./plots/ps1_data.pdf>
+ <./plots/ps2_data.pdf
+
+pdfTeX warning: pdflatex (file ./plots/ps2_data.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>] <plots/sigloss_modeloop_2panel.pdf, id=3424, 578.16pt x 609.77812pt>
+File: plots/sigloss_modeloop_2panel.pdf Graphic file (type pdf)
+
+<use plots/sigloss_modeloop_2panel.pdf>
+Package pdftex.def Info: plots/sigloss_modeloop_2panel.pdf used on input line 3
+43.
+(pdftex.def)             Requested size: 328.82707pt x 346.80487pt.
+ [67] [68 <./plots/sigloss_modeloop_2panel.pdf>] <plots/ps1_data_add.pdf, id=35
+34, 361.35pt x 433.62pt>
+File: plots/ps1_data_add.pdf Graphic file (type pdf)
+
+<use plots/ps1_data_add.pdf>
+Package pdftex.def Info: plots/ps1_data_add.pdf used on input line 367.
+(pdftex.def)             Requested size: 211.38832pt x 253.66338pt.
+
+<plots/ps2_data_add.pdf, id=3535, 361.35pt x 433.62pt>
+File: plots/ps2_data_add.pdf Graphic file (type pdf)
+
+<use plots/ps2_data_add.pdf>
+Package pdftex.def Info: plots/ps2_data_add.pdf used on input line 368.
+(pdftex.def)             Requested size: 211.38832pt x 253.66338pt.
+ [69] [70 <./plots/ps1_data_add.pdf> <./plots/ps2_data_add.pdf
+
+pdfTeX warning: pdflatex (file ./plots/ps2_data_add.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>] [71] [72] <plots/noise_errors.pdf, id=3688, 578.16pt x 433.62pt>
+File: plots/noise_errors.pdf Graphic file (type pdf)
+
+<use plots/noise_errors.pdf>
+Package pdftex.def Info: plots/noise_errors.pdf used on input line 447.
+(pdftex.def)             Requested size: 375.80544pt x 284.72055pt.
+ [73] [74 <./plots/noise_errors.pdf>] [75] [76]
+<plots/sense_check.pdf, id=3811, 299.71976pt x 347.88719pt>
+File: plots/sense_check.pdf Graphic file (type pdf)
+
+<use plots/sense_check.pdf>
+Package pdftex.def Info: plots/sense_check.pdf used on input line 531.
+(pdftex.def)             Requested size: 258.36668pt x 299.88846pt.
+
+<plots/ps1_noise_add.pdf, id=3824, 361.35pt x 433.62pt>
+File: plots/ps1_noise_add.pdf Graphic file (type pdf)
+
+<use plots/ps1_noise_add.pdf>
+Package pdftex.def Info: plots/ps1_noise_add.pdf used on input line 558.
+(pdftex.def)             Requested size: 211.38832pt x 253.66338pt.
+
+<plots/ps2_noise_add.pdf, id=3825, 361.35pt x 433.62pt>
+File: plots/ps2_noise_add.pdf Graphic file (type pdf)
+
+<use plots/ps2_noise_add.pdf>
+Package pdftex.def Info: plots/ps2_noise_add.pdf used on input line 559.
+(pdftex.def)             Requested size: 211.38832pt x 253.66338pt.
+ [77] [78 <./plots/sense_check.pdf>] [79 <./plots/ps1_noise_add.pdf> <./plots/p
+s2_noise_add.pdf
+
+pdfTeX warning: pdflatex (file ./plots/ps2_noise_add.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] [80] <plots/null_bls.pdf, id=4045, 578.16pt x 433.62pt>
+File: plots/null_bls.pdf Graphic file (type pdf)
+
+<use plots/null_bls.pdf>
+Package pdftex.def Info: plots/null_bls.pdf used on input line 647.
+(pdftex.def)             Requested size: 220.78543pt x 165.58452pt.
+ <plots/null_lsts.pdf, id=4046, 578.16pt x 433.62pt>
+File: plots/null_lsts.pdf Graphic file (type pdf)
+
+<use plots/null_lsts.pdf>
+Package pdftex.def Info: plots/null_lsts.pdf used on input line 648.
+(pdftex.def)             Requested size: 220.78543pt x 165.58452pt.
+ <plots/null_eo.pdf, id=4047, 578.16pt x 433.62pt>
+File: plots/null_eo.pdf Graphic file (type pdf)
+
+<use plots/null_eo.pdf>
+Package pdftex.def Info: plots/null_eo.pdf used on input line 649.
+(pdftex.def)             Requested size: 220.78543pt x 165.58452pt.
+ [81] [82 <./plots/null_bls.pdf> <./plots/null_lsts.pdf
+
+pdfTeX warning: pdflatex (file ./plots/null_lsts.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./plots/null_eo.pdf
+
+pdfTeX warning: pdflatex (file ./plots/null_eo.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>] [83] [84]) [85]
 \openout2 = `PSA64_results/PSA64_results.aux'.
 
  (./PSA64_results/PSA64_results.tex
 Chapter 4.
-) [57
+) [86
 
 
 
@@ -1035,13 +1149,13 @@ Chapter 4.
 
  (./PSA128/PSA128.tex
 Chapter 5.
-<plots/paper128_layout.png, id=2620, 949.6278pt x 516.0078pt>
+<plots/paper128_layout.png, id=4289, 949.6278pt x 516.0078pt>
 File: plots/paper128_layout.png Graphic file (type png)
 
 <use plots/paper128_layout.png>
 Package pdftex.def Info: plots/paper128_layout.png used on input line 10.
 (pdftex.def)             Requested size: 450.96797pt x 245.04326pt.
- [58
+ [87
 
 
 
@@ -1055,8 +1169,8 @@ Overfull \hbox (21.82613pt too wide) in paragraph at lines 22--28
 [][] 
  []
 
-[59 <./plots/paper128_layout.png>]
-<plots/psa128_meanVij_S1E1_before.png, id=2635, 516.7305pt x 387.3672pt>
+[88 <./plots/paper128_layout.png>]
+<plots/psa128_meanVij_S1E1_before.png, id=4304, 516.7305pt x 387.3672pt>
 File: plots/psa128_meanVij_S1E1_before.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E1_before.png>
@@ -1064,7 +1178,7 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E1_before.png used on input lin
 e 50.
 (pdftex.def)             Requested size: 219.32765pt x 164.41711pt.
 
-<plots/psa128_meanVij_S1E2_before.png, id=2637, 526.1256pt x 394.5942pt>
+<plots/psa128_meanVij_S1E2_before.png, id=4306, 526.1256pt x 394.5942pt>
 File: plots/psa128_meanVij_S1E2_before.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E2_before.png>
@@ -1072,7 +1186,7 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E2_before.png used on input lin
 e 51.
 (pdftex.def)             Requested size: 219.22916pt x 164.41711pt.
 
-<plots/psa128_meanVij_S1E1_after.png, id=2639, 516.7305pt x 387.3672pt>
+<plots/psa128_meanVij_S1E1_after.png, id=4308, 516.7305pt x 387.3672pt>
 File: plots/psa128_meanVij_S1E1_after.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E1_after.png>
@@ -1080,7 +1194,7 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E1_after.png used on input line
  52.
 (pdftex.def)             Requested size: 219.32765pt x 164.41711pt.
 
-<plots/psa128_meanVij_S1E2_after.png, id=2641, 526.1256pt x 394.5942pt>
+<plots/psa128_meanVij_S1E2_after.png, id=4310, 526.1256pt x 394.5942pt>
 File: plots/psa128_meanVij_S1E2_after.png Graphic file (type png)
 
 <use plots/psa128_meanVij_S1E2_after.png>
@@ -1088,37 +1202,37 @@ Package pdftex.def Info: plots/psa128_meanVij_S1E2_after.png used on input line
  53.
 (pdftex.def)             Requested size: 219.22916pt x 164.41711pt.
 
-<plots/psa128_badday.png, id=2643, 425.6703pt x 280.4076pt>
+<plots/psa128_badday.png, id=4312, 425.6703pt x 280.4076pt>
 File: plots/psa128_badday.png Graphic file (type png)
 
 <use plots/psa128_badday.png>
 Package pdftex.def Info: plots/psa128_badday.png used on input line 60.
 (pdftex.def)             Requested size: 375.80544pt x 247.56383pt.
- [60] [61 <./plots/psa128_meanVij_S1E1_before.png> <./plots/psa128_meanVij_S1E2
+ [89] [90 <./plots/psa128_meanVij_S1E1_before.png> <./plots/psa128_meanVij_S1E2
 _before.png> <./plots/psa128_meanVij_S1E1_after.png> <./plots/psa128_meanVij_S1
-E2_after.png>] [62 <./plots/psa128_badday.png>]
-<plots/psa128_crosspol.png, id=2669, 714.7503pt x 424.9476pt>
+E2_after.png>] [91 <./plots/psa128_badday.png>]
+<plots/psa128_crosspol.png, id=4337, 714.7503pt x 424.9476pt>
 File: plots/psa128_crosspol.png Graphic file (type png)
 
 <use plots/psa128_crosspol.png>
 Package pdftex.def Info: plots/psa128_crosspol.png used on input line 86.
 (pdftex.def)             Requested size: 450.96797pt x 268.12689pt.
- [63 <./plots/psa128_crosspol.png>]
-<plots/psa128_badants_S1E1.png, id=2680, 570.2103pt x 280.4076pt>
+ [92 <./plots/psa128_crosspol.png>]
+<plots/psa128_badants_S1E1.png, id=4350, 570.2103pt x 280.4076pt>
 File: plots/psa128_badants_S1E1.png Graphic file (type png)
 
 <use plots/psa128_badants_S1E1.png>
 Package pdftex.def Info: plots/psa128_badants_S1E1.png used on input line 97.
 (pdftex.def)             Requested size: 334.34169pt x 164.41711pt.
 
-<plots/psa128_badants_S1E2.png, id=2682, 570.2103pt x 280.4076pt>
+<plots/psa128_badants_S1E2.png, id=4352, 570.2103pt x 280.4076pt>
 File: plots/psa128_badants_S1E2.png Graphic file (type png)
 
 <use plots/psa128_badants_S1E2.png>
 Package pdftex.def Info: plots/psa128_badants_S1E2.png used on input line 98.
 (pdftex.def)             Requested size: 334.34169pt x 164.41711pt.
- [64 <./plots/psa128_badants_S1E1.png> <./plots/psa128_badants_S1E2.png>]
-<plots/S1E1xx_nobadants_firstcal.pdf, id=2696, 578.16pt x 433.62pt>
+ [93 <./plots/psa128_badants_S1E1.png> <./plots/psa128_badants_S1E2.png>]
+<plots/S1E1xx_nobadants_firstcal.pdf, id=4366, 578.16pt x 433.62pt>
 File: plots/S1E1xx_nobadants_firstcal.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_nobadants_firstcal.pdf>
@@ -1126,7 +1240,7 @@ Package pdftex.def Info: plots/S1E1xx_nobadants_firstcal.pdf used on input line
  109.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
 
-<plots/S1E1xx_withbadants_firstcal.pdf, id=2698, 578.16pt x 433.62pt>
+<plots/S1E1xx_withbadants_firstcal.pdf, id=4368, 578.16pt x 433.62pt>
 File: plots/S1E1xx_withbadants_firstcal.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_withbadants_firstcal.pdf>
@@ -1134,7 +1248,7 @@ Package pdftex.def Info: plots/S1E1xx_withbadants_firstcal.pdf used on input li
 ne 110.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
 
-<plots/S1E1xx_nobadants_chisq.pdf, id=2700, 578.16pt x 433.62pt>
+<plots/S1E1xx_nobadants_chisq.pdf, id=4370, 578.16pt x 433.62pt>
 File: plots/S1E1xx_nobadants_chisq.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_nobadants_chisq.pdf>
@@ -1142,48 +1256,38 @@ Package pdftex.def Info: plots/S1E1xx_nobadants_chisq.pdf used on input line 11
 1.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
 
-<plots/S1E1xx_withbadants_chisq.pdf, id=2702, 578.16pt x 433.62pt>
+<plots/S1E1xx_withbadants_chisq.pdf, id=4372, 578.16pt x 433.62pt>
 File: plots/S1E1xx_withbadants_chisq.pdf Graphic file (type pdf)
 
 <use plots/S1E1xx_withbadants_chisq.pdf>
 Package pdftex.def Info: plots/S1E1xx_withbadants_chisq.pdf used on input line 
 112.
 (pdftex.def)             Requested size: 208.43799pt x 164.41711pt.
- [65] [66 <./plots/S1E1xx_nobadants_firstcal.pdf> <./plots/S1E1xx_withbadants_f
+ [94] [95 <./plots/S1E1xx_nobadants_firstcal.pdf> <./plots/S1E1xx_withbadants_f
 irstcal.pdf> <./plots/S1E1xx_nobadants_chisq.pdf> <./plots/S1E1xx_withbadants_c
-hisq.pdf>]
-
-LaTeX Warning: Reference `sec:siglossmethod' on page 67 undefined on input line
- 153.
-
-
-LaTeX Warning: Reference `sec:Weight' on page 67 undefined on input line 153.
-
-
-LaTeX Warning: Reference `eq:sense' on page 67 undefined on input line 155.
-
-[67] <plots/PSA128_S1E1_80_100.pdf, id=2928, 361.35pt x 433.62pt>
+hisq.pdf>] [96]
+<plots/PSA128_S1E1_80_100.pdf, id=4599, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E1_80_100.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E1_80_100.pdf>
 Package pdftex.def Info: plots/PSA128_S1E1_80_100.pdf used on input line 162.
 (pdftex.def)             Requested size: 205.16112pt x 234.8775pt.
 
-<plots/PSA128_S1E2_80_100.pdf, id=2930, 361.35pt x 433.62pt>
+<plots/PSA128_S1E2_80_100.pdf, id=4601, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E2_80_100.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E2_80_100.pdf>
 Package pdftex.def Info: plots/PSA128_S1E2_80_100.pdf used on input line 163.
 (pdftex.def)             Requested size: 205.16112pt x 234.8775pt.
 
-<plots/PSA128_S1E1_110_130.pdf, id=2932, 361.35pt x 433.62pt>
+<plots/PSA128_S1E1_110_130.pdf, id=4603, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E1_110_130.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E1_110_130.pdf>
 Package pdftex.def Info: plots/PSA128_S1E1_110_130.pdf used on input line 164.
 (pdftex.def)             Requested size: 199.66391pt x 234.8775pt.
 
-<plots/PSA128_S1E2_110_130.pdf, id=2934, 361.35pt x 433.62pt>
+<plots/PSA128_S1E2_110_130.pdf, id=4605, 361.35pt x 433.62pt>
 File: plots/PSA128_S1E2_110_130.pdf Graphic file (type pdf)
 
 <use plots/PSA128_S1E2_110_130.pdf>
@@ -1193,14 +1297,14 @@ Package pdftex.def Info: plots/PSA128_S1E2_110_130.pdf used on input line 165.
 
 LaTeX Warning: Float too large for page by 7.46735pt on input line 169.
 
-) [68] [69 <./plots/PSA128_S1E1_80_100.pdf> <./plots/PSA128_S1E2_80_100.pdf> <.
+) [97] [98 <./plots/PSA128_S1E1_80_100.pdf> <./plots/PSA128_S1E2_80_100.pdf> <.
 /plots/PSA128_S1E1_110_130.pdf> <./plots/PSA128_S1E2_110_130.pdf>]
 \openout2 = `HERA/HERA.aux'.
 
 
 (./HERA/HERA.tex
 Chapter 6.
-) [70
+) [99
 
 
 
@@ -1209,22 +1313,22 @@ Chapter 6.
 
  (./conclusion/conclusion.tex
 Chapter 7.
-) [71
+) [100
 
 
 
 ] (./thesis.bbl
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 40.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 47.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [72
+) [101
 
 
-] [73]
-[74])
+] [102]
+[103] [104])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
- [75]
+ [105]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (./thesis.aux (./setup.aux) (./intro/intro.aux)
 (./methods_PS/methods_PS.aux) (./PSA64/PSA64.aux)
@@ -1233,21 +1337,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: EFD1DC3DC1AF420D83C39C327E0CFAAB;3528.
+(rerunfilecheck)             Checksum: 619ACAB214BDF8C783C8E736827E131C;4104.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 18490 strings out of 492995
- 316630 string characters out of 6132704
- 439871 words of memory out of 5000000
- 21377 multiletter control sequences out of 15000+600000
+ 18706 strings out of 492995
+ 320590 string characters out of 6132704
+ 502550 words of memory out of 5000000
+ 21494 multiletter control sequences out of 15000+600000
  32501 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,14n,79p,10353b,616s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,14n,79p,10353b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
@@ -1277,10 +1381,10 @@ ts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/public/cm-super/sftt1200.pfb>
-Output written on thesis.pdf (88 pages, 10617882 bytes).
+Output written on thesis.pdf (122 pages, 12617325 bytes).
 PDF statistics:
- 3501 PDF objects out of 3580 (max. 8388607)
- 2262 compressed objects within 23 object streams
- 353 named destinations out of 1000 (max. 500000)
- 781 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5206 PDF objects out of 6186 (max. 8388607)
+ 3148 compressed objects within 32 object streams
+ 436 named destinations out of 1000 (max. 500000)
+ 925 words of extra memory for PDF output out of 10000 (max. 10000000)
 

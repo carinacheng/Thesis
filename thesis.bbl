@@ -1,4 +1,4 @@
-\begin{thebibliography}{130}
+\begin{thebibliography}{136}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Ade {et~al.}(2008)Ade, Bock, Bowden, Brown, Cahill, Carlstrom,
@@ -33,6 +33,13 @@ Ade, P., Bock, J., Bowden, M., {et~al.} 2008,
   {Razavi}, {Stefan}, {Walbrugh}, \& {Walker}}]{ali_et_al2015}
 {Ali}, Z.~S., {Parsons}, A.~R., {Zheng}, H., {et~al.} 2015,
   \href{http://dx.doi.org/10.1088/0004-637X/809/1/61}{\apj, 809, 61}
+
+\bibitem[{Ali {et~al.}(2018)Ali, Parsons, Zheng, Pober, Liu, Aguirre, Bradley,
+  Bernardi, Carilli, Cheng, DeBoer, Dexter, Grobbelaar, Horrell, Jacobs, Klima,
+  MacMahon, Maree, Moore, Razavi, Stefan, Walbrugh, \& Walker}]{ali_et_al2018}
+Ali, Z.~S., Parsons, A.~R., Zheng, H., {et~al.} 2018,
+  \href{http://stacks.iop.org/0004-637X/863/i=2/a=201}{The Astrophysical
+  Journal, 863, 201}
 
 \bibitem[{{Andrae}(2010)}]{andrae2010}
 {Andrae}, R. 2010, ArXiv e-prints,
@@ -387,6 +394,10 @@ Jacobs, D.~C., Pober, J.~C., Parsons, A.~R., {et~al.} 2015,
 ---. 2016{\natexlab{b}},
   \href{http://dx.doi.org/10.3847/0004-637X/825/2/114}{\apj, 825, 114}
 
+\bibitem[{Jaynes(1968)}]{jaynes1968}
+Jaynes, E. 1968, \href{http://dx.doi.org/10.1109/TSSC.1968.300117}{IEEE
+  Transactions on Systems Science and Cybernetics, 4, 227 }
+
 \bibitem[{{Jeli{\'c}} {et~al.}(2008){Jeli{\'c}}, {Zaroubi}, {Labropoulos},
   {Thomas}, {Bernardi}, {Brentjens}, {de Bruyn}, {Ciardi}, {Harker},
   {Koopmans}, {Pandey}, {Schaye}, \& {Yatawatta}}]{jelic_et_al2008}
@@ -480,6 +491,12 @@ Liu, A., Tegmark, M., Morrison, S., Lutomirski, A., \& Zaldarriaga, M. 2010,
   C.~Kasper, \& Williams}]{lonsdale_et_al2009}
 Lonsdale, C., J.~Cappallo, R., F.~Morales, M., {et~al.} 2009, Proceedings of
   the IEEE, 97, 1497
+
+\bibitem[{{Masui} {et~al.}(2013){Masui}, {Switzer}, {Banavar}, {Bandura},
+  {Blake}, {Calin}, {Chang}, {Chen}, {Li}, {Liao}, {Natarajan}, {Pen},
+  {Peterson}, {Shaw}, \& {Voytek}}]{masui_et_al2013}
+{Masui}, K.~W., {Switzer}, E.~R., {Banavar}, N., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1088/2041-8205/763/1/L20}{\apjl, 763, L20}
 
 \bibitem[{Moore {et~al.}(2013)Moore, Aguirre, Parsons, Jacobs, \&
   Pober}]{moore_et_al2013}
@@ -625,6 +642,11 @@ Parsons, A.~R., Pober, J.~C., Aguirre, J.~E., {et~al.} 2012,
 {Planck Collaboration}, {Ade}, P.~A.~R., {Aghanim}, N., {et~al.} 2016,
   \href{http://dx.doi.org/10.1051/0004-6361/201525830}{\aap, 594, A13}
 
+\bibitem[{{Pober} {et~al.}(2016{\natexlab{a}}){Pober}, {Greig}, \&
+  {Mesinger}}]{pober_et_al2016b}
+{Pober}, J.~C., {Greig}, B., \& {Mesinger}, A. 2016{\natexlab{a}},
+  \href{http://dx.doi.org/10.1093/mnrasl/slw156}{\mnras, 463, L56}
+
 \bibitem[{{Pober} {et~al.}(2012){Pober}, {Parsons}, {Jacobs}, {Aguirre},
   {Bradley}, {Carilli}, {Gugliucci}, {Moore}, \& {Parashare}}]{pober_et_al2012}
 {Pober}, J.~C., {Parsons}, A.~R., {Jacobs}, D.~C., {et~al.} 2012,
@@ -655,19 +677,21 @@ Pober, J.~C., Parsons, A.~R., Aguirre, J.~E., {et~al.} 2013,
 {Pober}, J.~C., {Ali}, Z.~S., {Parsons}, A.~R., {et~al.} 2015,
   \href{http://dx.doi.org/10.1088/0004-637X/809/1/62}{\apj, 809, 62}
 
-\bibitem[{{Pober} {et~al.}(2016){Pober}, {Hazelton}, {Beardsley}, {Barry},
-  {Martinot}, {Sullivan}, {Morales}, {Bell}, {Bernardi}, {Bhat}, {Bowman},
-  {Briggs}, {Cappallo}, {Carroll}, {Corey}, {de Oliveira-Costa}, {Deshpande},
-  {Dillon}, {Emrich}, {Ewall-Wice}, {Feng}, {Goeke}, {Greenhill}, {Hewitt},
-  {Hindson}, {Hurley-Walker}, {Jacobs}, {Johnston-Hollitt}, {Kaplan}, {Kasper},
-  {Kim}, {Kittiwisit}, {Kratzenberg}, {Kudryavtseva}, {Lenc}, {Line}, {Loeb},
-  {Lonsdale}, {Lynch}, {McKinley}, {McWhirter}, {Mitchell}, {Morgan}, {Neben},
-  {Oberoi}, {Offringa}, {Ord}, {Paul}, {Pindor}, {Prabu}, {Procopio}, {Riding},
-  {Rogers}, {Roshi}, {Sethi}, {Udaya Shankar}, {Srivani}, {Subrahmanyan},
-  {Tegmark}, {Thyagarajan}, {Tingay}, {Trott}, {Waterson}, {Wayth}, {Webster},
-  {Whitney}, {Williams}, {Williams}, \& {Wyithe}}]{pober_et_al2016a}
-{Pober}, J.~C., {Hazelton}, B.~J., {Beardsley}, A.~P., {et~al.} 2016,
-  \href{http://dx.doi.org/10.3847/0004-637X/819/1/8}{\apj, 819, 8}
+\bibitem[{{Pober} {et~al.}(2016{\natexlab{b}}){Pober}, {Hazelton}, {Beardsley},
+  {Barry}, {Martinot}, {Sullivan}, {Morales}, {Bell}, {Bernardi}, {Bhat},
+  {Bowman}, {Briggs}, {Cappallo}, {Carroll}, {Corey}, {de Oliveira-Costa},
+  {Deshpande}, {Dillon}, {Emrich}, {Ewall-Wice}, {Feng}, {Goeke}, {Greenhill},
+  {Hewitt}, {Hindson}, {Hurley-Walker}, {Jacobs}, {Johnston-Hollitt}, {Kaplan},
+  {Kasper}, {Kim}, {Kittiwisit}, {Kratzenberg}, {Kudryavtseva}, {Lenc}, {Line},
+  {Loeb}, {Lonsdale}, {Lynch}, {McKinley}, {McWhirter}, {Mitchell}, {Morgan},
+  {Neben}, {Oberoi}, {Offringa}, {Ord}, {Paul}, {Pindor}, {Prabu}, {Procopio},
+  {Riding}, {Rogers}, {Roshi}, {Sethi}, {Udaya Shankar}, {Srivani},
+  {Subrahmanyan}, {Tegmark}, {Thyagarajan}, {Tingay}, {Trott}, {Waterson},
+  {Wayth}, {Webster}, {Whitney}, {Williams}, {Williams}, \&
+  {Wyithe}}]{pober_et_al2016a}
+{Pober}, J.~C., {Hazelton}, B.~J., {Beardsley}, A.~P., {et~al.}
+  2016{\natexlab{b}}, \href{http://dx.doi.org/10.3847/0004-637X/819/1/8}{\apj,
+  819, 8}
 
 \bibitem[{{Pope} \& {Szapudi}(2008)}]{pope_szapudi2008}
 {Pope}, A.~C., \& {Szapudi}, I. 2008,
@@ -741,6 +765,12 @@ Sullivan, I.~S., Morales, M.~F., Hazelton, B.~J., {et~al.} 2012,
   T.~C. 2015, \href{http://dx.doi.org/10.1088/0004-637X/815/1/51}{\apj, 815,
   51}
 
+\bibitem[{{Switzer} {et~al.}(2013){Switzer}, {Masui}, {Bandura}, {Calin},
+  {Chang}, {Chen}, {Li}, {Liao}, {Natarajan}, {Pen}, {Peterson}, {Shaw}, \&
+  {Voytek}}]{switzer_et_al2013}
+{Switzer}, E.~R., {Masui}, K.~W., {Bandura}, K., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1093/mnrasl/slt074}{\mnras, 434, L46}
+
 \bibitem[{{Taylor} \& {Joachimi}(2014)}]{taylor_joachimi_etal2014}
 {Taylor}, A., \& {Joachimi}, B. 2014,
   \href{http://dx.doi.org/10.1093/mnras/stu996}{\mnras, 442, 2728}
@@ -784,6 +814,11 @@ Thyagarajan, N., Jacobs, D.~C., Bowman, J.~D., {et~al.} 2015,
   {et~al.}}]{tingay_et_al2013}
 {Tingay}, S.~J., {Goeke}, R., {Bowman}, J.~D., {et~al.} 2013,
   \href{http://dx.doi.org/10.1017/pasa.2012.007}{\pasa, 30, 7}
+
+\bibitem[{Trott \& Wayth(2017)}]{trott_wayth_2017}
+Trott, C.~M., \& Wayth, R.~B. 2017,
+  \href{http://dx.doi.org/10.1017/pasa.2017.57}{Publications of the
+  Astronomical Society of Australia, 34, e061}
 
 \bibitem[{{Trott} {et~al.}(2012){Trott}, {Wayth}, \&
   {Tingay}}]{trott_et_al2012}

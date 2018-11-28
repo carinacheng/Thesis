@@ -33,7 +33,7 @@ with each other and impact the themes. We will give brief definitions now, and b
 follow.
 
 \begin{itemize}
-\item \textbf{Signal Loss} (Chapter \ref{sec:SiglossOverview}): Signal loss refers to attenuation of the target \textit{cosmological} signal 
+\item \textbf{Signal Loss} (Chapters \ref{sec:SiglossOverview} and \ref{sec:SiglossMath}): Signal loss refers to attenuation of the target \textit{cosmological} signal 
 in a power spectrum estimate. Certain analysis techniques can cause this loss, and if the amount of loss is not quantified accurately, it could lead to false non-detections and overly aggressive upper limits. Determining whether an analysis pipeline is lossy, and estimating the amount of loss if so, has subtle challenges but is necessary to ensure the accuracy of any result. 
 \item \textbf{Error Estimation} (Chapter \ref{sec:ErrorOverview}): Confidence intervals on a 21\,cm power spectrum result 
 determine the difference between a detection and a null result, which have two very different implications. Additionally, accurate error estimation is crucial for the comparison of results to theoretical models. Errors can be 
@@ -68,7 +68,7 @@ dimensions of a dataset to cross-validate results. In particular, null tests can
 systematics, as done with CO power spectra (\citealt{keating_et_al2016}) and CMB measurements (see e.g. \citealt{ade_et_al2008}; \citealt{chiang_et_al2010}; \citealt{bischoff_et_al2011}; \citealt{das_et_al2011b}; \citealt{araujo_et_al2012}; \citealt{crites_et_al2015}; \citealt{ade_et_al2016}; \citealt{ade_et_al2017}; \citealt{sherwin_et_al2017}). An EoR detection must pass both jackknife and null tests, which we highlight in Chapter \ref{sec:JackknifeOverview}.
 \end{itemize}
 
-In the next three sections, we study each theme in depth, focusing on how power spectrum technique trade-offs affect each. 
+In this chapter, we study each theme in depth, focusing on how power spectrum technique trade-offs affect each. 
 We use toy data models to develop intuition into why certain analysis choices may be appealing and discuss ways in which 
 they are limited. We highlight problems that can arise regarding each theme and offer suggestions to mitigate the issues. 
 Ultimately, we show that rigorous investigations into signal loss, error estimation, and bias must be performed for robust 21\,cm results.
@@ -496,6 +496,7 @@ of the components in a dataset.
 In summary, we have shown how signal loss is caused by weighting a dataset by itself, and in particular how estimated covariances can overfit EoR modes when they are coupled to data and not converged to their true forms. We have also seen that there are trade-offs between a chosen weighting method, its foreground-removal effectiveness, the number of independent samples in a dataset, and the amount of resulting signal loss. 
 
 \section{Signal Loss Mathematical Framework}
+\label{sec:SiglossMath}
 
 In Chapter \ref{sec:QE}, we argued that the optimal quadratic estimator method has the effect of projecting out foreground modes that have a different covariance structure than the EoR signal. And in Chapter \ref{sec:toymodel}, we saw that \textit{empirical} inverse covariance weighting can lead to loss via a multiplicative bias to estimates of the signal. To support these arguments, we now present two mathematical frameworks in which we use toy models in order to illustrate these conclusions analytically. 
 
