@@ -13,44 +13,44 @@ A level-1 auxiliary file: conclusion/conclusion.aux
 Database file #1: thesis.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-You've used 136 entries,
+You've used 134 entries,
             3201 wiz_defined-function locations,
-            1593 strings with 64639 characters,
-and the built_in function-call counts, 90677 in all, are:
-= -- 5926
-> -- 9013
-< -- 36
-+ -- 3306
-- -- 3157
-* -- 9091
-:= -- 17050
-add.period$ -- 136
-call.type$ -- 136
-change.case$ -- 831
+            1587 strings with 64447 characters,
+and the built_in function-call counts, 88909 in all, are:
+= -- 5859
+> -- 8762
+< -- 35
++ -- 3220
+- -- 3073
+* -- 8861
+:= -- 16688
+add.period$ -- 134
+call.type$ -- 134
+change.case$ -- 823
 chr.to.int$ -- 130
-cite$ -- 136
-duplicate$ -- 3821
-empty$ -- 4742
-format.name$ -- 3328
-if$ -- 17495
-int.to.chr$ -- 7
+cite$ -- 134
+duplicate$ -- 3775
+empty$ -- 4671
+format.name$ -- 3241
+if$ -- 17180
+int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 133
-newline$ -- 412
-num.names$ -- 546
-pop$ -- 1335
+missing$ -- 131
+newline$ -- 406
+num.names$ -- 537
+pop$ -- 1320
 preamble$ -- 1
-purify$ -- 831
+purify$ -- 823
 quote$ -- 0
-skip$ -- 2258
+skip$ -- 2232
 stack$ -- 0
-substring$ -- 3495
-swap$ -- 142
+substring$ -- 3459
+swap$ -- 136
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1212
+type$ -- 1194
 warning$ -- 0
-while$ -- 605
+while$ -- 598
 width$ -- 0
-write$ -- 1362
+write$ -- 1343
