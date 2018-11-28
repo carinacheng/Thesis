@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 NOV 2018 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 NOV 2018 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1327,22 +1327,22 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 ] [102]
 [103])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
  [104]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./thesis.aux (./setup.aux) (./intro/intro.aux)
 (./methods_PS/methods_PS.aux) (./PSA64/PSA64.aux)
 (./PSA64_results/PSA64_results.aux) (./PSA128/PSA128.aux) (./HERA/HERA.aux)
 (./conclusion/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 619ACAB214BDF8C783C8E736827E131C;4104.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
  18697 strings out of 492995
@@ -1381,7 +1381,7 @@ ts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/public/cm-super/sftt1200.pfb>
-Output written on thesis.pdf (121 pages, 12614856 bytes).
+Output written on thesis.pdf (121 pages, 12614704 bytes).
 PDF statistics:
  5179 PDF objects out of 6186 (max. 8388607)
  3122 compressed objects within 32 object streams
