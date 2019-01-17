@@ -88,7 +88,7 @@ Using this metric, we find six antennas to be cross-polarized in PAPER-128 obser
 	\label{fig:psa128_crosspol}
 \end{figure}
 
-Another failure mode is an antenna that exhibits low amplitude, a fairly common occurrence as different electronic components can cause the temporary reduction or loss of power. A drastic example of this is when an entire correlator (FX2) was accidentally shut-off, cutting off connections to 16 antennas. The loss of those 16 antennas only affected Epoch 1, and the correlator was then re-started for Epoch 2. 
+Another failure mode is an antenna that exhibits low amplitude, a fairly common occurrence as different electronic components can cause the temporary reduction or loss of power. For example, low power can result from a malfunctioning amplifier or resistance somewhere along the signal chain. A particularly drastic example of power failure is when an entire correlator (FX2) was accidentally shut-off, cutting off connections to 16 antennas. The loss of those 16 antennas only affected Epoch 1, and the correlator was then re-started for Epoch 2. 
 
 In order to find antennas with unusually low signals, we again employ Equation \eqref{eq:psa128_badant}, computing the metric for every antenna. Comparing $M_{i}$ across the entire array can reveal which antennas are consistently misbehaving. We then flag antennas with $M_{i}$ values that are low by at least $1\sigma$. Figure \ref{fig:psa128_badants} shows these antenna flags across both epochs, and we remove all data associated with antennas that are flagged greater than 50\% of the time (then for each epoch, we combine the flags for the XX and YY polarizations).
 
