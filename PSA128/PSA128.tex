@@ -19,15 +19,32 @@ Although PAPER-128 doubled in number of antennas, the data collected by this arr
 In this chapter, we present methods developed for the detection of corrupt data in PAPER-128. These methods represent the first routinely-used ``quality assurance" steps for the PAPER experiment. They also represent the first generation of data assessment techniques that are currently being expanded upon for incorporation into HERA's real-time processing system. 
 
 \begin{table}[]
-\begin{tabular}{|c|c|c|c|c|}
+\setlength\tabcolsep{0.25cm} % column padding
+\renewcommand{\arraystretch}{1.3} % row padding
+\begin{tabular}{|c|c|c|}
 \hline
-\textbf{Epoch} & \textbf{Dates}        & \textbf{\begin{tabular}[c]{@{}c@{}}Number of \\ Days Analyzed\end{tabular}} & \textbf{Flagged Days}                                                    & \textbf{Flagged Antennas}                                                                                                                         \\ \hline
-1              & \begin{tabular}[c]{@{}c@{}} Nov 2013 - Jan 2014 \\ JDs 6617-6673\end{tabular}   & 38                                                                          & \begin{tabular}[c]{@{}c@{}}6647,6662,6664,\\ 6665,6673\end{tabular}      & \begin{tabular}[c]{@{}c@{}}3,7,8,16,19,20,\\ 27,28,34,53,\\ 56,84,85,96,100\\ \textbf{FX2}: 2,10,15,22,31,\\ 33,42,43,47,58,\\ 64,72,91,97,105,107\end{tabular} \\ \hline
-2              & \begin{tabular}[c]{@{}c@{}} Jan 2014 - March 2014 \\JDs 6678-6724\end{tabular} & 40                                                                          & \begin{tabular}[c]{@{}c@{}}6692,6702,6704,\\ 6706,6717,6730\end{tabular} & \begin{tabular}[c]{@{}c@{}}3,7,16,27,34,56,\\57,84,85,100,110\end{tabular}                                                               \\ \hline
+ 															& \textbf{Epoch 1} & \textbf{Epoch 2} \\ \hline
+\textbf{Dates} 													&  \begin{tabular}[c]{@{}c@{}} Nov 2013 - Jan 2014 \\ JDs 6617-6673\end{tabular} & \begin{tabular}[c]{@{}c@{}} Jan 2014 - March 2014 \\JDs 6678-6724\end{tabular}  \\ \hline
+\textbf{LST Range}												& 1h-9h & 4h-12h \\ \hline
+\textbf{Number of Baselines}		& 51 & 79 \\ \hline
+\textbf{Number of Days} 	& 38 & 40 \\ \hline
+\textbf{Flagged Days}											& 6647,6662,6664,6665,6673 & 6692,6702,6704,6706,6717,6730 \\ \hline
+\textbf{Flagged Antennas}											& \begin{tabular}[c]{@{}c@{}}3,7,8,16,19,20,27,28\\ 34,53,56,84,85,96,100\\ \textbf{FX2}: 2,10,15,22,31,33,42,\\43,47,58,64,72,91,97,105,107\end{tabular} & \begin{tabular}[c]{@{}c@{}}3,7,16,27,34,56,\\57,84,85,100,110\end{tabular} \\ \hline
 \end{tabular}
-\caption{An overview of the PAPER-128 data used for power spectrum analysis in this thesis.}
+\caption{An overview of the properties of PAPER-128 data analyzed in this thesis. The number of baselines and days is indicative of the final numbers used in the power spectrum analysis, post-flagging.}
 \label{table:psa128_overview}
 \end{table}
+
+%\begin{table}[]
+%\begin{tabular}{|c|c|c|c|c|c|c|}
+%\hline
+%\textbf{Epoch} & \textbf{Dates} & \textbf{LST Range} & \textbf{Number of Baselines}  & \textbf{\begin{tabular}[c]{@{}c@{}}Number of \\ Days Analyzed\end{tabular}} & \textbf{Flagged Days} & \textbf{Flagged Antennas} \\ \hline
+%1              & \begin{tabular}[c]{@{}c@{}} Nov 2013 - Jan 2014 \\ JDs 6617-6673\end{tabular}   & 1h-9h & 51 & 38                                                                          & \begin{tabular}[c]{@{}c@{}}6647,6662,6664,\\ 6665,6673\end{tabular}      & \begin{tabular}[c]{@{}c@{}}3,7,8,16,19,20,\\ 27,28,34,53,\\ 56,84,85,96,100\\ \textbf{FX2}: 2,10,15,22,31,\\ 33,42,43,47,58,\\ 64,72,91,97,105,107\end{tabular} \\ \hline
+%2              & \begin{tabular}[c]{@{}c@{}} Jan 2014 - March 2014 \\JDs 6678-6724\end{tabular} & 4h-12h & 79 & 40                                                                          & \begin{tabular}[c]{@{}c@{}}6692,6702,6704,\\ 6706,6717,6730\end{tabular} & \begin{tabular}[c]{@{}c@{}}3,7,16,27,34,56,\\57,84,85,100,110\end{tabular}                                                               \\ \hline
+%\end{tabular}
+%\caption{An overview of the PAPER-128 data used for power spectrum analysis in this thesis.}
+%\label{table:psa128_overview}
+%\end{table}
 
 Additionally in this chapter, we process two epochs of PAPER-128 data (both from the first season) and show power spectrum results for each. We do not show results from the second season of data due to increased hardware failure that was experienced at the end of PAPER-128's deployment. As such, the first season of PAPER-128 represents the bulk of the array's sensitivity (though we note that the limits do not surpass those of PAPER-64, mostly due to having fewer days of data). Table \ref{table:psa128_overview} gives an overview of the PAPER-128 dataset analyzed in this thesis.
 
@@ -150,11 +167,13 @@ Finally, the last step of processing is fringe-rate filtering, where an optimal 
 
 \section{Power Spectrum Limits}
 
-We form power spectrum estimates for both epochs of data and two frequency channel ranges: 139-149\,MHz (z=8.9) and 154-164\,MHz (z=7.9). Both bands consist of $21$ channels (each 0.5\,MHz) and are relatively absent of RFI. We focus only on one baseline-separation type, namely all 30\,m East/West baselines (of which there are 51 in the first epoch and 79 in the second). Our power spectrum formalism follows the analysis outlined in Chapter \ref{c.PSA64} and uses all updated methods regarding bootstrapping and noise sensitivity estimation. Because empirical inverse covariance weighting is shown to be extremely lossy for fringe-rate filtered PAPER data (Chapter \ref{sec:siglossmethod}) and regularization techniques do not significantly improve power spectrum sensitivity (Chapter \ref{sec:Weight}), we form unweighted limits ($\textbf{C} \equiv \textbf{I}$) in an effort to present straightforward, reliable results.
+We form power spectrum estimates for both epochs of data and two frequency channel ranges: 139-149\,MHz (z=8.9) and 154-164\,MHz (z=7.9). Both bands consist of $21$ channels (each 0.5\,MHz) and are relatively absent of RFI. We focus only on one baseline-separation type, namely all 30\,m East/West baselines (of which there are 51 in the first epoch and 79 in the second), and we use eight hours of LST for both (the exact ranges differ though, as there are only five hours of LST overlap between the two epochs). Our power spectrum formalism follows the analysis outlined in Chapter \ref{c.PSA64} and uses all updated methods regarding bootstrapping and noise sensitivity estimation. Because empirical inverse covariance weighting is shown to be extremely lossy for fringe-rate filtered PAPER data (Chapter \ref{sec:siglossmethod}) and regularization techniques do not significantly improve power spectrum sensitivity (Chapter \ref{sec:Weight}), we form unweighted limits ($\textbf{C} \equiv \textbf{I}$) in an effort to present straightforward, reliable results.
 
 Figure \ref{fig:psa128_ps} shows the power spectrum results for PAPER-128. The two epochs are displayed as columns and the two redshifts as rows. Black and gray data points represent positive and negative power spectrum values, respectively (calculated as the average power spectrum value over all baseline pairs), and they have $2\sigma$ error bars that are calculated from bootstrapping over baselines. The solid green curve is our theoretical prediction of our sensitivity, computed analytically using Equation \eqref{eq:sense}. This sensitivity prediction is also plotted as gray shaded regions around the data points.
 
-We note that our best limit is (126.4\,mK)$^{2}$ at $k = 0.29\,h$ Mpc$^{-1}$ and $z=7.9$ (from Epoch 2). This is a factor of XXX higher than our best limit from PAPER-64 (which uses three baselines instead of just one). These limits are understandably comparable given that the PAPER-128 analysis uses fewer days of data (by a factor of $\sim2$). While it's certainly possible that combining multiple epochs of data together (and using more baseline types) may yield better limits, we do not think this analysis is worthwhile as the second season of data is severely dominated by systematics. Instead, we look forward to exciting future results from HERA, knowing that many of the techniques developed for both PAPER-64 and PAPER-128 are being incorporated and improved upon.
+We do not do a deep investigation of systematics, though it is clear that all power spectra are systematics-dominated, especially at low $k$, albeit to varying degrees. The level of bias that is present is thought to be highly dependent on the quality of the particular days and antennas that contribute to each LST-binned dataset. An investigation into the redundancy of PAPER-128 baselines would be useful to help control the systematics, as shown through the re-analysis of PAPER-64. Unfortunately, binning together both epochs of data in order to increase our sensitivity is not straightforward, as each individual LST-binned epoch contains different baselines and LST coverages. In practice, one could re-bin individual days, but this would require a more precise absolute calibration method to be implemented on a per-day basis prior to LST-binning. We hence present only rough limits from each epoch individually and note that the varying systematics between epochs and redshifts are an interesting indication of how sensitive the data is to non-redundancies.
+
+Our most sensitive upper limits that are consistent with noise are (194.8\,mK)$^{2}$ at $k = 0.30\,h$ Mpc$^{-1}$ and $z=7.9$ (from Epoch 2) and (130.3\,mK)$^{2}$ at $k = 0.19\,h$ Mpc$^{-1}$ and $z=8.9$ (from Epoch 1). The limits at these two redshifts are comparable to those of PAPER-64, as shown in Figure XXX, and are in fact to within a factor of $<2$ to nearby redshift results from PAPER-64. While it's certainly possible that combining multiple epochs of data together (and using more baseline types) may yield slightly better limits, we do not think this analysis is worthwhile as the second season of data is severely dominated by systematics. Instead, we look forward to exciting future results from HERA, knowing that many of the techniques developed for both PAPER-64 and PAPER-128 are being incorporated and continuously improved upon.
 
 \begin{figure}
 	\centering
