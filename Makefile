@@ -30,8 +30,8 @@ deps += PSA128/PSA128.tex
 cleans += PSA128/PSA128.aux
 
 # Chapter Five
-deps += HERA/HERA.tex
-cleans += HERA/HERA.aux
+deps += Future/Future.tex
+cleans += Future/Future.aux
 
 # Conclusion
 deps += conclusion/conclusion.tex
