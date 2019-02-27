@@ -17,7 +17,7 @@ pitfalls, and connections to the themes. We first approach the themes from a bro
 case study (Chapter \ref{c.PSA64}) using data from the 64-element configuration of PAPER, highlighting key changes from the methods used in the previously published result in \citet{ali_et_al2015}, henceforth known as \citetalias{ali_et_al2015}, which have led to a 
 revised PAPER-64 power spectrum result. In these two chapters we use a subset of PAPER-64 data to illustrate our revised analysis methods, while Chapter \ref{c.PSA64_results} builds off of the methods to finally present revised PAPER-64 results for multiple redshifts and baseline types.
 
-We note that this thesis as a whole adds to the growing foundations of lessons which have been documented, for example, in \citet{paciga_et_al2013}, \citet{Patil2016}, and \citet{jacobs_et_al2016}, by the GMRT, LOFAR, and MWA projects respectively. These lessons are imperative as the community as a whole moves towards higher sensitivities and potential EoR detections.
+We note that this thesis as a whole adds to the growing foundations of lessons which have been documented, for example, in \citet{paciga_et_al2013}, \citet{Patil2016}, and \citet{jacobs_et_al2016}, by the GMRT, LOFAR, and MWA projects respectively. These lessons are imperative as the community moves towards higher sensitivities and potential EoR detections.
 
 There are many choices a 21\,cm data analyst must consider. How can time-ordered measurements be combined? How can the 
 variance of the data be estimated? In what way(s) can the data be weighted to suppress contaminated modes while not 
@@ -52,7 +52,7 @@ these four techniques because they represent major steps in PAPER's power spectr
 being standard steps in general 21\,cm analyses.
 \begin{itemize}
 \item \textbf{Fringe-rate filtering:} Fringe-rate filtering is an averaging scheme for time-ordered data 
-(\citealt{parsons_et_al2016}). Broadly, a fringe-rate filter averages visibilities in time to produce a smaller number of more sensitive 
+(\citealt{parsons_et_al2016}). Broadly, a fringe-rate filter, as described in more detail in Chapter \ref{sec:frf_intro}, averages visibilities in time to produce a smaller number of more sensitive 
 independent samples. However, such a filter also affects the presence 
 of foregrounds and systematics. We explain the trade-offs of filtering in more detail in Chapter \ref{sec:toymodel_frf}.
 \item \textbf{Weighting:} A dataset can be weighted to emphasize certain features and minimize others. One particular flavor of 
@@ -65,7 +65,7 @@ itself (\citealt{andrae2010}). By randomly drawing many subsamples of the data, 
 consider such as the independence of values in a dataset. We explore this potential pitfall of bootstrapping in Chapter \ref{sec:ErrorOverview}.
 \item \textbf{Jackknife testing:} A resampling technique useful for estimating bias, jackknives can be taken along different 
 dimensions of a dataset to cross-validate results. In particular, null tests can be used to verify whether results are free of 
-systematics, as done with CO power spectra (\citealt{keating_et_al2016}) and CMB measurements (see e.g. \citealt{ade_et_al2008}; \citealt{chiang_et_al2010}; \citealt{bischoff_et_al2011}; \citealt{das_et_al2011b}; \citealt{araujo_et_al2012}; \citealt{crites_et_al2015}; \citealt{ade_et_al2016}; \citealt{ade_et_al2017}; \citealt{sherwin_et_al2017}). An EoR detection must pass both jackknife and null tests, which we highlight in Chapter \ref{sec:JackknifeOverview}.
+systematics, as done with CO power spectra (\citealt{keating_et_al2016}) and CMB measurements (see e.g., \citealt{ade_et_al2008}; \citealt{chiang_et_al2010}; \citealt{bischoff_et_al2011}; \citealt{das_et_al2011b}; \citealt{araujo_et_al2012}; \citealt{crites_et_al2015}; \citealt{ade_et_al2016}; \citealt{ade_et_al2017}; \citealt{sherwin_et_al2017}). An EoR detection must pass both jackknife and null tests, which we highlight in Chapter \ref{sec:JackknifeOverview}.
 \end{itemize}
 
 In this chapter, we study each theme in depth, focusing on how power spectrum technique trade-offs affect each. 
@@ -78,17 +78,17 @@ Ultimately, we show that rigorous investigations into signal loss, error estimat
 
 Signal loss can arise in a variety of ways in an analysis pipeline, such as by fitting a polynomial during spectral calibration, applying a delay domain filter, or deriving weights from data and applying them to itself. Here we focus on signal loss associated with 
 % JEA - we're not considering a general problem, but are really just focused on the empirical QE and its discontents, so let's say that
-the use of an empirically estimated covariance matrix with the ``optimal quadratic estimator'' formalism.
+the use of an empirically estimated covariance matrix with the "optimal quadratic estimator'' formalism.
 This loss was significantly 
 %applying a weighting matrix to data, a loss that can be significant depending on the choice of weighting and one that was previously 
-under-estimated in the \citetalias{ali_et_al2015} analysis.
+underestimated in the \citetalias{ali_et_al2015} analysis.
 
 \subsection{The Quadratic Estimator Method}
 \label{sec:QE}
 
 %AAAICW
 
-We begin with an overview of the quadratic estimator (QE) formalism used for power spectrum estimation. The goal of power spectrum analysis is to produce an unbiased estimator of the EoR power spectrum in the presence of both noise and foreground emission. Prior to power spectrum estimation, the data will often have been prepared to have minimal foregrounds by some method of subtraction, so this foreground emission may appear either directly (because it was not subtracted) or as a residual of some subtraction process not in the power spectrum domain. If an accurate estimate of the total covariance of the data is known, including both the desired signal and any contaminants, then the ``optimal quadratic estimator'' formalism provides a method of producing a minimum variance, unbiased estimator of the desired signal, as shown in 
+We begin with an overview of the quadratic estimator (QE) formalism used for power spectrum estimation. The goal of power spectrum analysis is to produce an unbiased estimator of the EoR power spectrum in the presence of both noise and foreground emission. Prior to power spectrum estimation, the data will often have been prepared to have minimal foregrounds by some method of subtraction, so this foreground emission may appear either directly (because it was not subtracted) or as a residual of some subtraction process not in the power spectrum domain. If an accurate estimate of the total covariance of the data is known, including both the desired signal and any contaminants, then the "optimal quadratic estimator" formalism provides a method of producing a minimum variance, unbiased estimator of the desired signal, as shown in 
 % JEA - I cut this b/c I wanted to step back and explain a bit more clearly what we were actually hoping for 
 %Driven by the need to mitigate foreground bias, PAPER's previous analyses use a weighting method that aims to down-weight foregrounds. This weighting is applied to data, which is then propagated into a final estimator using the power spectrum estimation technique of quadratic estimators (QE) as done in 
 \citet{liu_tegmark2011}, \citet{dillon_et_al2013a}, \citet{liu_et_al2014a}, \citet{liu_et_al2014b}, \citet{trott_et_al2012}, \citet{dillon_et_al2014}, \citet{dillon_et_al2015}, \citet{switzer_et_al2015}, and \citet{trott_et_al2016}. 
@@ -143,7 +143,7 @@ The power spectrum estimator in Equation \eqref{eq:OQE} is the minimum variance 
 \end{equation}
 \citep{tegmark_et_al1997a,bond_et_al1998}.
 
-Intuitively, the estimator must be capable of ``suppressing" or ``removing" the effects of contaminants in order to obtain an unbiased estimate of the power spectrum. By construction, the subtraction of the residual foreground and noise bias accomplishes this, removing any additive bias. However, the $\mathbf{C}^{-1}$ piece of Equation \eqref{eq:OQEQuadratic} also has the effect of suppressing residual foregrounds and noise, in both the additive bias and any contributions the residuals may have to the variance. The way in which the optimal estimator accomplishes this is illustrated with a toy model in Chapter \ref{sec:icw_appendix}. In this chapter, we show that the effect of the weighting in Equation \ref{eq:OQEQuadratic} is to project out the modes of $\textbf{U}$ with a different covariance structure than $\mathbf{S}$ in the power spectrum estimate, and the effect of Equation \ref{eq:OQELinear} is to subtract out the remaining bias. Similar effects for a realistic model of the EoR and foregrounds are shown in \citet{liu_tegmark2011}.
+Intuitively, the estimator must be capable of "suppressing" or "removing" the effects of contaminants in order to obtain an unbiased estimate of the power spectrum. By construction, the subtraction of the residual foreground and noise bias accomplishes this, removing any additive bias. However, the $\mathbf{C}^{-1}$ piece of Equation \eqref{eq:OQEQuadratic} also has the effect of suppressing residual foregrounds and noise, in both the additive bias and any contributions the residuals may have to the variance. The way in which the optimal estimator accomplishes this is illustrated with a toy model in Chapter \ref{sec:icw_appendix}. There, we show that the effect of the weighting in Equation \ref{eq:OQEQuadratic} is to project out the modes of $\textbf{U}$ with a different covariance structure than $\mathbf{S}$ in the power spectrum estimate, and the effect of Equation \ref{eq:OQELinear} is to subtract out the remaining bias. Similar effects for a realistic model of the EoR and foregrounds are shown in \citet{liu_tegmark2011}.
 
 The toy model in Chapter \ref{sec:icw_appendix} also illustrates that if the covariance structure of the contaminants is sufficiently different from the desired power spectrum, then the linear bias term may be expected to be quite small, and it is only necessary to know $\C$ and $\textbf{Q}^{\alpha}$, but not $\mathbf{U}$. Since the foregrounds are expected to be strongly correlated between frequencies whereas the EoR is not, we expect different covariance structures and therefore a small linear bias. Moreover, because the linear bias is always positive and there is no multiplicative bias, the quadratic-only term will always produce an estimate which is {\it high} relative to the true value, and which can conservatively be interpreted as an upper limit. These considerations, and the difficulty of obtaining an estimate for $\mathbf{U}$, motivate the neglect of the linear bias in the rest of this analysis.
 
@@ -197,7 +197,7 @@ As a brief preview, we summarize our findings in the following sections here:
 
 \begin{itemize}
 
-\item If the covariance matrix is estimated from the data, a strong correlation between the estimated modes and the data will in general produce an estimate of the signal power spectrum which is strongly biased {\it low} relative to the true value.  In this context, this is what we call ``signal loss''  (Chapter \ref{sec:toymodel}).
+\item If the covariance matrix is estimated from the data, a strong correlation between the estimated modes and the data will in general produce an estimate of the signal power spectrum which is strongly biased {\it low} relative to the true value.  In this context, this is what we call "signal loss''  (Chapter \ref{sec:toymodel}).
 
 \item The effect of the bias is worsened when the number of independent samples used to estimate the covariance matrix is reduced (Chapter \ref{sec:toymodel_frf}).
 
@@ -269,7 +269,7 @@ There is negligible signal loss when all eigenmodes besides the foreground one a
 	\label{fig:toy_sigloss3}
 \end{figure*}
 
-As discussed in Chapter \ref{sec:QE}, this behavior is {\it not} expected in the case that we were to use a true $\textbf{C}^{-1}$ weighting.  Rather, we would obtain the behavior shown in the toy model in Chapter \ref{sec:icw_appendix}\footnote{Note that there the true covariance matrix is also the sum of a diagonal portion describing the signal, and a single mode describing the contaminant (similar to Figure \ref{fig:toy_sigloss12}).}, with suppression of the foreground mode resulting in 
+As discussed in Chapter \ref{sec:QE}, this behavior is {\it not} expected in the case that we were to use a true $\textbf{C}^{-1}$ weighting.  Rather, we would obtain the behavior shown in the toy model in Chapter \ref{sec:icw_appendix}\footnote{Note that there the true covariance matrix is also the sum of a diagonal portion describing the signal and a single mode describing the contaminant (similar to Figure \ref{fig:toy_sigloss12}).}, with suppression of the foreground mode resulting in 
 a nearly unbiased estimate of the power spectrum. The key difference is that since $\widehat{\textbf{C}}$ is estimated from the data, its eigenvectors and eigenvalues are strongly coupled to the particular data realization that was used to compute it, and this coupling leads to loss.
 
 For the case of an eigenmode which can be safely assumed to be predominantly a foreground, its presence in the true covariance matrix will result in the desired suppression via a kind of projection; whether or not it is strongly correlated with the the actual data vector is irrelevant.  However, in the case of an empirically estimated covariance matrix, the eigenmodes of $\widehat{\textbf{C}}_{\rm EoR}$ will both be incorrect and can be correlated with the data. If these incorrect eigenmodes are not correlated with the data, it will lead to non-minimum variance estimates but will not produce the suppression of the power spectrum amplitude as seen in the left plot of Figure \ref{fig:toy_sigloss3}. As shown mathematically in Chapter \ref{sec:sigloss_appendix}, however, if $\widehat{\mathbf{C}}_{\rm EoR}$ $\textit{is}$ correlated with the data vector $\mathbf{x}$, there is a kind of projection of power in the {\it non}-foreground modes from the resulting power spectrum estimate, thus producing an estimate that is biased low.  In short, {\it if the covariance is computed from the data itself, it carries the risk of overfitting information in the data and introducing a multiplicative bias (per $k$) to estimates of the signal.} 
@@ -343,7 +343,7 @@ Because fringe-rate filtering is analogous to averaging in time, it comes at the
 \label{eq:converge}
 \varepsilon (\Chat) \equiv \sqrt{\frac{\sum_{ij} (\widehat{C}_{ij} - {C}_{ij})^2}{\sum_{ij} {C}_{ij}^2}},
 \end{equation}
-where $\C$ is the true covariance matrix. To compute this metric, we draw different numbers of realizations (different draws of Gaussian noise) of our toy model EoR measurement, $\textbf{x}_{\rm EoR}$, and take their ensemble average. We then compare this to the ``true" covariance, which in our simulation is set to be the empirical covariance after a large number ($500$) of realizations. As shown in Figure \ref{fig:toy_sigloss16}, we perform this computation for a range of total independent ensemble realizations (horizontal axis) and number of independent samples in the data following time-averaging, or ``fringe-rate filtering" (different colors). With more independent time samples (i.e., more realizations) in the data, one converges to the true fringe-rate filtered covariance more quickly. 
+where $\C$ is the true covariance matrix. To compute this metric, we draw different numbers of realizations (different draws of Gaussian noise) of our toy model EoR measurement, $\textbf{x}_{\rm EoR}$, and take their ensemble average. We then compare this to the "true" covariance, which in our simulation is set to be the empirical covariance after a large number ($500$) of realizations. As shown in Figure \ref{fig:toy_sigloss16}, we perform this computation for a range of total independent ensemble realizations (horizontal axis) and number of independent samples in the data following time-averaging, or "fringe-rate filtering" (different colors). With more independent time samples (i.e., more realizations) in the data, one converges to the true fringe-rate filtered covariance more quickly. 
 
 The situation here with using a finite number of time samples to estimate our covariance is analogous to a problem faced in galaxy surveys, where the non-linear covariance 
 of the matter power spectrum is estimated using a large --- but finite --- number of expensive simulations. There, the limited 
@@ -364,7 +364,7 @@ The overall convergence of the covariance is important, but also noteworthy is t
 \label{eq:converge_eig}
 \varepsilon (\widehat{\textbf{v}}) \equiv \sqrt{\sum_{i}^{N_{f}}|\textbf{v}-\widehat{\textbf{v}}|_{i}^2},
 \end{equation}
-where $N_{f}$ is the number of frequencies ($20$) in the mock data. The eigenmode convergence curves in Figure \ref{fig:toy_sigloss17} are ranked ordered by eigenvalue, such that ``Eigenmode \#0" illustrates the convergence of the eigenvector with the largest eigenvalue, ``Eigenmode \#1" for the second largest eigenvalue, and so on. We see that the zeroth eigenmode --- the mode describing the foreground signal --- is quickest to converge.
+where $N_{f}$ is the number of frequencies ($20$) in the mock data. The eigenmode convergence curves in Figure \ref{fig:toy_sigloss17} are ranked ordered by eigenvalue, such that "Eigenmode \#0" illustrates the convergence of the eigenvector with the largest eigenvalue, "Eigenmode \#1" for the second largest eigenvalue, and so on. We see that the zeroth eigenmode --- the mode describing the foreground signal --- is quickest to converge.
 
 Our numerical test reveals that the convergence rates of empirical eigenvectors is related to the sample variance in our empirical estimate. In general, computing an empirical covariance from a finite ensemble average means that the empirical eigenmodes have sample variances. Consider first a limiting case where all eigenvalues are equal. In such a scenario, any linear combination of eigenvectors is also an eigenvector, and thus there is no sensible way to define the convergence of eigenvectors. In our current test, aside from the zeroth mode, the eigenvalues have similar values but are not precisely equal. Hence, there is a well-defined set of eigenvectors to converge to. However, due to the sample variance of our empirical covariance estimate, there may be accidental degeneracies between modes, where some modes are mixing and swapping with others. Therefore, the steeper an eigenspectrum, the easier it is for the eigenmodes to decouple from each other and approach their true forms. A particularly drastic example of this can be seen in the behavior of mode $0$ (the foreground mode), whose eigenvalue differs enough from the others that it is able to converge reasonably quickly despite substantial sample variance in our empirical covariance estimate. To break degeneracies in the remaining modes, however, requires many more realizations.
 
@@ -401,13 +401,13 @@ In the toy models throughout Chapter \ref{sec:SiglossOverview}, we exploit the f
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{plots/toy_sigloss5.pdf}
-	\caption{Our ``fringe-rate filtered" (time-averaged) toy model dataset. We average every four samples together, 
+	\caption{Our "fringe-rate filtered" (time-averaged) toy model dataset. We average every four samples together, 
 yielding $25$ independent samples in time. Real parts are shown here.}
 	\label{fig:toy_sigloss5}
 \end{figure}
 
 
-With Figures \ref{fig:toy_sigloss16} and \ref{fig:toy_sigloss17} establishing the connection between convergence rates (of empirical covariances and eigenvectors) and number of realizations, we now turn back to our original toy model used in Chapter \ref{sec:toymodel}, which is comprised of a mock foreground and mock EoR signal. We mimic a fringe-rate filter by averaging every four time integrations of our toy model dataset together, yielding $25$ independent samples in time (Figure \ref{fig:toy_sigloss5}). We choose these numbers so that the total number of independent samples is similar to the number of frequency channels --- hence our matrices will be full rank. We use this ``fringe-rate filtered" mock data for the remainder of Chapter \ref{sec:SiglossOverview}.
+With Figures \ref{fig:toy_sigloss16} and \ref{fig:toy_sigloss17} establishing the connection between convergence rates (of empirical covariances and eigenvectors) and number of realizations, we now turn back to our original toy model used in Chapter \ref{sec:toymodel}, which is comprised of a mock foreground and mock EoR signal. We mimic a fringe-rate filter by averaging every four time integrations of our toy model dataset together, yielding $25$ independent samples in time (Figure \ref{fig:toy_sigloss5}). We choose these numbers so that the total number of independent samples is similar to the number of frequency channels --- hence our matrices will be full rank. We use this "fringe-rate filtered" mock data for the remainder of Chapter \ref{sec:SiglossOverview}.
 %\footnote{If instead we average every $20$ samples together, yielding only $5$ independent samples in time, we are left with a rank deficient covariance matrix. In this case... \cc{fill in}}
 
 The power spectrum results for this model are shown in Figure \ref{fig:toy_sigloss7}, and as 
@@ -427,7 +427,7 @@ advantageous to use one despite the trade-offs.
 \begin{figure}
 	\centering
 	\includegraphics[trim={0cm 0cm 0cm 0cm},clip,width=0.7\textwidth]{plots/toy_sigloss7.pdf}
-	\caption{Resulting power spectrum estimate for the ``fringe-rate filtered" (time-averaged) toy model simulation --- foregrounds only (blue), 
+	\caption{Resulting power spectrum estimate for the "fringe-rate filtered" (time-averaged) toy model simulation --- foregrounds only (blue), 
 EoR only (red), and the weighted FG + EoR dataset (green). We use empirically estimated inverse covariance weighting where $\textbf{C}$ is 
 computed from the data. There is a larger amount of signal loss than for the non-averaged data, a consequence of weighting by eigenmodes that are more strongly coupled to the data due to there being fewer independent modes in the data.}
 	\label{fig:toy_sigloss7}
@@ -459,7 +459,7 @@ In practice such a weighting option is not feasible, as it is difficult to model
 	\includegraphics[trim={0cm 0cm 0cm 0cm},clip,height=0.33\textwidth]{plots/toy_sigloss8.pdf}
 	\includegraphics[trim={0cm 0cm 0cm 0cm},clip,height=0.33\textwidth]{plots/toy_sigloss9.pdf}
 	\includegraphics[trim={0cm 0cm 0cm 0cm},clip,height=0.33\textwidth]{plots/toy_sigloss11.pdf}
-	\caption{Resulting power spectra estimates for our ``fringe-rate filtered" (time-averaged) toy model simulation --- foregrounds only (blue), EoR only (red), and the weighted FG + EoR dataset (green). We show four alternate weighting options that each minimize signal loss, including modeling the covariance matrix of EoR (upper left), regularizing $\widehat{\textbf{C}}$ by adding an identity matrix to it (upper right), using only the first three eigenmodes of $\widehat{\textbf{C}}$ (lower left), and keeping only the diagonal elements of $\widehat{\textbf{C}}$ (lower right). The first case (upper left) is not feasible in practice since we do not know $\textbf{C}_{\rm FG}$ and $\textbf{C}_{\rm EoR}$ like we do in the toy model.}
+	\caption{Resulting power spectra estimates for our "fringe-rate filtered" (time-averaged) toy model simulation --- foregrounds only (blue), EoR only (red), and the weighted FG + EoR dataset (green). We show four alternate weighting options that each minimize signal loss, including modeling the covariance matrix of EoR (upper left), regularizing $\widehat{\textbf{C}}$ by adding an identity matrix to it (upper right), using only the first three eigenmodes of $\widehat{\textbf{C}}$ (lower left), and keeping only the diagonal elements of $\widehat{\textbf{C}}$ (lower right). The first case (upper left) is not feasible in practice since we do not know $\textbf{C}_{\rm FG}$ and $\textbf{C}_{\rm EoR}$ like we do in the toy model.}
 	\label{fig:toy_sigloss8}
 \end{figure*}
 
@@ -507,7 +507,7 @@ In Chapter \ref{sec:QE}, we argued that the optimal quadratic estimator method h
 
 In this section, we focus on the optimal quadratic estimator, Equation \eqref{eq:OQE}, and mathematically illustrate its role in estimating the power spectrum of EoR. While there exists detailed literature about quadratic estimators in general (e.g., \citealt{liu_tegmark2011}; \citealt{trott_et_al2012}; \citealt{liu_et_al2014b}; \citealt{dillon_et_al2014}), here we focus on two simple cases in order to outline one situation where the estimator successfully suppresses contamination and one where it does not. By describing these two cases, we hope to clarify and motivate the desire to use OQE while also understanding its limitations.
 
-In our toy model, we specifically choose toy models where the data covariance is diagonal, as indeed we expect the EoR signal to be. We assume we have $N$ data points $\Delta_i$ which are the sum of a desired signal $\sigma_i$ and an undesired contaminant $\upsilon_i$
+In our toy model, we specifically choose models where the data covariance is diagonal, as indeed we expect the EoR signal to be. We assume we have $N$ data points $\Delta_i$ which are the sum of a desired signal $\sigma_i$ and an undesired contaminant $\upsilon_i$
 \begin{equation}
 \Delta_i = \sigma_i + \upsilon_i
 \end{equation}
@@ -573,7 +573,7 @@ An instructive limit is $u \gg s$, $\xi \to 1$, in which case the virtue of weig
 \begin{equation}
 \invC  = \frac{1}{s} \left(\I - \mathbf{m m}^T \right)
 \end{equation}
-where $\I - \mathbf{m m}^T$ is the projection operator, projecting out $\mathbf{m}$ from any vector it acts on, and further, the linear bias tends to 0 as $\xi \to 1$ (i.e., the projection is ``perfect'' and not ``undone'' by the Fisher matrix normalization).
+where $\I - \mathbf{m m}^T$ is the projection operator, projecting out $\mathbf{m}$ from any vector it acts on, and further, the linear bias tends to 0 as $\xi \to 1$ (i.e., the projection is "perfect'' and not "undone'' by the Fisher matrix normalization).
 
 This is the ideal case for the inverse covariance weighting performed in the PAPER analysis, where removal of contamination with a known covariance can be suppressed by a kind of projection of the offending modes.  But even in this case, it is worth pointing out that the estimator still has a linear bias for finite $u$.  We have also assumed that the contaminating mode $\mathbf{m}$ is known perfectly; the next section takes up the case where the modes are estimated from the data.
 
@@ -604,7 +604,7 @@ where
 \begin{equation}
 \widehat{F}^{\alpha \alpha} \equiv \frac{1}{2} \textrm{tr} \left( \Chat^{-1} \Q^\alpha \Chat^{-1} \Q^\alpha \right),
 \end{equation}
-with the label ``loss" to foreshadow the fact that this will be an estimator with signal loss (i.e., a multiplicative bias of less than unity). We will now provide an explicit demonstration of this by modeling the estimated covariance as
+with the label "loss" to foreshadow the fact that this will be an estimator with signal loss (i.e., a multiplicative bias of less than unity). We will now provide an explicit demonstration of this by modeling the estimated covariance as
 \begin{equation}
 \label{eq:ChatDef}
 \Chat = (1-\eta) \C + \eta \x \x^t,
@@ -684,7 +684,7 @@ prediction (green).
 	\includegraphics[trim={0cm 0cm 0cm 0cm},width=0.7\textwidth]{plots/toy_error1.pdf}
 	\caption{Error estimation from bootstrapping as a function of the number of elements drawn per bootstrap when 
 sampling with replacement. The star represents the standard deviation of $N_{\rm boot}=500$ bootstraps, each created by drawing $1000$ 
-elements (with replacement) from a length $1000$ array of a Gaussian random signal. The black points correspond to time-averaged data (correlated data) which has $100$ independent samples. They illustrate how errors can be under-estimated if 
+elements (with replacement) from a length $1000$ array of a Gaussian random signal. The black points correspond to time-averaged data (correlated data) which has $100$ independent samples. They illustrate how errors can be underestimated if 
 drawing more elements than there are independent samples in the data. The estimated errors match up with the theoretical 
 prediction only at $N=100$.}
 	\label{fig:toy_error1}
@@ -693,18 +693,18 @@ prediction only at $N=100$.}
 One major caveat of bootstrapping arises when working with correlated data. If, for example, a dataset has many repeated 
 values inside it, this would be reflected in each bootstrap. The same value would be present multiple times within a bootstrap 
 and also be present between bootstraps, purely because it has a more likely chance of being drawn if there are repeats of 
-itself. Therefore, bootstrapping correlated data results in a smaller variation between bootstraps, and hence, under-estimates 
+itself. Therefore, bootstrapping correlated data results in a smaller variation between bootstraps, and hence, underestimates 
 errors. The use of a fringe-rate filter, which averages data in time to increase sensitivity, is one example which leads to a 
-reduction in the number of independent samples, creating a situation in which errors can be under-estimated. We will now show 
+reduction in the number of independent samples, creating a situation in which errors can be underestimated. We will now show 
 this effect using our toy model.
 
 Going back to our toy model, we apply a sliding boxcar average to $10$ samples at a time, thus reducing the number of 
 independent data samples to $N/10 = 100$. Bootstrapping this time-averaged noise, using the same method as described 
-earlier (drawing $N=1000$ elements per bootstrap sample), under-estimates the error by a factor of $\sim3$ (black points in Figure \ref{fig:toy_error1}, at $N=1000$). This occurs 
+earlier (drawing $N=1000$ elements per bootstrap sample), underestimates the error by a factor of $\sim3$ (black points in Figure \ref{fig:toy_error1}, at $N=1000$). This occurs 
 because we are drawing more samples than independent ones available, and thus some samples are repeated multiple times 
 in all bootstraps, leading to less variation between the bootstraps. In fact, the error derived from bootstrapping is a strong 
 function of the number of elements that are drawn per bootstrap (Figure \ref{fig:toy_error1}, black points), and we can both 
-under-estimate the error by drawing too many or over-estimate it by drawing too few. However, since we know that we have $100$ 
+underestimate the error by drawing too many or overestimate it by drawing too few. However, since we know that we have $100$ 
 independent samples in this toy model, the error associated with drawing $N=100$ samples with replacement does match the theoretical prediction 
 as expected (the black points cross the green line at $N=100$ in Figure \ref{fig:toy_error1}).
 
@@ -713,10 +713,10 @@ common statistical procedure like bootstrapping. Bootstrapping as a means of est
 fringe-rate filtered data requires knowledge of the number of independent samples, which is not always a trivial task. For 
 example, computing the effective number of independent samples of fringe-rate filtered data is not as simple as counting the 
 number of averages performed. Down-sampling a time-averaged signal is straightforward using a boxcar average, but non-trivial with a more complicated convolution function that has long tails. Hence, we do not recommend bootstrapping unless the 
-number of independent samples along the axis that is being re-sampled is well-determined. In Chapter \ref{sec:Boot}, we explain how we under-estimated errors in the \citetalias{ali_et_al2015} analysis of PAPER and how our bootstrapping procedure has now changed to avoid the over-sampling of correlated data. 
+number of independent samples along the axis that is being re-sampled is well-determined. In Chapter \ref{sec:Boot}, we explain how we underestimated errors in the \citetalias{ali_et_al2015} analysis of PAPER and how our bootstrapping procedure has now changed to avoid the over-sampling of correlated data. 
 
 In summary, bootstrapping can be an effective and straightforward way to estimate errors of a dataset. However, we have 
-illustrated a situation in which bootstrapping can lead to under-estimated errors and therefore under-estimated power spectrum limits. We have shown that 
+illustrated a situation in which bootstrapping can lead to underestimated errors and therefore underestimated power spectrum limits. We have shown that 
 bootstrapped error depends strongly on the number of elements drawn in a bootstrap sample. Estimated errors can drop to 
 arbitrarily small values when the number of elements drawn exceeds the effective number of independent elements. 
 %We have also shown a situation in which a bootstrapping method does not provide the most sensitive measurement possible. 
@@ -737,12 +737,12 @@ help evaluate deep limits and/or detections.
 \label{sec:BiasTypes}
 
 In Chapter \ref{sec:SiglossOverview}, we discussed signal loss as a form of multiplicative bias to estimates of the signal. Foregrounds are another type of bias, but an additive instead of a multiplicative one. Foreground bias is perhaps one of the main factors limiting 21\,cm results, as foreground signals lie $\sim4$-$5$ orders of 
-magnitude above the cosmological signal. Though there are many techniques proposed for removing foregrounds (see e.g. \citealt{vedantham_et_al2012}; \citealt{chapman_et_al2012}; \citealt{parsons_et_al2012a}; \citealt{parsons_et_al2012b}; \citealt{dillon_et_al2013a}; \citealt{wang_et_al2013}; \citealt{parsons_et_al2014}; \citealt{liu_et_al2014a}; \citealt{wolz_et_al2014}; \citealt{liu_et_al2014b}; \citealt{dillon_et_al2015}; \citealt{pober_et_al2016a}; \citealt{trott_et_al2016}), most 
+magnitude above the cosmological signal. Though there are many techniques proposed for removing foregrounds (see e.g., \citealt{vedantham_et_al2012}; \citealt{chapman_et_al2012}; \citealt{parsons_et_al2012a}; \citealt{parsons_et_al2012b}; \citealt{dillon_et_al2013a}; \citealt{wang_et_al2013}; \citealt{parsons_et_al2014}; \citealt{liu_et_al2014a}; \citealt{wolz_et_al2014}; \citealt{liu_et_al2014b}; \citealt{dillon_et_al2015}; \citealt{pober_et_al2016a}; \citealt{trott_et_al2016}), most 
 experiments currently remain limited by residuals rather than noise, especially at low $k$.
 
 One common method to isolate and filter foregrounds is to exploit their behavior in $k$-space. For a particular 
 baseline length, there is a maximum delay imposed on sources attached to the sky, which corresponds to the light-crossing time between two 
-antennas in a baseline. For longer baselines, this value increases, producing what is known as ``the 
+antennas in a baseline. For longer baselines, this value increases, producing what is known as "the 
 wedge"
 \citep{datta_et_al2010, parsons_et_al2012b, vedantham_et_al2012, pober_et_al2013, thyagarajan_et_al2013, liu_et_al2014a, liu_et_al2014b, patil_et_al2017}. 
 The wedge describes a region in $k$-space contaminated by smooth spectrum foregrounds, bounded by baseline length (which is proportional to $k_{\perp}$) and delay (which is 
@@ -755,7 +755,7 @@ Although smooth-spectrum foregrounds preferentially show up at low delay, or low
 the delay associated with the length of a baseline are often still contaminated at a low level. This leakage, particularly at low $k$'s, can be attributed to 
 convolution kernels associated with Fourier-transforming visibilities into delay-space. In other words, smooth-spectrum 
 foregrounds appear as $\delta$-functions in delay-space, convolved by the Fourier transform of the source spectrum, the signal chain, and the 
-antenna response, all of which could smear out the foregrounds and cause leakage outside the wedge \citep[e.g.][]{ewall-wice_et_al2017, kerrigan_et_al2018}.
+antenna response, all of which could smear out the foregrounds and cause leakage outside the wedge \citep[e.g.,][]{ewall-wice_et_al2017, kerrigan_et_al2018}.
 
 There are analysis techniques to mitigate the effects of foreground leakage and prevent information from low $k's$ from 
 spreading to high $k$ values. For example, narrow window functions in delay-space can be used to minimize the leakage from a particular 
