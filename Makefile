@@ -26,10 +26,15 @@ deps += PSA64/PSA64.tex
 cleans += PSA64/PSA64.aux
 
 # Chapter Four
+
+deps += PSA64_Results/PSA64_Results.tex
+cleans += PSA64_Results/PSA64_Results.aux
+
+# Chapter Five
 deps += PSA128/PSA128.tex
 cleans += PSA128/PSA128.aux
 
-# Chapter Five
+# Chapter Six
 deps += Future/Future.tex
 cleans += Future/Future.aux
 
