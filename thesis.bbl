@@ -1,4 +1,4 @@
-\begin{thebibliography}{134}
+\begin{thebibliography}{144}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Ade {et~al.}(2008)Ade, Bock, Bowden, Brown, Cahill, Carlstrom,
@@ -255,6 +255,13 @@ DeBoer, D.~R., Parsons, A.~R., Aguirre, J.~E., {et~al.} 2017,
 Dillon, J.~S., \& Parsons, A.~R. 2016,
   \href{http://stacks.iop.org/0004-637X/826/i=2/a=181}{\apj, 826, 181}
 
+\bibitem[{{Dillon} {et~al.}(2014){Dillon}, {Liu}, {Williams}, {Hewitt},
+  {Tegmark}, {Morgan}, {Levine}, {Morales}, {Tingay}, {Bernardi}, {Bowman},
+  {Briggs}, {Cappallo}, {Emrich}, {Mitchell}, {Oberoi}, {Prabu}, {Wayth}, \&
+  {Webster}}]{dillon_et_al2013b}
+{Dillon}, J.~S., {Liu}, A., {Williams}, C.~L., {et~al.} 2014,
+  \href{http://dx.doi.org/10.1103/PhysRevD.89.023002}{\prd, 89, 023002}
+
 \bibitem[{Dillon {et~al.}(2014)Dillon, Liu, Williams, Hewitt, Tegmark, Morgan,
   Levine, Morales, Tingay, Bernardi, Bowman, Briggs, Cappallo, Emrich,
   Mitchell, Oberoi, Prabu, Wayth, \& Webster}]{dillon_et_al2014}
@@ -314,6 +321,11 @@ Fialkov, A., Barkana, R., Pinhas, A., \& Visbal, E. 2014,
 {Ghosh}, A., {Bharadwaj}, S., {Ali}, S.~S., \& {Chengalur}, J.~N. 2011,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2011.19649.x}{\mnras, 418, 2584}
 
+\bibitem[{{Greig} {et~al.}(2015){Greig}, {Mesinger}, \&
+  {Pober}}]{greig_et_al2015a}
+{Greig}, B., {Mesinger}, A., \& {Pober}, J.~C. 2015, ArXiv e-prints,
+  \href{http://arxiv.org/abs/1509.02158}{{\sffamily arXiv:1509.02158}}
+
 \bibitem[{Haiman \& Knox(1999)}]{haiman_knox_1999}
 Haiman, Z., \& Knox, L. 1999, ASP Conf. Ser., 181, 227
 
@@ -339,6 +351,9 @@ Hazelton, B.~J., Morales, M.~F., \& Sullivan, I.~S. 2013,
   \& {Wright}}]{hinshaw_et_al2013}
 {Hinshaw}, G., {Larson}, D., {Komatsu}, E., {et~al.} 2013,
   \href{http://dx.doi.org/10.1088/0067-0049/208/2/19}{\apjs, 208, 19}
+
+\bibitem[{{H{\"o}gbom}(1974)}]{hogbom1974}
+{H{\"o}gbom}, J.~A. 1974, \aaps, 15, 417
 
 \bibitem[{Jacobs {et~al.}(2015)Jacobs, Pober, Parsons, Aguirre, Ali, Bowman,
   Bradley, Carilli, DeBoer, Dexter, Gugliucci, Klima, Liu, MacMahon, Manley,
@@ -418,6 +433,14 @@ Kerrigan, J., Pober, J., Ali, Z., {et~al.} 2018,
 Lenc, E., Gaensler, B.~M., Sun, X.~H., {et~al.} 2016,
   \href{http://stacks.iop.org/0004-637X/830/i=1/a=38}{\apj, 830, 38}
 
+\bibitem[{{lglewicz} \& {Hoaglin}(1993)}]{Iglewicz_and_hoaglin}
+{lglewicz}, B., \& {Hoaglin}, D.~C. 1993, Volume 16: How to Detect and Handle
+  Outliers (The ASQC Basic References in Quality Control: Statistical
+  Techniques)
+
+\bibitem[{Liu \& Parsons(2016)}]{liu_parsons_2016}
+Liu, A., \& Parsons, A.~R. 2016, MNRAS, 457, 1864
+
 \bibitem[{{Liu} {et~al.}(2014{\natexlab{a}}){Liu}, {Parsons}, \&
   {Trott}}]{liu_et_al2014a}
 {Liu}, A., {Parsons}, A.~R., \& {Trott}, C.~M. 2014{\natexlab{a}},
@@ -459,10 +482,37 @@ Lonsdale, C., J.~Cappallo, R., F.~Morales, M., {et~al.} 2009, Proceedings of
 {Masui}, K.~W., {Switzer}, E.~R., {Banavar}, N., {et~al.} 2013,
   \href{http://dx.doi.org/10.1088/2041-8205/763/1/L20}{\apjl, 763, L20}
 
+\bibitem[{{Mellema} {et~al.}(2013){Mellema}, {Koopmans}, {Abdalla}, {Bernardi},
+  {Ciardi}, {Daiboo}, {de Bruyn}, {Datta}, {Falcke}, {Ferrara}, {Iliev},
+  {Iocco}, {Jeli{\'c}}, {Jensen}, {Joseph}, {Labroupoulos}, {Meiksin},
+  {Mesinger}, {Offringa}, {Pandey}, {Pritchard}, {Santos}, {Schwarz},
+  {Semelin}, {Vedantham}, {Yatawatta}, \& {Zaroubi}}]{mellema:2013}
+{Mellema}, G., {Koopmans}, L.~V.~E., {Abdalla}, F.~A., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1007/s10686-013-9334-5}{Experimental Astronomy,
+  36, 235}
+
+\bibitem[{{Mesinger} {et~al.}(2011){Mesinger}, {Furlanetto}, \&
+  {Cen}}]{mesinger_et_al2011}
+{Mesinger}, A., {Furlanetto}, S., \& {Cen}, R. 2011,
+  \href{http://dx.doi.org/10.1111/j.1365-2966.2010.17731.x}{\mnras, 411, 955}
+
+\bibitem[{Monsalve {et~al.}(2017)Monsalve, Rogers, Bowman, \&
+  Mozdzen}]{monsalve_et_al2017}
+Monsalve, R.~A., Rogers, A. E.~E., Bowman, J.~D., \& Mozdzen, T.~J. 2017,
+  \href{http://dx.doi.org/10.3847/1538-4357/aa88d1}{The Astrophysical Journal,
+  847, 64}
+
 \bibitem[{Moore {et~al.}(2013)Moore, Aguirre, Parsons, Jacobs, \&
   Pober}]{moore_et_al2013}
 Moore, D.~F., Aguirre, J.~E., Parsons, A.~R., Jacobs, D.~C., \& Pober, J.~C.
   2013, \href{http://stacks.iop.org/0004-637X/769/i=2/a=154}{\apj, 769, 154}
+
+\bibitem[{{Moore} {et~al.}(2017){Moore}, {Aguirre}, {Kohn}, {Parsons}, {Ali},
+  {Bradley}, {Carilli}, {DeBoer}, {Dexter}, {Gugliucci}, {Jacobs}, {Klima},
+  {Liu}, {MacMahon}, {Manley}, {Pober}, {Stefan}, \&
+  {Walbrugh}}]{moore_et_al2017}
+{Moore}, D.~F., {Aguirre}, J.~E., {Kohn}, S.~A., {et~al.} 2017,
+  \href{http://dx.doi.org/10.3847/1538-4357/836/2/154}{\apj, 836, 154}
 
 \bibitem[{Morales {et~al.}(2006)Morales, Bowman, \& Hewitt}]{morales_et_al2006}
 Morales, M.~F., Bowman, J.~D., \& Hewitt, J.~N. 2006,
@@ -742,17 +792,33 @@ Sullivan, I.~S., Morales, M.~F., Hazelton, B.~J., {et~al.} 2012,
 {Thyagarajan}, N., {Udaya Shankar}, N., {Subrahmanyan}, R., {et~al.} 2013,
   \href{http://dx.doi.org/10.1088/0004-637X/776/1/6}{\apj, 776, 6}
 
-\bibitem[{Thyagarajan {et~al.}(2015)Thyagarajan, Jacobs, Bowman, Barry,
-  Beardsley, Bernardi, Briggs, Cappallo, Carroll, Corey, de~Oliveira-Costa,
-  Dillon, Emrich, Ewall-Wice, Feng, Goeke, Greenhill, Hazelton, Hewitt,
-  Hurley-Walker, Johnston-Hollitt, Kaplan, Kasper, Kim, Kittiwisit,
-  Kratzenberg, Lenc, Line, Loeb, Lonsdale, Lynch, McKinley, McWhirter,
-  Mitchell, Morales, Morgan, Neben, Oberoi, Offringa, Ord, Paul, Pindor, Pober,
-  Prabu, Procopio, Riding, Rogers, Roshi, Shankar, Sethi, Srivani,
-  Subrahmanyan, Sullivan, Tegmark, Tingay, Trott, Waterson, Wayth, Webster,
-  Whitney, Williams, Williams, Wu, \& Wyithe}]{thyagarajan_et_al2015}
-Thyagarajan, N., Jacobs, D.~C., Bowman, J.~D., {et~al.} 2015,
-  \href{http://stacks.iop.org/0004-637X/804/i=1/a=14}{\apj, 804, 14}
+\bibitem[{{Thyagarajan} {et~al.}(2015{\natexlab{a}}){Thyagarajan}, {Jacobs},
+  {Bowman}, {Barry}, {Beardsley}, {Bernardi}, {Briggs}, {Cappallo}, {Carroll},
+  {Deshpande}, {de Oliveira-Costa}, {Dillon}, {Ewall-Wice}, {Feng},
+  {Greenhill}, {Hazelton}, {Hernquist}, {Hewitt}, {Hurley-Walker},
+  {Johnston-Hollitt}, {Kaplan}, {Kim}, {Kittiwisit}, {Lenc}, {Line}, {Loeb},
+  {Lonsdale}, {McKinley}, {McWhirter}, {Mitchell}, {Morales}, {Morgan},
+  {Neben}, {Oberoi}, {Offringa}, {Ord}, {Paul}, {Pindor}, {Pober}, {Prabu},
+  {Procopio}, {Riding}, {Udaya Shankar}, {Sethi}, {Srivani}, {Subrahmanyan},
+  {Sullivan}, {Tegmark}, {Tingay}, {Trott}, {Wayth}, {Webster}, {Williams},
+  {Williams}, \& {Wyithe}}]{Thyagarajan_et_al2015b}
+{Thyagarajan}, N., {Jacobs}, D.~C., {Bowman}, J.~D., {et~al.}
+  2015{\natexlab{a}},
+  \href{http://dx.doi.org/10.1088/2041-8205/807/2/L28}{\apjl, 807, L28}
+
+\bibitem[{{Thyagarajan} {et~al.}(2015{\natexlab{b}}){Thyagarajan}, {Jacobs},
+  {Bowman}, {Barry}, {Beardsley}, {Bernardi}, {Briggs}, {Cappallo}, {Carroll},
+  {Corey}, {de Oliveira-Costa}, {Dillon}, {Emrich}, {Ewall-Wice}, {Feng},
+  {Goeke}, {Greenhill}, {Hazelton}, {Hewitt}, {Hurley-Walker},
+  {Johnston-Hollitt}, {Kaplan}, {Kasper}, {Kim}, {Kittiwisit}, {Kratzenberg},
+  {Lenc}, {Line}, {Loeb}, {Lonsdale}, {Lynch}, {McKinley}, {McWhirter},
+  {Mitchell}, {Morales}, {Morgan}, {Neben}, {Oberoi}, {Offringa}, {Ord},
+  {Paul}, {Pindor}, {Pober}, {Prabu}, {Procopio}, {Riding}, {Rogers}, {Roshi},
+  {Udaya Shankar}, {Sethi}, {Srivani}, {Subrahmanyan}, {Sullivan}, {Tegmark},
+  {Tingay}, {Trott}, {Waterson}, {Wayth}, {Webster}, {Whitney}, {Williams},
+  {Williams}, {Wu}, \& {Wyithe}}]{Thyagarajan_et_al2015a}
+---. 2015{\natexlab{b}},
+  \href{http://dx.doi.org/10.1088/0004-637X/804/1/14}{\apj, 804, 14}
 
 \bibitem[{{Tingay} {et~al.}(2013){Tingay}, {Goeke}, {Bowman}, {Emrich}, {Ord},
   {Mitchell}, {Morales}, {Booler}, {Crosse}, {Wayth},
