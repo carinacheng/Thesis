@@ -58,7 +58,7 @@ extended by Chapter \ref{c.PSA64}.
 is retained, with a power spectrum measurement coming from each type of baseline; however several steps have been removed and others replaced. In particular, while the re-analysis described in Chapter \ref{c.PSA64} focuses almost exclusively on
 the final power spectrum estimation stage, here the intermediate stages (like foreground filtering) have been re-examined.
 
-We expand the subset of data analyzed in Chapter \ref{c.PSA64} to the full PAPER-64 dataset as used in \citetalias{ali_et_al2015} in order to make our revised power spectrum analysis. Data collection and processing steps prior to LST-binning remain identical to previous analyses (Chapters \ref{sec:PSA64_observations} and \ref{sec:PSA64_processing}). We analyze the same three 30\,m baselines as in \citetalias{ali_et_al2015} and form estimates for six independent redshift bands. In selecting our bands, we note that a practical limitation in selection
+We expand the subset of data analyzed in Chapter \ref{c.PSA64} to the full PAPER-64 data set as used in \citetalias{ali_et_al2015} in order to make our revised power spectrum analysis. Data collection and processing steps prior to LST-binning remain identical to previous analyses (Chapters \ref{sec:PSA64_observations} and \ref{sec:PSA64_processing}). We analyze the same three 30\,m baselines as in \citetalias{ali_et_al2015} and form estimates for six independent redshift bands. In selecting our bands, we note that a practical limitation in selection
 comes from a desire to avoid including channels with significant RFI flagging.
 Bands with the most continuous spectral sampling span the redshift range $7.5$ to $11$, and we select redshift ranges that are approximately coeval, i.e., bandwidths over which limited evolution of the 21\,cm signal is expected.
 Constraints from EDGES \emph{high} suggest that the evolution is probably slower than a $dz$ (total change in
@@ -149,7 +149,7 @@ analysis.
 However, as can be seen in the right panel of Figure \ref{fig:FRF_response}, this filter is frequency dependent.
 In particular, the maximum fringe-rate range probed by a baseline increases linearly with frequency.
 This spectral dependence may introduce additional structure during the delay transform; further investigation is needed to find the best approach for mitigating this effect.
-We also recall that the use of these ``aggressive" fringe-rate filters is shown to contribute to signal loss
+We also recall that the use of these "aggressive" fringe-rate filters is shown to contribute to signal loss
 (Chapter \ref{sec:toymodel_frf}).
 
 Therefore, as a simplification to avoid potential signal loss
@@ -163,7 +163,7 @@ rates.
 
 Common mode signals are those which vary on time scales longer than would be expected from an ideal interferometer \citep{ali_et_al2015}.
 Such common modes were previously referred to as
-	``crosstalk'' --- however, these signals may not
+	"crosstalk'' --- however, these signals may not
 	necessarily result from signals observed in one antenna and leaked to another
 	(a time-delayed sky signal) but rather any time-independent signal which is observed by all antennas. We exclude common mode signals here by setting the minimum fringe-rate included in the filter to $3.5\times10^{-5}$~Hz; this
 excludes all modes with periods longer than $\sim$45 minutes.
@@ -186,7 +186,7 @@ fringe modes but preserves the structure of Eastward moving sky-like modes.
 To mitigate foreground contamination during
 power spectrum estimation, PAPER analyses have used
 a wide-band iterative deconvolution algorithm (WIDA),
-often referred to as a ``clean-like'' iterative
+often referred to as a "clean-like'' iterative
 deconvolution algorithm. This algorithm relies on the
 underlying mathematics of CLEAN as described in
 \citet{hogbom1974} to remove delay components from
@@ -380,7 +380,7 @@ However, effects can leak real sky power into the
 imaginary part of the spectrum.
 A perfectly calibrated array with non-redundant baselines
 --- for example, with slightly different antenna positions ---
-will cause two nominally ``redundant'' baselines to have slightly different phases.
+will cause two nominally "redundant'' baselines to have slightly different phases.
 The imaginary parts of these cross-multiplied visibilities will therefore not cancel out, and non-zero power will be seen in the imaginary component of the power spectrum estimate.
 The same effect would come from a perfectly redundant but imperfectly calibrated array.
 %It is also important to note that because of the foreground-dependent error bars derived in Section~\ref{sec:FG_err},
@@ -526,7 +526,7 @@ While we have identified non-redundancies as a likely cause of our failed null t
 
 We use the PAPER-64 data to place upper limits on the 21\,cm signal using the
 dimensionless power spectrum: $\Delta^{2}(k)= \frac{|k|^{3}}{2\pi^{2}}P(|k|)$. To convert from
-interferometric delay to cosmological co-moving wavenumber, we assume WMAP-9 year cosmology in ``little-h'' units ($ H_{0}=100 $ $ h\, $km/s/Mpc). These power spectra are shown in Figure~\ref{fig:pspec_delta2}.
+interferometric delay to cosmological co-moving wavenumber, we assume WMAP-9 year cosmology in "little-h'' units ($ H_{0}=100 $ $ h\, $km/s/Mpc). These power spectra are shown in Figure~\ref{fig:pspec_delta2}.
 
 As a summary and comparison of progress across the field, we also report from each published power spectrum the lowest upper limits achieved by various instruments in the $k$-ranges reported by each instrument (Figure \ref{fig:eor_summary}). To encapsulate the results of this work, the most sensitive limit is reported from
 the range $0.3 <  k < 0.6\ \hMpci$, where both null tests

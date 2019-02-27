@@ -7,18 +7,18 @@
 \section{Overview}
 \label{sec:PSA64overview}
 
-In the previous chapter we have discussed three overarching 21\,cm power spectrum themes --- signal loss, error estimation, 
+In the previous chapter we have discussed three overarching 21\,cm power spectrum themes: signal loss, error estimation, 
 and bias. Understanding the subtleties and trade-offs involved in each is necessary for an accurate and robust understanding of 
 a power spectrum result. 
 
-We now apply these lessons to data from the PAPER experiment in order to illustrate our revised analysis pipeline. We begin with a brief overview of PAPER's data processing steps prior to power spectrum estimation before delving into each theme in detail.
+We now apply these lessons to a subset of data from the PAPER experiment in order to illustrate our revised analysis pipeline. We begin with a brief overview of PAPER's data processing steps prior to power spectrum estimation before delving into each theme in detail.
 
 \subsection{Observations}
 \label{sec:PSA64_observations}
 
-As described in Chapter \ref{sec:PAPER_intro}, PAPER is a dedicated 21\,cm experiment located in the Karoo Desert in South Africa. The PAPER-64 configuration consists of 64 dual-polarization drift-scan elements that are arranged in a grid layout (Figure \ref{fig:ant_layout}). While every unique baseline is used for calibration, only a subset of the baselines are used for the power spectrum analysis in \citetalias{ali_et_al2015} (the three baselines used are the $30$\,m East/West baselines and their off-diagonal companions where two antennas are in adjacent columns and neighboring rows) and only one baseline-type is used for the demonstrations in this chapter (only the $30$\,m East/West baselines).
+As described in Chapter \ref{sec:PAPER_intro}, PAPER is a dedicated 21\,cm experiment located in the Karoo Desert in South Africa. The PAPER-64 configuration consists of 64 dual-polarization drift-scan elements that are arranged in a grid layout (Figure \ref{fig:ant_layout}). While every unique baseline is used for calibration, only a subset of the baselines are used for the power spectrum analysis in \citetalias{ali_et_al2015} and Chapter \ref{c.PSA64_results} (the three baselines used are the $30$\,m East/West baselines and their off-diagonal companions where two antennas are in adjacent columns and neighboring rows) and only one baseline-type is used for the "case study" demonstrations in this chapter (only the $30$\,m East/West baselines).
 
-PAPER-64 conducted nighttime observations from November 2012 to March 2013. Over the course of the season, LST-coverage varied slightly, with power spectrum analyses focusing on the ``cold patch" range from $\sim0$-$8$\,hours when the Galaxy is below the horizon. The PAPER correlator processes a 100-200\,MHz bandwidth that consists of 1024 channels, each of width 97.6\,kHz. Visibilities are integrated for 10.7\,s before being written to disk. 
+PAPER-64 conducted nighttime observations from November 2012 to March 2013. Over the course of the season, LST-coverage varied slightly, with power spectrum analyses focusing on the "cold patch" range from $\sim0$-$8$\,hours when the Galaxy is below the horizon. The PAPER correlator processes a 100-200\,MHz bandwidth that consists of 1024 channels, each of width 97.6\,kHz. Visibilities are integrated for 10.7\,s before being written to disk. 
 
 PAPER's raw data is compressed by a factor of $\sim70$ through the use of RFI, delay, and delay-rate filters. More specifically, radio frequency interference is flagged at the $6\sigma$ level. Next, a low-pass delay filter is applied to all the data in order to filter out delays greater than the maximum delay allowed by the longest baseline in the array. Similarly, a low-pass fringe-rate, or delay-rate filter is applied to limit fringe-rates to allowable scales set by the array. Finally, the data is decimated to critical Nyquist sampling rates of 493\,kHz and 42.9\,s. For more details about PAPER's data acquisition and compression pipelines, we refer the reader to \citet{parsons_et_al2010} and \citetalias{ali_et_al2015}.
 
@@ -33,11 +33,11 @@ chapter (i.e., a subset of the shortest horizontal spacings).}
 \subsection{Data Processing}
 \label{sec:PSA64_processing}
 
-As described in Chapters \ref{sec:calibration_intro}, \ref{sec:fg_intro}, \ref{sec:frf_intro}, the primary post-processing steps of PAPER's compressed data is calibration, foreground-filtering, and fringe-rate filtering. We now give a brief overview of each, as applied to PAPER data.
+As described in Chapters \ref{sec:calibration_intro}, \ref{sec:fg_intro}, and \ref{sec:frf_intro}, the primary post-processing steps of PAPER's compressed data is calibration, foreground-filtering, and fringe-rate filtering. We now give a brief overview of each, as applied to PAPER data.
 
-We employ the package {\sc Omnical} for redundant calibration (\citealt{zheng_et_al2014}), which comprises of three steps. The first is {\tt FirstCal}, which uses all baseline redundancies to generate a static gain solution for each antenna that will unwrap any phase wrapping between two identical baselines. We perform {\tt FirstCal} because the next stage of {\sc Omnical} cannot tell the difference between a phase of $0$ and $2\pi$, for example. The second step is {\tt LogCal}, which takes the log of all the visibility equations (Equation \eqref{eq:gains}) and separates the real and imaginary components into two matrices. Coarse solutions are determined for both the antenna gains and ``model" visibilities (one for each baseline type) simultaneously. The final step of {\sc Omnical} is {\tt LinCal}, which applies small perturbations to the {\tt LogCal} solutions in an iterative fashion, honing in on the optimal solutions.
+We employ the package {\sc Omnical} for redundant calibration (\citealt{zheng_et_al2014}), which comprises of three steps. The first is {\tt FirstCal}, which uses all baseline redundancies to generate a static gain solution for each antenna that will unwrap any phase wrapping between two identical baselines. We perform {\tt FirstCal} because the next stage of {\sc Omnical} cannot tell the difference between a phase of $0$ and $2\pi$, for example. The second step is {\tt LogCal}, which takes the log of all the visibility equations (Equation \eqref{eq:gains}) and separates the real and imaginary components into two matrices. Coarse solutions are determined for both the antenna gains and "model" visibilities (one for each baseline type) simultaneously. The final step of {\sc Omnical} is {\tt LinCal}, which applies small perturbations to the {\tt LogCal} solutions in an iterative fashion, honing in on the optimal solutions.
  
-It is important to note that while {\sc Omnical} is powerful for ensuring array redundancy, it is not able to solve for $4$ calibration parameters - namely, the overall gain, phase, and tip/tilt of the array. For absolute calibration, we turn to a standard self-calibration routine which includes imaging Pictor A, Fornax A, and the Crab Nebula in order to fit for the overall phase solutions and the flux scale.
+It is important to note that while {\sc Omnical} is powerful for ensuring array redundancy, it is not able to solve for four calibration parameters - namely, the overall gain, phase, and tip/tilt of the array. For absolute calibration, we turn to a standard self-calibration routine which includes imaging Pictor A, Fornax A, and the Crab Nebula in order to fit for the overall phase solutions and the flux scale.
 
 After calibration, we combine the XX and YY linear polarization data to form pseudo-Stokes I as defined as:
 
@@ -49,7 +49,7 @@ V_{I} = \frac{1}{2}(V_{XX}+V_{YY})
 
 Next, a delay-filter is used to filter out foregrounds contained inside the maximum delay set by each baseline. This is accomplished by de-convolving out our sampling function (which contains flags due to RFI) from our delay-domain visibilities using a CLEAN-like algorithm that restricts our clean components to inside the horizon limit, plus a 15\,ns buffer. The Fourier-transformed clean components are then subtracted from our visibilities. This filtering process is performed on a per-baseline, per-integration basis, and we achieve a brightness suppression of $\sim4$ orders of magnitude in our visibilities.
 
-After delay-filtering, we perform a final round of RFI-removal by flagging visibilities that lie more than $3\sigma$ above the mean on a time, frequency, and baseline basis. Finally, we stack our data in LST into two datasets, alternating between even and odd Julian Dates to create an ``even" and ``odd" LST-binned dataset. A total of 124 days of data are included in the LST-binned dataset.
+After delay-filtering, we perform a final round of RFI-removal by flagging visibilities that lie more than $3\sigma$ above the mean on a time, frequency, and baseline basis. Finally, we stack our data in LST into two data sets, alternating between even and odd Julian dates to create an "even" and "odd" LST-binned data set. A total of 124 days of data are included in the LST-binned data set.
 
 The final step before power spectrum estimation is fringe-rate filtering. The chosen filter (which is described in the next section) is applied on a per-baseline basis and weights the fringe-rate bins on the sky by the RMS of the primary beam at that same location. A smooth filter is constructed by fitting a Gaussian to the filter shape in the fringe-rate domain. Additionally, fringe-rates below 0.2\,mHz are zeroed out, effectively removing slowly-varying signals such as crosstalk. We then convolve our time-domain visibilities by the Fourier-transform of the fringe-rate filter to yield time-averaged visibilities that have gained another order of magnitude in sensitivity.
 
@@ -57,7 +57,7 @@ The final step before power spectrum estimation is fringe-rate filtering. The ch
 
 For the case study presented in the rest of this chapter, we 
 focus on a subset of the PAPER-64 data used in \citetalias{ali_et_al2015}, namely, on LST-binned, Stokes I estimated data \citep{moore_et_al2013} from PAPER's $30$ m East/West baselines (Figure 
-\ref{fig:ant_layout}). Hence, all data processing steps are identical to those in \citetalias{ali_et_al2015} until after the LST-binning step in Figure 3 of \citetalias{ali_et_al2015}.
+\ref{fig:ant_layout}). Hence, all data processing steps are identical to those in \citetalias{ali_et_al2015} until after the LST-binning step in Figure 3 of \citetalias{ali_et_al2015}. We foreshadow the use of the full \citetalias{ali_et_al2015} data set in Chapter \ref{c.PSA64_results} when revising our upper limits.
 
 The previously best published 21\,cm upper limit result from \citetalias{ali_et_al2015} placed a $2\sigma$ upper limit 
 on $\Delta^{2}(k)$, defined as
@@ -66,16 +66,16 @@ on $\Delta^{2}(k)$, defined as
 \Delta^{\textbf{2}}(k) = \frac{k^{3}}{2\pi^{2}}\,\hat{P}(k),
 \end{equation}
 
-\noindent of $(22.4$ mK$)^{2}$ in the range $0.15 < k < 0.5$\,$h$ Mpc$^{-1}$ at $z = 8.4$. The need to revise this limit stems mostly from previously under-estimated signal loss and under-estimated error bars, both of which we 
+\noindent of $(22.4$ mK$)^{2}$ in the range $0.15 < k < 0.5$\,$h$ Mpc$^{-1}$ at $z = 8.4$. The need to revise this limit stems mostly from previously underestimated signal loss and underestimated error bars, both of which we 
 address in the following sections. 
 
 For the analysis in this chapter, we use $8.1$ hours of LST, namely an RA range of $0.5$-$8.6$ hours (\citetalias{ali_et_al2015} uses a slightly longer RA 
 range of $0$-$8.6$ hours; we found that some early LSTs were more severely foreground contaminated). We also use only $10$ baselines, a subset of the $51$ total East/West baselines used in \citetalias{ali_et_al2015}, in order to illustrate our revised methods. All power spectrum results are produced for a center frequency of 151\,MHz using a width of 10\,MHz ($20$ channels), identical to the analysis in \citetalias{ali_et_al2015}. In the case study in this chapter, we only use one baseline type instead of the three as in 
-\citetalias{ali_et_al2015}, but Chapter \ref{c.PSA64_results} uses the full dataset presented in \citetalias{ali_et_al2015} to revise the result and place limits on the EoR at multiple redshifts (using a straightforward and not lossy approach to avoid many of the issues presented in this chapter).
+\citetalias{ali_et_al2015}, but Chapter \ref{c.PSA64_results} uses the full data set presented in \citetalias{ali_et_al2015} to revise the result and place limits on the EoR at multiple redshifts (using a straightforward and not lossy approach to avoid many of the issues presented in this chapter).
 
 The most significant changes from \citetalias{ali_et_al2015} occur in our revised power spectrum analysis, which is explained in the rest of this chapter, but we also note that the applied fringe-rate filter is also slightly different. In \citetalias{ali_et_al2015}, the 
 applied filter was not equivalent to the optimal fringe-rate filter (which is designed to maximize power spectrum sensitivity). Instead, the optimal filter was degraded slightly by widening it in fringe-rate space. This was chosen in order to increase the number of independent 
-modes and reduce signal loss associated with the quadratic estimator, though as we will explain in the next section, this signal loss was still under-estimated. With the development of a new, 
+modes and reduce signal loss associated with the quadratic estimator, though as we will explain in the next section, this signal loss was still underestimated. With the development of a new, 
 robust method for assessing signal loss, we choose to use the optimal filter in order to maximize sensitivity. This filter is 
 computed for a fiducial 30\,m baseline at 150\,MHz, the center frequency in our band. The filter in both the fringe-rate 
 domain and time domain is shown in Figure \ref{fig:frp}.
@@ -88,7 +88,7 @@ Finally, we emphasize that the discussion that follows is solely focused on sign
     \caption{Top: the normalized optimal power-spectrum sensitivity weighting in fringe-rate space for our fiducial baseline and 
 Stokes I polarization beam. Bottom: the time domain convolution kernel corresponding to the top panel. Real and imaginary 
 components are illustrated in cyan and magenta, respectively, with the absolute amplitude in black. The fringe-rate filter acts as 
-an integration in time, increasing sensitivity but reducing the number of independent samples in the dataset.}
+an integration in time, increasing sensitivity but reducing the number of independent samples in the data set.}
     \label{fig:frp}
 \end{figure}
 
@@ -100,8 +100,8 @@ We present our PAPER-64 signal loss investigation in three parts. We first give 
 \subsection{Signal Loss Methodology} 
 \label{sec:siglossmethod}
 In short, our method for estimating signal loss consists of adding an EoR-like signal into visibility data and then measuring how much of this injected signal would be detectable given any attenuation of this signal by the (lossy) data analysis pipeline.  To capture the full statistical likelihood of signal loss, one requires a quick way to generate many realizations of simulated 21\,cm signal visibilities. Here we use the same method as in \citetalias{ali_et_al2015}, where mock Gaussian noise visibilities (mock EoR signals) 
-are filtered in time using an optimal fringe-rate filter to retain only ``sky-like" modes. Since the optimal filter has a shape that matches the rate of the sidereal motion of the sky, this transforms the Gaussian noise into a measurement that PAPER could make. This signal is then added to the visibility data.\footnote{One 
-specific change from \citetalias{ali_et_al2015} is that we add this simulated signal - which has been fringe-rate filtered once already in order to transform it into a ``sky-like" signal - into the analysis pipeline before a fringe-rate filter is 
+are filtered in time using an optimal fringe-rate filter to retain only "sky-like" modes. Since the optimal filter has a shape that matches the rate of the sidereal motion of the sky, this transforms the Gaussian noise into a measurement that PAPER could make. This signal is then added to the visibility data.\footnote{One 
+specific change from \citetalias{ali_et_al2015} is that we add this simulated signal - which has been fringe-rate filtered once already in order to transform it into a "sky-like" signal - into the analysis pipeline before a fringe-rate filter is 
 applied to the data (i.e., prior to the analysis step of fringe-rate filtering). Previously, the addition was done after the fringe-rate filter analysis step.  This change results in an increased 
 estimate of signal loss, %(by a factor of $\sim$$10$), 
 likely due to the use of the fringe-rate filter as a simulator. However, this pipeline difference, while significant, is not the dominant reason why signal loss was underestimated in \citetalias{ali_et_al2015} (the dominant reason is explained in the main text in Chapter \ref{sec:siglossmethod}).}
@@ -112,7 +112,7 @@ Mathematically, suppose that $\textbf{e}$ is the mock injected EoR signal (at so
 \label{eq:rxe}
 \textbf{r} = \textbf{x} + \textbf{e},
 \end{equation}
-can be thought of as the sum of contaminants plus EoR. The quantity $\textbf{r}$ then becomes the dataset for which we are measuring how much loss of $\textbf{e}$ there is due to our power spectrum pipeline.
+can be thought of as the sum of contaminants plus EoR. The quantity $\textbf{r}$ then becomes the data set for which we are measuring how much loss of $\textbf{e}$ there is due to our power spectrum pipeline.
 
 We are interested in quantifying how much variance in $\textbf{e}$ is lost after weighting $\textbf{r}$ and estimating the power 
 spectrum according to QE formalism. We investigate this by comparing two quantities we call the input power spectrum and 
@@ -210,11 +210,11 @@ of a diagonal-dominant matrix.
 \subsection{Signal Loss in Practice}
 \label{sec:Practice}
 
-We now shift our attention towards computing upper limits on the EoR signal for the fringe-rate filtered PAPER-64 dataset in a way that accounts for signal loss. While our methodology 
+We now shift our attention towards computing upper limits on the EoR signal for the fringe-rate filtered PAPER-64 data set in a way that accounts for signal loss. While our methodology 
 outlined below is independent of weighting scheme, here we demonstrate the computation using empirically estimated inverse covariance weighting 
 ($\textbf{R} \equiv \widehat{\textbf{C}}^{-1}$), the weighting scheme used in \citetalias{ali_et_al2015} which leads to substantial loss. 
 
-One issue to address is how one incorporates the randomness of $\widehat{P}_{\rm out}$ into our signal loss corrections. A different realization of the mock EoR signal is injected with each bootstrap run, causing the output to vary in three ways ---  there is noise variation from the bootstraps, there is cosmic variation from generating multiple realizations of the mock EoR signal, and there is a variation caused by whether the injected signal looks more or less ``like'' the data (i.e., how much coupling there is, which affects how much loss results). 
+One issue to address is how one incorporates the randomness of $\widehat{P}_{\rm out}$ into our signal loss corrections. A different realization of the mock EoR signal is injected with each bootstrap run, causing the output to vary in three ways ---  there is noise variation from the bootstraps, there is cosmic variation from generating multiple realizations of the mock EoR signal, and there is a variation caused by whether the injected signal looks more or less "like'' the data (i.e., how much coupling there is, which affects how much loss results). 
 
 For each injection level, the true $P_{\rm in}$ is simply the average of our bootstrapped estimates $\widehat{P}_{\rm in}$, since $\widehat{P}_{\rm in, \alpha}$ is by construction an unbiased estimator. Phrased in the context of Bayes' rule, we wish to find the posterior probability distribution $p(P_{\rm in} | 
 \widehat{P}_{\rm out})$, which is the probability of $P_{\rm in}$ given the uncorrected/measured power spectrum estimate $\widehat{P}_{\rm out}$.  Bayes' rule relates the posterior, which we don't know, to the likelihood, which we can forward model. In other words,
@@ -333,11 +333,11 @@ becomes more aggressive (dashed red). In other words, more EoR-dominated fluctua
 subtracted as more modes are down-weighted. We also find that the power spectrum upper limit, post-signal loss estimation, 
 increases with the number of down-weighted modes (solid red). The more modes we use in down-weighting, the stronger the coupling between the weighting and the data, and the greater the error we have in estimating the power spectrum. \citet{switzer_et_al2013} took a similar approach in determining the optimal number of modes to down-weight in GBT data, finding similar trends and noting that removing too few modes is limited by residual foregrounds and removing too many modes is limited by large error bars and signal loss.
 
-Optimistically, we expect there to be a ``sweet spot" as we dial our regularization knob; a level of regularization where weighting 
+Optimistically, we expect there to be a "sweet spot" as we dial our regularization knob; a level of regularization where weighting 
 is beneficial compared to uniform weighting (blue). In other words, we would like a weighting scheme that down-weights eigenmodes that predominantly describe foreground modes, but not EoR modes. We see in Figure \ref{fig:sigloss_modeloop} that this occurs roughly when 
 only the $\sim3$ highest-valued eigenmodes are down-weighted and the rest are given equal weights (though for the case shown, weighting only slightly outperforms uniform weighting). For a similar discussion on projecting out modes (zeroing out eigenmodes, rather than just ignoring their relative weightings as we do in this study), see \citet{switzer_et_al2013}. 
 
-We also saw in Chapter \ref{sec:otherweight} how adding the identity matrix to the empirical covariance can minimize signal loss. We experiment with this idea as well, shown in the bottom panel of Figure \ref{fig:sigloss_modeloop}. The dashed red and solid red lines represent power spectrum limits pre and post-signal loss estimation, respectively, as a function of the strength of $\textbf{I}$ that is added to $\widehat{\textbf{C}}$, quantified as a percentage of Tr($\widehat{\textbf{C}})\textbf{I}$ added to $\widehat{\textbf{C}}$. We parameterize this ``regularization strength" parameter as $\gamma$, namely $\widehat{\textbf{C}} \equiv \widehat{\textbf{C}} + \gamma$Tr$(\widehat{\textbf{C}})\textbf{I}$. From this plot we see that only a small percentage of Tr($\widehat{\textbf{C}})$ is needed to significantly reduce loss. We expect that as the strength of $\textbf{I}$ is increased (going to the left), both the red curves will approach the uniform-weighted case. We also notice that the post-signal loss limit hovers around the uniform-weighted limit for a large range of regularization strengths and while an overall trend from high-to-low signal loss is seen as the strength increases, there does not appear to be a clear ``minimum" that produces the least loss.
+We also saw in Chapter \ref{sec:otherweight} how adding the identity matrix to the empirical covariance can minimize signal loss. We experiment with this idea as well, shown in the bottom panel of Figure \ref{fig:sigloss_modeloop}. The dashed red and solid red lines represent power spectrum limits pre and post-signal loss estimation, respectively, as a function of the strength of $\textbf{I}$ that is added to $\widehat{\textbf{C}}$, quantified as a percentage of Tr($\widehat{\textbf{C}})\textbf{I}$ added to $\widehat{\textbf{C}}$. We parameterize this "regularization strength" parameter as $\gamma$, namely $\widehat{\textbf{C}} \equiv \widehat{\textbf{C}} + \gamma$Tr$(\widehat{\textbf{C}})\textbf{I}$. From this plot we see that only a small percentage of Tr($\widehat{\textbf{C}})$ is needed to significantly reduce loss. We expect that as the strength of $\textbf{I}$ is increased (going to the left), both the red curves will approach the uniform-weighted case. We also notice that the post-signal loss limit hovers around the uniform-weighted limit for a large range of regularization strengths and while an overall trend from high-to-low signal loss is seen as the strength increases, there does not appear to be a clear "minimum" that produces the least loss.
 
 \begin{figure*}
 	\centering
@@ -367,7 +367,7 @@ $2\sigma$ errors bars from bootstrapping). It is also shown as an upper limit us
 	\centering
 	\includegraphics[width=0.45\textwidth]{plots/ps1_data_add.pdf}
 	\includegraphics[width=0.45\textwidth]{plots/ps2_data_add.pdf}
-	\caption{A power spectrum of a subset of PAPER-64 data illustrating the use of $\widehat{\textbf{C}}_{\rm eff}$ to minimize signal loss. The solid red curve is the $2\sigma$ upper limit on the EoR signal estimated from our signal injection framework. The theoretical $2\sigma$ thermal noise level prediction based on observational parameters is in green. Additionally, the power spectrum result for the uniform weighted case is shown in three different ways: power spectrum values (black and gray points as positive and negative values, respectively, with $2\sigma$ error bars from bootstrapping), the $2\sigma$ upper limit on the EoR signal using our full signal injection framework (solid blue), and the measured power spectrum values with $2\sigma$ thermal noise errors (gray shaded regions). The vertical dashed black lines signify the horizon limit for this analysis using $30$\,m baselines. This power spectrum result does not use the full dataset's sensitivity as in \citet{ali_et_al2015} and Chapter \ref{c.PSA64_results}, though we include all analysis changes which have mostly stemmed from revisions regarding signal 
+	\caption{A power spectrum of a subset of PAPER-64 data illustrating the use of $\widehat{\textbf{C}}_{\rm eff}$ to minimize signal loss. The solid red curve is the $2\sigma$ upper limit on the EoR signal estimated from our signal injection framework. The theoretical $2\sigma$ thermal noise level prediction based on observational parameters is in green. Additionally, the power spectrum result for the uniform weighted case is shown in three different ways: power spectrum values (black and gray points as positive and negative values, respectively, with $2\sigma$ error bars from bootstrapping), the $2\sigma$ upper limit on the EoR signal using our full signal injection framework (solid blue), and the measured power spectrum values with $2\sigma$ thermal noise errors (gray shaded regions). The vertical dashed black lines signify the horizon limit for this analysis using $30$\,m baselines. This power spectrum result does not use the full data set's sensitivity as in \citet{ali_et_al2015} and Chapter \ref{c.PSA64_results}, though we include all analysis changes which have mostly stemmed from revisions regarding signal 
 loss, bootstrapping, and the theoretical error computation. We see that the regularization scheme used here produces limits similar to the unweighted limits.}
 	\label{fig:ps1_data}
 \end{figure*}
@@ -383,9 +383,9 @@ because of this very reason (however, they are affected by the error estimation 
 we also regard those results as suspect and superseded by those in Chapter \ref{c.PSA64_results}).
 
 Another possible way to regularize $\widehat{\textbf{C}}$ is to use information from different ranges of LST. For example, one could 
-calculate $\widehat{\textbf{C}}$ with data from LSTs where foregrounds are stronger (earlier or later LSTs than the ``foreground-quiet" range typically used in forming power spectra) --- doing so may yield a better description of the foregrounds that we desire to 
+calculate $\widehat{\textbf{C}}$ with data from LSTs where foregrounds are stronger (earlier or later LSTs than the "foreground-quiet" range typically used in forming power spectra) --- doing so may yield a better description of the foregrounds that we desire to 
 down-weight, especially if residual foreground chromaticity is instrumental in origin and stable in time. Fundamentally, each of these examples are similar in that they rely on a computation of $\widehat{\textbf{C}}$ from 
-data that is similar but not exactly the same as the data that is being down-weighted. Ideally this would be effective in down-weighting shared contaminants yet avoid signal loss from overfitting EoR modes in the power spectrum dataset itself. 
+data that is similar but not exactly the same as the data that is being down-weighted. Ideally this would be effective in down-weighting shared contaminants yet avoid signal loss from overfitting EoR modes in the power spectrum data set itself. 
 
 In Chapter \ref{sec:CaseStudy}, we have detailed several aspects of signal loss in PAPER-64: how the loss arises, how it can be estimated from an injection framework, and ways it can be minimized. We again emphasize that these lessons learned about signal loss are largely responsible for shaping our revised analysis of PAPER data. In the remainder of this chapter, we will transition to other aspects of our analysis that have been revised since \citetalias{ali_et_al2015}.
 
@@ -399,17 +399,7 @@ In this section, we summarize multiple inconsistencies and errors that have been
 \subsection{Bootstrapping}
 \label{sec:Boot}
 
-Broadly speaking, we desire robust methods for determining accurate 
-confidence intervals for our measurements. For PAPER's analysis, we choose a data-driven method of error estimation, computing error bars that have been derived from the inherent 
-variance of our measurements. A common technique used to do this is bootstrapping, which we first define below and then discuss its application to PAPER.
-
-Bootstrapping uses sampling with replacement to estimate a posterior distribution. For example, bootstrap measurements (of power spectra, for example) can be made from different random samples of data. Each of these bootstraps is a different realization drawn from some underlying distribution, and realizations are correlated with each other to a degree set by the fraction of sampled points that are held in common between them. Through the process of re-sampling and averaging along different axes of a dataset, such as along baselines or times, we can estimate error bars for our results which represent the underlying distribution of values that are allowed by our measurements (\citealt{efron_tibshirani1994}; \citealt{andrae2010}).
-
-One major caveat of bootstrapping arises when working with correlated data. If, for example, a dataset has many repeated 
-values inside it, this would be reflected in each bootstrap. The same value would be present multiple times within a bootstrap 
-and also be present between bootstraps, purely because it has a more likely chance of being drawn if there are repeats of 
-itself. Therefore, bootstrapping correlated data results in a smaller variation between bootstraps, and hence, underestimates 
-errors. 
+In Chapter \ref{sec:ErrorOverview} we described the method of bootstrapping, which is used to determine confidence intervals on our power spectrum measurements. We highlighted one caveat of bootstrapping that arises when working with correlated data and showed how errors can be underestimated when data is correlated along the bootstrapping axis.
 
 This is the precisely how errors were underestimated in PAPER-64. Because of fringe-rate filtering, which averages data in time to increase sensitivity, PAPER-64 data is correlated along the time axis. Hence, there are fewer independent samples after filtering, thus decreasing the variance of the bootstraps.
 
@@ -420,7 +410,7 @@ Means were then taken of the values in each bootstrap. Finally, power
 spectrum limits were computed by taking the mean and standard deviation over all the bootstraps. We emphasize again that in 
 this previous analysis, the number of elements sampled per bootstrap greatly 
 exceeded the number of independent LST samples, underestimating errors. A random draw of $700$ 
-measurements from this dataset has many repeated values, and the variance between hundreds of these random 
+measurements from this data set has many repeated values, and the variance between hundreds of these random 
 samples is smaller than the true underlying variance of the data. 
 
 Given our new understanding of the sensitivity of bootstraps to the number of elements sampled, we have removed the second 
@@ -441,14 +431,14 @@ In addition to learning how sample independence affects bootstrapped errors, we 
 
 \end{itemize}
 
-In summary, we have learned several lessons regarding bootstrapping and have revised our analysis procedure in order to determine error bars that correctly reflect the variance in our power spectrum estimates. Bootstrapping can be an effective and straightforward way to estimate errors of a dataset, however, bootstrapping as a means of estimating power spectrum errors from real fringe-rate filtered data requires knowledge of the number of independent samples, which is not always a trivial task. We have thus avoided this issue by removing one of our bootstrap axes, as well as updated several other details of our procedure to ensure accurate re-sampling and error estimation.
+In summary, we have learned several lessons regarding bootstrapping and have revised our analysis procedure in order to determine error bars that correctly reflect the variance in our power spectrum estimates. Bootstrapping can be an effective and straightforward way to estimate errors of a data set, however, bootstrapping as a means of estimating power spectrum errors from real fringe-rate filtered data requires knowledge of the number of independent samples, which is not always a trivial task. We have thus avoided this issue by removing one of our bootstrap axes, as well as updated several other details of our procedure to ensure accurate re-sampling and error estimation.
 
 \begin{figure}
 	\centering
 	\includegraphics[trim={0.3cm 0cm 0.3cm 0.3cm},width=0.8\textwidth]{plots/noise_errors.pdf}
 	\caption{$2\sigma$ power spectrum errors (from bootstrap variances) for a noise simulation (computed via Equation \eqref{eq:noise} using PAPER-64 observing parameters) using two different bootstrapping 
 methods. The noise is fringe-rate filtered and a weighting matrix of $\textbf{I}$ (uniform-weighted) is used in order to disentangle the 
-effects of bootstrapping from signal loss. The bootstrapping method used in \citet{ali_et_al2015} is shown in gray, where bootstrapping occurs along both the baseline and time axes. This underestimates errors by sampling more values than independent ones in the dataset (fringe-rate filtering reduces the number of independent samples along time). We use the method illustrated by the black curve in our updated analysis, where bootstrapping only occurs along the baseline axis. We find that these revised limits agree with the $2\sigma$ analytic prediction for noise (green).}
+effects of bootstrapping from signal loss. The bootstrapping method used in \citet{ali_et_al2015} is shown in gray, where bootstrapping occurs along both the baseline and time axes. This underestimates errors by sampling more values than independent ones in the data set (fringe-rate filtering reduces the number of independent samples along time). We use the method illustrated by the black curve in our updated analysis, where bootstrapping only occurs along the baseline axis. We find that these revised limits agree with the $2\sigma$ analytic prediction for noise (green).}
 	\label{fig:data_errors}
 \end{figure}
 
@@ -502,13 +492,13 @@ t_{\rm int} = t_{i} \frac{\int1 \, df}{\int w^{2}(f) \,df},
 where $t_{i}=43$ seconds, $t_{\rm int}$ is the fringe-rate filtered integration time, $w$ is the fringe-rate profile, and the integral is 
 taken over all fringe-rates. For PAPER-64, this number is $t_{\rm int} = 3857$\,s. 
 \item $N_{\rm days}$: The total number of days of data analyzed. In \citetalias{ali_et_al2015}, this number was set to $135$. However, because we 
-divide our data in half (to form ``even" and ``odd" datasets, or $N_{\rm datasets} = 2$), this number should reflect the number of days in each individual dataset instead of the total. Additionally, this number should be adjusted to reflect the actual number of cross-multiplications that occur between datasets (``even" with ``odd" and ``odd" with ``even", but not ``odd" with ``odd" or ``even" with ``even" in order to avoid noise biases). Finally, because our LST coverage is not $100\%$ complete (it doesn't overlap for every single day), we incorporate a root-mean-square statistic in computing a realistic value of 
+divide our data in half (to form "even" and "odd" data sets, or $N_{\rm data sets} = 2$), this number should reflect the number of days in each individual data set instead of the total. Additionally, this number should be adjusted to reflect the actual number of cross-multiplications that occur between data sets ("even" with "odd" and "odd" with "even", but not "odd" with "odd" or "even" with "even" in order to avoid noise biases). Finally, because our LST coverage is not $100\%$ complete (it doesn't overlap for every single day), we incorporate a root-mean-square statistic in computing a realistic value of 
 $N_{\rm days}$. Our expression therefore becomes:
 \begin{equation}
-N_{\rm days} = \sqrt{\langle N_{i}^{2}\rangle} \sqrt{(N_{\rm datasets}^{2}-N_{\rm datasets})}
+N_{\rm days} = \sqrt{\langle N_{i}^{2}\rangle} \sqrt{(N_{\rm data sets}^{2}-N_{\rm data sets})}
  %\frac{1}{N_{\rm days}} = \sqrt{\Big\langle\frac{1}{N_{i}^{2}} \Big\rangle_{i}},
  \end{equation}
-\noindent where $i$ indexes LST and frequency channel over all datasets (\citealt{jacobs_et_al2015}). For PAPER-64, our revised estimate of $N_{\rm days}$ is $\sim47$ 
+\noindent where $i$ indexes LST and frequency channel over all data sets (\citealt{jacobs_et_al2015}). For PAPER-64, our revised estimate of $N_{\rm days}$ is $\sim47$ 
 days.
 \item $N_{\rm bls}$: The number of baselines contributing to the sensitivity of a power spectrum estimate. In \citetalias{ali_et_al2015}, this number was 
 the total number of $30$\,m East/West baselines used in the analysis. However, using the total number of baselines ($N_{\rm bls\_total} = 51$) neglects 
@@ -613,9 +603,9 @@ contamination of foreground bias. This tailored window function was used in the 
 In addition to mitigating foreground bias at high-$k$'s, two other sources of bias that we actively suppress in the PAPER-64 
 analysis are noise bias associated with the squaring of thermal noise and noise bias from crosstalk. In order to avoid the 
 former, we filter out certain cross-multiplications when forming $\widehat{q}$ in Equation \eqref{eq:qhat}. Namely, the PAPER-64 
-dataset is divided into two halves: even Julian dates and odd Julian dates. Our data vectors are then $\textbf{x}_{even, 1}$ for 
-the ``even" dataset and baseline $1$, $\textbf{x}_{odd, 1}$ for the ``odd" dataset and baseline $1$, etc. We only form 
-$\widehat{q}$ when the two copies of $\textbf{x}$ come from different groups and baselines, never multiplying ``baseline 1" with ``baseline 1", for 
+data set is divided into two halves: even Julian dates and odd Julian dates. Our data vectors are then $\textbf{x}_{even, 1}$ for 
+the "even" data set and baseline $1$, $\textbf{x}_{odd, 1}$ for the "odd" data set and baseline $1$, etc. We only form 
+$\widehat{q}$ when the two copies of $\textbf{x}$ come from different groups and baselines, never multiplying "baseline 1" with "baseline 1", for 
 example, in order to prevent the squaring of the same thermal noise. 
 
 To mitigate crosstalk bias, which appears as a static bias in time, we apply a fringe-rate filter that suppresses fringe-rates of 
@@ -628,19 +618,19 @@ As shown in Figure \ref{fig:ps1_data}, our illustrative PAPER-64 power spectrum 
 most likely attributable to foreground leakage. %The cause for biases at higher $k$-values is more difficult to pinpoint. 
 
 Here we perform three null tests on PAPER-64 data that aim to isolate systematics in the data and verify 
-that our biases are not attributable to EoR. Similar to in Chapter \ref{sec:JackknifeOverview}, we take jackknives along different axes of the dataset to produce multiple power spectra. We then difference them (i.e., the null test) to tease out excess variances.
+that our biases are not attributable to EoR. Similar to in Chapter \ref{sec:JackknifeOverview}, we take jackknives along different axes of the data set to produce multiple power spectra. We then difference them (i.e., the null test) to tease out excess variances.
 
-The three results are shown in Figure \ref{fig:null}. Each test displays the differenced power spectrum between two halves of a jackknife, where the plotted points are the differenced power spectrum values, and the plotted errors are the bootstrapped errors of the two dataset halves added in quadrature. The expected thermal noise level (gray shaded regions) is the thermal noise of each dataset added in quadrature as well. Constructing the tests as such ensures that we are probing whether the variances of each dataset differ by an amount consistent with the thermal noise. We use uniform weightings for all tests. 
+The three results are shown in Figure \ref{fig:null}. Each test displays the differenced power spectrum between two halves of a jackknife, where the plotted points are the differenced power spectrum values, and the plotted errors are the bootstrapped errors of the two data set halves added in quadrature. The expected thermal noise level (gray shaded regions) is the thermal noise of each data set added in quadrature as well. Constructing the tests as such ensures that we are probing whether the variances of each data set differ by an amount consistent with the thermal noise. We use uniform weightings for all tests. 
 
 We take jackknives along three different axes:
 
 \begin{itemize}
 %\item Original Data (black): This is identical to the unweighted, revised PAPER-64 power spectrum in Figure \ref{fig:ps1_data} (one baseline type only) with weighting matrix $\textbf{I}$. There are clear detections at low $k$'s.
-\item Baselines: We split our dataset into two halves, where each contains half of the total baselines used in the 
-analysis. No baselines are repeated between the two datasets.
-\item Sidereal Hour: We split our dataset into two halves based on LST, namely the first half (LSTs 0.5-4.5 hours) and second half (LSTs 
+\item Baselines: We split our data set into two halves, where each contains half of the total baselines used in the 
+analysis. No baselines are repeated between the two data sets.
+\item Sidereal Hour: We split our data set into two halves based on LST, namely the first half (LSTs 0.5-4.5 hours) and second half (LSTs 
 4.5-8.6 hours).
-\item Day: We split our dataset into even and odd Julian dates. We form power spectra for each separately, allowing the cross-multiplication of ``even" with ``even", for example, for this null test only. If the same sky signal is in both the ``even" and ``odd" datasets, we expect it to cancel out. %However, allowing these cross-multiplications can in practice introduce a low level noise bias... 
+\item Day: We split our data set into even and odd Julian dates. We form power spectra for each separately, allowing the cross-multiplication of "even" with "even", for example, for this null test only. If the same sky signal is in both the "even" and "odd" data sets, we expect it to cancel out. %However, allowing these cross-multiplications can in practice introduce a low level noise bias... 
 \end{itemize}
 
 \begin{figure*}
@@ -652,11 +642,11 @@ analysis. No baselines are repeated between the two datasets.
 	\label{fig:null}
 \end{figure*}
 
-In investigating Figure \ref{fig:null}, we focus on three main possibilities --- whether the data points and error bars are consistent with thermal noise (``passing"), whether the error bars are consistent with zero but not consistent with thermal noise (``passing but has an additional variance"), or whether the error bars are not consistent with zero at all (``failing"). We examine each case in the context of our results below.
+In investigating Figure \ref{fig:null}, we focus on three main possibilities --- whether the data points and error bars are consistent with thermal noise ("passing"), whether the error bars are consistent with zero but not consistent with thermal noise ("passing but has an additional variance"), or whether the error bars are not consistent with zero at all ("failing"). We examine each case in the context of our results below.
 
-Firstly, all three null tests display data points that lie within the thermal noise gray band for $k > \pm 0.25$\,$h$ Mpc$^{-1}$. In addition, all three null tests show error bars consistent with the thermal noise level for those same $k$'s. This implies that the two jackknife halves do not differ by an amount greater than the thermal noise (i.e., the baselines making up the two jackknives either do not contain bias, or contain similar amounts of bias; we suspect it is the former though more thorough jackknives along this axis are needed to make this conclusion). We deem these as ``passing" null tests for the specific jackknives taken (again, dividing up the data in a different way along the same axes may not yield the same results, so more thorough testing is needed to be sure).
+Firstly, all three null tests display data points that lie within the thermal noise gray band for $k > \pm 0.25$\,$h$ Mpc$^{-1}$. In addition, all three null tests show error bars consistent with the thermal noise level for those same $k$'s. This implies that the two jackknife halves do not differ by an amount greater than the thermal noise (i.e., the baselines making up the two jackknives either do not contain bias, or contain similar amounts of bias; we suspect it is the former though more thorough jackknives along this axis are needed to make this conclusion). We deem these as "passing" null tests for the specific jackknives taken (again, dividing up the data in a different way along the same axes may not yield the same results, so more thorough testing is needed to be sure).
 
-The second null test possibility (error bars consistent with zero but not with thermal noise) is displayed by the $k$-values just outside the horizon ($k\sim\pm 0.1$\,$h$ Mpc$^{-1}$) for all three tests. This indicates an additive noise component that is increasing our errors. More specifically, although we expect each cross-multiplication that is used in power spectrum estimation to have independent noise, there is still the possibility of a noise-foreground coupling term that can introduce power. This is because cross-multiplications produce four additive terms --- a signal-squared term (where ``signal" includes both foregrounds and EoR), two cross-terms between the signal and noise, and one noise-only term. When differencing two power spectra (each with their own four terms), we expect the signal-only term to subtract out for a ``passing" null test, and we expect the noise-only terms to be consistent with thermal noise. While the cross-terms have a mathematical expectation value of zero, in practice we are limited by our number of samples ($90$ cross-products for this analysis times $\sim$ $8$ independent LST samples). Combined with the fact that the foregrounds are so bright, the finite ensemble of the couplings can introduce extra variance that varies with foreground strength. It is therefore not surprising that this effect is largest at $k$-values just outside the horizon, where we expect foregrounds to be brightest post-delay filtering.
+The second null test possibility (error bars consistent with zero but not with thermal noise) is displayed by the $k$-values just outside the horizon ($k\sim\pm 0.1$\,$h$ Mpc$^{-1}$) for all three tests. This indicates an additive noise component that is increasing our errors. More specifically, although we expect each cross-multiplication that is used in power spectrum estimation to have independent noise, there is still the possibility of a noise-foreground coupling term that can introduce power. This is because cross-multiplications produce four additive terms --- a signal-squared term (where "signal" includes both foregrounds and EoR), two cross-terms between the signal and noise, and one noise-only term. When differencing two power spectra (each with their own four terms), we expect the signal-only term to subtract out for a "passing" null test, and we expect the noise-only terms to be consistent with thermal noise. While the cross-terms have a mathematical expectation value of zero, in practice we are limited by our number of samples ($90$ cross-products for this analysis times $\sim$ $8$ independent LST samples). Combined with the fact that the foregrounds are so bright, the finite ensemble of the couplings can introduce extra variance that varies with foreground strength. It is therefore not surprising that this effect is largest at $k$-values just outside the horizon, where we expect foregrounds to be brightest post-delay filtering.
 
 Lastly, a third null test result is an error bar not consistent with zero. This is the case for the LST null test at $k\sim-0.1$\,$h$ Mpc$^{-1}$ and $k\sim0.15$\,$h$ Mpc$^{-1}$, as well as the even/odd test at $k\sim0.2$\,$h$ Mpc$^{-1}$ and $k\sim0.25$\,$h$ Mpc$^{-1}$. In such a case, the two jackknife halves differ by an amount greater than the thermal noise (i.e., the data point is not in the thermal noise band), yet they are each constrained tightly by individual error bars that when combined, are not consistent with zero. This result implies that there exists a low level bias that is LST-dependent and Julian date-dependent. The former is likely caused by residual foregrounds that vary in LST, and it is not surprising that this type of bias occurs near the horizon limit. The latter requires further investigation that we leave to future work.
 
@@ -665,7 +655,7 @@ In this section we have presented the first jackknife and null tests from the PA
 \section{Summary}
 
 Although current 21\,cm published power spectrum upper limits lie several orders of magnitude above predicted EoR levels, 
-ongoing analyses of deeper sensitivity datasets from PAPER, MWA, and LOFAR, as well as next generation instruments like 
+ongoing analyses of deeper sensitivity data sets from PAPER, MWA, and LOFAR, as well as next generation instruments like 
 HERA, are expected to continue to push towards EoR sensitivities. As the field progresses towards a detection, we have shown 
 that it is crucial for future analyses to have a rigorous understanding of signal loss in an analysis pipeline and be able to accurately 
 and robustly calculate both power spectrum and theoretical errors.
@@ -681,8 +671,8 @@ time-averaging techniques such as fringe-rate filtering and signal loss when usi
 \item Signal injection and recovery simulations can be used to quantify signal loss (Chapter \ref{sec:siglossmethod}). However, a 
 signal-only simulation (i.e., comparing a uniformly weighted vs. weighted power spectrum of EoR only) can underestimate loss by 
 failing to account for correlations between the data and signal which can be large and negative.
-\item Errors that are estimated via bootstrapping can be underestimated if samples in the dataset are significantly correlated 
-(Chapter \ref{sec:Boot}). However, if the number of independent samples in a dataset is well-determined, bootstrapping is a 
+\item Errors that are estimated via bootstrapping can be underestimated if samples in the data set are significantly correlated 
+(Chapter \ref{sec:Boot}). However, if the number of independent samples in a data set is well-determined, bootstrapping is a 
 simple and accurate way of estimating errors.
 \end{itemize}
 
