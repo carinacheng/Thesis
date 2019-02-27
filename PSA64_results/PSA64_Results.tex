@@ -7,9 +7,9 @@
 
 \section{Introduction}
 
-Through the re-analysis described in Chapter \ref{c.PSA64}, signal loss (the
+As described in the re-analysis in Chapter \ref{c.PSA64}, signal loss (the
 unintentional removal of the target cosmological signal) in the empirical covariance
-inversion method was discovered \citep{ali_et_al2018}. More specifically, in \citetalias{ali_et_al2015} this signal loss resulted from the use of empirically estimated covariance
+inversion method was discovered in previous PAPER analyses \citep{ali_et_al2018}. More specifically, in \citetalias{ali_et_al2015} this signal loss resulted from the use of empirically estimated covariance
 matrices as a weighting matrix in the Quadratic Estimator (QE)
 during power spectrum estimation.
 An empirically estimated covariance matrix contains
@@ -24,8 +24,8 @@ at the origin of these issues, it does not deliver a revised analysis for the sa
 \begin{figure*}[tp]
 \begin{center}
 \includegraphics[width=\textwidth]{plots/simpleDS_pipeline_compare.jpg}
-\caption{Comparison between the prior PAPER analysis by \citet{ali_et_al2015} and \texttt{simpleDS}'.
-Our frequency independent fringe rate filter has a smoother
+\caption{Comparison between the prior PAPER analysis by \citet{ali_et_al2015} and \texttt{simpleDS}.
+Our frequency independent fringe-rate filter has a smoother
 delay response compared to the one used in
 \citet{ali_et_al2015} and
 Chapter \ref{c.PSA64} in order to reduce leakage
@@ -44,7 +44,7 @@ frequency to delay is not dynamic range limited
 when including foreground signals.
 Most importantly, in order to avoid signal loss during power spectrum
 estimation, we use a uniformly weighted
-Fast Fourier-Tranform (FFT) estimator instead of the
+Fast Fourier-Transform (FFT) estimator instead of the
 empirical inverse covariance weighted OQE used in
 previous PAPER analyses.}
 \label{fig:pipeline_compare}
@@ -58,7 +58,7 @@ extended by Chapter \ref{c.PSA64}.
 is retained, with a power spectrum measurement coming from each type of baseline; however several steps have been removed and others replaced. In particular, while the re-analysis described in Chapter \ref{c.PSA64} focuses almost exclusively on
 the final power spectrum estimation stage, here the intermediate stages (like foreground filtering) have been re-examined.
 
-We expand the subset of data analyzed in Chapter \ref{c.PSA64} to the full PAPER-64 data set as used in \citetalias{ali_et_al2015} in order to make our revised power spectrum analysis. Data collection and processing steps prior to LST-binning remain identical to previous analyses (Chapters \ref{sec:PSA64_observations} and \ref{sec:PSA64_processing}). We analyze the same three 30\,m baselines as in \citetalias{ali_et_al2015} and form estimates for six independent redshift bands. In selecting our bands, we note that a practical limitation in selection
+We expand the subset of data analyzed in Chapter \ref{c.PSA64} to the full PAPER-64 data set as used in \citetalias{ali_et_al2015} in order to make our revised power spectrum analysis. Data collection and processing steps prior to LST-binning remain identical to previous analyses (see Chapters \ref{sec:PSA64_observations} and \ref{sec:PSA64_processing}). We analyze the same three $\sim$ 30\,m baselines as in \citetalias{ali_et_al2015} and form estimates for five independent (and six total) redshift bands. In selecting our bands, we note that a practical limitation in selection
 comes from a desire to avoid including channels with significant RFI flagging.
 Bands with the most continuous spectral sampling span the redshift range $7.5$ to $11$, and we select redshift ranges that are approximately coeval, i.e., bandwidths over which limited evolution of the 21\,cm signal is expected.
 Constraints from EDGES \emph{high} suggest that the evolution is probably slower than a $dz$ (total change in
@@ -81,7 +81,7 @@ Redshift bands are denoted by the
 Blackman-Harris window functions used during
 the Fourier-transform from frequency to delay in order
 to reduce foreground leakage to high delays.
-All frequency bands used in this analysis have been shown, including the $z=8.37$ ($151.6$\,MHz) band used in \ref{c.PSA64} and \citet{ali_et_al2015}.
+All frequency bands used in this analysis have been shown, including the $z=8.37$ ($151.6$\,MHz) band analyzed in Chapter \ref{c.PSA64} and \citet{ali_et_al2015}.
 This redshift bin is included in order
 to properly compare with previous works,
 but it is worth noting the information
@@ -90,12 +90,12 @@ redshift bins with which it overlaps.
 \label{fig:freq_select}}
 \end{figure*}
 
-This chapter is organized in three main parts. We first present major differences between the \texttt{simpleDS} pipeline and that of \citetalias{ali_et_al2015}, including an investigation into the redundancy of PAPER-64 which motivated the removal of certain contaminated data prior to power spectrum analysis. Then, we present our multi-redshift power spectrum results supported by a discussion into systematics through the interpretation of jackknife and null tests. Finally, we present 21\,cm upper limits within the context of the broader field. 
+This chapter is organized in three main parts. We first present major differences between the \texttt{simpleDS} pipeline and that of \citetalias{ali_et_al2015}, including changes in the fringe-rate and foreground filtering steps of our analysis pipeline and an investigation into the redundancy of PAPER-64 which motivated the removal of certain contaminated data prior to power spectrum analysis. Then, we present our multi-redshift power spectrum results supported by a discussion into systematics through the interpretation of jackknife and null tests. Finally, we present 21\,cm upper limits within the context of the broader field. 
 
 \section{A Simplified Pipeline}
 
-In this section we describe the differences in the analysis steps prior to power spectrum estimation
- between this work and \citetalias{ali_et_al2015}, including time-averaging, foreground removal techniques, and flagging on redundant baselines (see Figure~\ref{fig:pipeline_compare}).
+In this section we describe the differences in analysis steps prior to power spectrum estimation
+ between this work and \citetalias{ali_et_al2015}, including time-averaging, foreground removal techniques, and flagging on redundant baselines (see Figure~\ref{fig:pipeline_compare} for a visual representation of pipeline differences).
 
 \begin{figure}
 \centering
@@ -114,7 +114,7 @@ Top-Hat filter.
 \centering
 \includegraphics[width=.85\textwidth]{plots/data_bl_waterfalls.pdf}
 \caption{LST and frequency waterfalls of a representative
-baseline taken from the even LST binned set before (left)
+baseline taken from the even LST-binned set before (left)
 and after (right) application of the Top-Hat FRF.
 The baseline illustrated is the antenna pair (1,4). The application of the fringe-rate filter removes very fast
 fringe modes but preserves the structure of sky-like
@@ -125,7 +125,7 @@ modes.}
 \subsection{Time-averaging}
 
 The LST-binned PAPER-64 data have been averaged into $43$~s bins, a timescale
-which is short compared to the $\sim$3500~s fringe coherence time of 30\,m baselines.
+which is short compared to the $\sim$ 3500~s fringe coherence time of 30\,m baselines.
 Here, as in past PAPER analyses, we choose to perform time-averaging by convolving the time stream with a windowing function.
 This function is defined as a filter in fringe-rate space
 (the Fourier dual to time) which can be tuned to maximize sensitivity to sky-like modes and exclude slowly varying systematics.
@@ -135,7 +135,7 @@ a great circle on the sky.
 \cite{parsons_et_al2016} then show that a fringe-rate filter (FRF) can be defined with weights corresponding
 to the instrument's primary beam power integrated along the line of constant fringe-rate. Applying an FRF with this weighting provides the longest possible coherent integration in time for a baseline of a given length.
 
-Previous PAPER analyses have used variations on such a filter.  \citetalias{ali_et_al2015}
+Previous PAPER analyses have used variations on such a filter.  For example, \citetalias{ali_et_al2015}
 formed the beam-weighted filter, fit a Gaussian
 in fringe-rate space, and then artificially increased
 the width of the Gaussian
@@ -144,7 +144,7 @@ bandpass and decrease the effective integration time.
 A similar Gaussian fit was
 also used and discussed in the PAPER-64 case study in Chapter \ref{c.PSA64},
 but the width of the fit was not increased in that
-analysis.
+analysis (i.e., the optimal filter was used).
 
 However, as can be seen in the right panel of Figure \ref{fig:FRF_response}, this filter is frequency dependent.
 In particular, the maximum fringe-rate range probed by a baseline increases linearly with frequency.
@@ -163,7 +163,7 @@ rates.
 
 Common mode signals are those which vary on time scales longer than would be expected from an ideal interferometer \citep{ali_et_al2015}.
 Such common modes were previously referred to as
-	"crosstalk'' --- however, these signals may not
+	"crosstalk" --- however, these signals may not
 	necessarily result from signals observed in one antenna and leaked to another
 	(a time-delayed sky signal) but rather any time-independent signal which is observed by all antennas. We exclude common mode signals here by setting the minimum fringe-rate included in the filter to $3.5\times10^{-5}$~Hz; this
 excludes all modes with periods longer than $\sim$45 minutes.
@@ -177,7 +177,7 @@ excludes all modes with periods longer than $\sim$45 minutes.
 
 Waterfalls of a representative baseline
 before and after the application of the
-fringe-rate filer are shown in Figure~\ref{fig:waterfalls}.
+fringe-rate filter are shown in Figure~\ref{fig:waterfalls}.
 The application of the fringe-rate filter removes very fast
 fringe modes but preserves the structure of Eastward moving sky-like modes.
 
@@ -186,14 +186,14 @@ fringe modes but preserves the structure of Eastward moving sky-like modes.
 To mitigate foreground contamination during
 power spectrum estimation, PAPER analyses have used
 a wide-band iterative deconvolution algorithm (WIDA),
-often referred to as a "clean-like'' iterative
-deconvolution algorithm. This algorithm relies on the
+often referred to as a "clean-like" iterative
+deconvolution algorithm (Chapter \ref{sec:PSA64_processing}). This algorithm relies on the
 underlying mathematics of CLEAN as described in
 \citet{hogbom1974} to remove delay components from
 PAPER data inside of some range of delays.
 This type of deconvolution and its specific
 application to radio data is described in \citet{parsons_backer2009}.
-The WIDA was used in \citet{parsons_et_al2012b,parsons_et_al2014,jacobs_et_al2015}, \citetalias{ali_et_al2015}, \citet{kerrigan_et_al2018}, and Chapter \ref{c.PSA64}.
+The WIDA was used in \citet{parsons_et_al2012b}, \citet{parsons_et_al2014}, \citet{jacobs_et_al2015}, \citetalias{ali_et_al2015}, \citet{kerrigan_et_al2018}, and Chapter \ref{c.PSA64}.
 
 We choose to omit this filtering technique in our simplified analysis. While the technique should not
 affect cosmological signals outside the user-defined
@@ -215,7 +215,7 @@ dynamic range of the transform.
 \centering
 \includegraphics[trim={3cm 0  4cm 0},width=\textwidth]{plots/psa64_antpos_flagged.pdf}
 \caption{The antenna positions of PAPER-64.
-Highlighted are the three baseline types used in this analysis.
+Highlighted in black are the three baseline types used in this analysis.
 These baselines consist of East-West baselines from adjacent
 antenna columns with no row separation
 (e.g., 49-41, 1-4, 0-26),
@@ -224,20 +224,20 @@ row separation (e.g., 10-41, 1-48, 0-38),
 and baselines with one column separation
 and one negative Northward row separation
 (e.g., 49-3, 1-18, 0-46). A red `x' denotes antennas which have been flagged from the analysis. Reasons for
-flagging include previously known spectral instability (19, 37, and 50), low number of counts in LST binning (3 and 16), and suspected non-redundant information (21 and 31).} \label{fig:ant_pos}
+flagging include previously known spectral instability (19, 37, and 50), low number of counts in LST-binning (3 and 16), and suspected non-redundant information (21 and 31).} \label{fig:ant_pos}
 \end{figure*}
 
 \begin{figure}[tp]
 	\centering
 	\includegraphics[width=.85\textwidth]{plots/data_noise_mad_O.pdf}
 	\caption{A representative Median Absolute Deviation (MAD) for both data (left)
-		and noise simulation (right) computed for each time and frequency observed by
+		and a noise simulation (right) computed for each time and frequency observed by
 		PAPER in the LST range $00^{h}30^{m}00^{s} - 08^{h}36^{m}00^{s}$.
     The data shown here corresponds to
 		strictly 30\,m East-West baselines.
 		For perfectly redundant sky measurements the individual
 		baseline measurements will only differ by thermal noise.
-		The large amplitude of deviations observed here
+		The large amplitude of deviations observed on the left
 		illustrates that there is a significant
 		amount of non-redundant information in the data.}\label{fig:mad}
 \end{figure}
@@ -252,11 +252,11 @@ the PAPER baselines are perfectly redundant, this analysis can
 help identify extreme outliers which should not be used in
 power spectrum estimation.
 
-In Figure \ref{fig:ant_pos}, we show the 8 x 8 antenna configuration used in the PAPER-64 deployment, which was chosen to increase power spectrum sensitivity through having many copies of the same baseline (i.e., redundant observations). Each of the three baseline vectors shown  (which we use for our revised power spectrum analysis in this chapter) are
+In Figure \ref{fig:ant_pos}, we show the 8 x 8 antenna configuration used in the PAPER-64 deployment, which was chosen to increase power spectrum sensitivity through having many copies of the same baseline (i.e., redundant observations). Each of the three baseline vectors shown in black (which we use for our revised power spectrum analysis in this chapter) are
 sampled many times across the grid-like array. Rather than average
-baselines together (as was done in previous PAPER analyses for computational simplicity)
+baselines together,
 we cross-multiply all redundant pairs and then bootstrap average for
-an estimate of variance. Our bootstrapping procedure was described in more detail in Chapter \ref{sec:Boot}.
+an estimate of variance (Chapter \ref{sec:Boot}). 
 
 A first test of the array's redundancy is to compare the measured variation between baselines
 with that expected due to thermal noise, using Equation \eqref{eq:sense}
@@ -275,10 +275,10 @@ For perfectly redundant sky measurements the individual
 baseline measurements will only differ by thermal noise.
 We see that some measurements have a MAD consistent with thermal noise ---
 however the larger deviations observed at other frequencies and times
-illustrates a significant amount of non-redundant information in the data.
+illustrate a significant amount of non-redundant information in the data.
 
 We then use the MAD to estimate the significance of each baseline's
-deviation from the median baseline measurement using the modified z-score ($ M_{z}(t,\nu) $) defined as
+deviation from the median baseline measurement using the modified z-score $ M_{z}(t,\nu) $ defined as
 \begin{equation}
 M_{z}(t,\nu) = 0.6745\frac{\left|V_{i,j}(t,\nu) - median \left(V(t,\nu)
 	\right)\right|}{MAD} \label{eqn:zscore}
@@ -291,7 +291,7 @@ modified z-score for a large number of samples \citep{Iglewicz_and_hoaglin}.
 The waterfalls of z-scores (in time and frequency) are averaged in LST
 and a maximum is taken along the frequency dimension to find a single
 worst case modified z-score for each baseline.
-The histogram of these z-scores for every baseline in this analysis is shown in Figure~\ref{fig:mod_z_score_avg}.
+A histogram of these z-scores for every baseline in this analysis is shown in Figure~\ref{fig:mod_z_score_avg}.
 As suggested in \citet{Iglewicz_and_hoaglin},
 any baseline with a modified z-score of at least $ 3.5 $ is identified as a potential outlier.
 
@@ -301,7 +301,7 @@ to tell if this deviation is due
 to a single defective antenna or the physical baseline.
 We take the most conservative approach and flag
 both antennas 21 and 31 from all remaining analysis.
-Although no other baselines qualify as outliers,
+Although no other baselines qualify as outliers using our metric,
 the existence of scores above 2 in general
 indicates an amount of non-redundancy
 inconsistent with thermal noise from the baselines in this analysis and may affect
@@ -321,7 +321,7 @@ power spectrum estimates.
 
 \section{Multi-Redshift Power Spectrum Results}\label{sec:pspec_results}
 
-In this section, we present power spectrum results for all six of our redshift bands. We show three principal products: our observed data, a simulated foreground observation, and a noise-only simulation. Broadly speaking, the simulated foreground observation is created using the simulator PRISim \citep{Thyagarajan_et_al2015a, Thyagarajan_et_al2015b}, which performs a full-sky visibility calculation matching the observing parameters of PAPER's LST-binned data set. For more details about the construction and accuracy of the sky simulation, we refer the reader to Kolopanis et al. (\textit{in prep.}). Power spectra of the other two products, data and noise-only, are produced similarly to those in Chapter \ref{c.PSA64}, but with an unweighted, non-lossy estimator.
+In this section, we present power spectrum results for all six of our redshift bands. We show three principal products in our figures: our observed data, a simulated foreground observation, and a noise-only simulation. Broadly speaking, the simulated foreground observation is created using the simulator PRISim \citep{Thyagarajan_et_al2015b, Thyagarajan_et_al2015a}, which performs a full-sky visibility calculation matching the observing parameters of PAPER's LST-binned data set. For more details about the construction and accuracy of the sky simulation, we refer the reader to Kolopanis et al. (\textit{in prep.}). Power spectra of the other two products, data and noise-only, are produced similarly to those in Chapter \ref{c.PSA64}, but with an unweighted, non-lossy estimator.
 
 \begin{figure*}[tp]
 \centering
@@ -331,7 +331,7 @@ the observed data (black), simulated noise (orange), and simulated foreground ob
 Error bars on data points are the bootstrapped $2\sigma$ uncertainty.
 The solid green line indicates the theoretical thermal
 noise estimate for each redshift bin, and the dashed
-green line includes a modeled foreground error (Kolopanis et al. (\textit{in prep.})).
+green line includes a modeled foreground error (derived in Kolopanis et al. (\textit{in prep.})).
 Gray shaded regions are the foreground dependent uncertainties plotted around each data point.
 The vertical black dotted lines indicate the horizon/wedge/light travel time for a 30~m
 baseline. We find that the simulated noise is consistent with
@@ -341,7 +341,7 @@ show good agreement in the total power observed;
 generally, the power at all delays inside the horizon agrees between the two simulations within a factor of $ \sim5 $. The simulated data set also shows some
 power leakage outside the horizon,
 consistent with the power observed by PAPER out to $ \sim 400$\,ns. The PAPER data also show numerous statistically significant detections beyond 400\,ns, however, which are not predicted by the foreground simulation.
-To investigate the origin of these signals, multiple jackknives and null tests are performed.}
+To investigate the origin of these signals, jackknife and null tests are performed.}
 \label{fig:pspec_vs_sim}
 \end{figure*}
 
@@ -363,7 +363,7 @@ $ |\tau| < 400 $~ns, generally at a power level
 which is $ \sim 20\% $ of the real components at the same delay.
 This may result from non-redundancies in calibration or baseline orientation. At delay modes $ |\tau| > 400 $~ns, the imaginary
 component of the power spectrum displays comparable power to the 
-real part. This is especially prominent in, but not isolated to, the two lowest redshift bins. The statistically significant imaginary power is indicative of some non-redundant information 
+real part. This is especially prominent in, but not isolated to, the two highest redshift bins (lowest frequencies). The statistically significant imaginary power is indicative of some non-redundant information 
 during power spectrum estimation, systematic biases introduced during data analysis or calibration, 
 or residual contaminants like improperly flagged RFI.
 }
@@ -372,7 +372,7 @@ or residual contaminants like improperly flagged RFI.
 
 \subsection{Investigation of High Delay Detections}
 
-The power spectrum is computed by cross-multiplying
+We have seen that the PAPER power spectrum results exhibit statistically significant detections at high delays and aim to understand their origin. The power spectrum is computed by cross-multiplying
 different baseline pairs within redundant baseline groups.
 Ideally, this cross-multiplication of complex-valued
 delay spectra will result in any sky-like power being confined to the real part in the power spectrum, leaving the imaginary part dominated by noise.
@@ -380,7 +380,7 @@ However, effects can leak real sky power into the
 imaginary part of the spectrum.
 A perfectly calibrated array with non-redundant baselines
 --- for example, with slightly different antenna positions ---
-will cause two nominally "redundant'' baselines to have slightly different phases.
+will cause two nominally "redundant" baselines to have slightly different phases.
 The imaginary parts of these cross-multiplied visibilities will therefore not cancel out, and non-zero power will be seen in the imaginary component of the power spectrum estimate.
 The same effect would come from a perfectly redundant but imperfectly calibrated array.
 %It is also important to note that because of the foreground-dependent error bars derived in Section~\ref{sec:FG_err},
@@ -396,7 +396,7 @@ This may result from non-redundancies in calibration or baseline orientation.
 
 At delay modes $ |\tau| > 400 $~ns, the imaginary
 component of the power spectrum displays comparable power to the 
-real part. This is especially prominent in the two lowest redshift bins, but is observable across the entire band.
+real part. This is especially prominent in the two highest redshift bins (lowest frequencies), but is observable across the entire band.
 The disagreement between the imaginary component (red) and the estimated foreground error (dashed green) is indicative of some non-redundant information, systematic biases introduced by data analysis or calibration steps, or residual contaminants like improperly flagged RFI.
 
 \begin{figure*}[tp]
@@ -415,7 +415,7 @@ LST dependence which is inconsistent with cosmological power.}
 \begin{figure*}[tp]
 \centering
 \includegraphics[width=\textwidth]{plots/pspec_even_odd_null_test.pdf}
-\caption{Jackknife test constructed by splitting the data set by even and odd Julian day. Plotted here is the difference between the power spectra from these two sets. We use the same color scheme as Figure~\ref{fig:lst_null_test}. While the largest difference in the LST null test
+\caption{Jackknife test constructed by splitting the data set into even and odd Julian days. Plotted here is the difference between the power spectra from these two sets. We use the same color scheme as Figure~\ref{fig:lst_null_test}. While the largest difference in the LST null test
 (Figure \ref{fig:lst_null_test}) was on the order of 10\% of the measured value, here differences are less than 1\% at delays less than 400\,ns, and the imaginary points are nearly all consistent with predicted error bars. At delays larger than 400\,ns, statistically significant detections
 in the three highest redshift bands are at comparable
 levels to the power spectrum values in Figure~\ref{fig:pspec_vs_sim}.
@@ -440,7 +440,7 @@ similar amplitude. Galactic synchrotron emission and bright point sources (like 
 and Pictor A) are the most obvious contenders for strong variability. We also see that the significant power seen in modes well beyond the horizon (for example, the strong positive offset at redshift 9.93 seen in the Figure~\ref{fig:pspec_vs_sim} power spectrum) is reflected in this null test.
 
 Additionally, we see that the imaginary component of the power spectrum null test is comparable to the real component at most delay modes across all redshifts. 
-This suggests a sidereal time dependence of phase differences between baselines. In particular, note that the strong bias seen at redshift 9.93 is associated with a strong imaginary bias, implying a phase rotation between baselines. Such an LST dependence of the imaginary component might be expected for non-redundancy (slightly different sky seen by nominally redundant baselines) or repeatable differences in calibration which depend on the sky configuration (for example, one calibration solution when Fornax is transiting and a different one for when Pictor dominates). This kind of variation in redundant calibration with sky flux density was shown in \citet{joseph_et_al2018}. This picture of non-redundancy strengthens the earlier hints provided by the z-score analysis in Section~\ref{sec:redundancy}, which suggested that redundancy was particularly low around $120$-$130$\,MHz (redshifts 9 and 10).
+This suggests a sidereal time dependence of phase differences between baselines. In particular, note that the strong bias seen at redshift 9.93 is associated with a strong imaginary bias, implying a phase rotation between baselines. Such an LST dependence of the imaginary component might be expected for non-redundancy (slightly different sky seen by nominally redundant baselines) or repeatable differences in calibration which depend on the sky configuration (for example, obtaining one calibration solution when Fornax is transiting and a different one for when Pictor dominates). This kind of variation in redundant calibration with sky flux density is shown in \citet{joseph_et_al2018}. We note that this picture of non-redundancy strengthens the earlier hints provided by the z-score analysis in Section~\ref{sec:redundancy}, which suggested that redundancy was particularly low around $120$-$130$\,MHz (redshifts 9 and 10).
 
 A second easily constructed null test is to difference
 power spectra made from only the even and odd binned data sets.
@@ -456,8 +456,8 @@ are shown in Figure~\ref{fig:even_odd_null_test}.
 Across all redshifts, there are points well beyond the
 horizon which are inconsistent with both the analytic thermal noise
 and the propagated uncertainty. However there are two important differences
-from the LST null test. First, the overall amplitude of the differenced power spectrum is much less. Within the wedge, the
-difference in amplitude is at most a few $\times 10^{13}$, or less than 0.1\% of the original power spectrum amplitude.
+between this test and the LST null test. First, the overall amplitude of the differenced even/odd power spectrum is much less. Within the wedge, the
+difference in amplitude is at most a few $\times$ $10^{13}$, or less than 0.1\% of the original power spectrum amplitude.
 Second, the imaginary power spectrum is consistent with
 noise across most modes. This is particularly notable within the wedge where even a small percent difference would drive a significant deviation. This
  suggests that whatever causes the small but detectable difference between
@@ -477,7 +477,7 @@ Our two null tests provide evidence that the foregrounds,
 which vary significantly as a function of LST, are likely the cause of
 some of the residual power detected at high delays. There is also some
 evidence that suggests significant phase differences exist between
-nominally redundant baselines, which introduce non-redundant signals
+nominally redundant baselines which introduce non-redundant signals
 into the power spectrum estimates.
 
 The presence of highly significant detections in the
@@ -499,7 +499,7 @@ the power spectrum, indicate the presence of
 non-redundant and non-isotropic signals. The latter
 is not surprising since this analysis is performed
 on data without a foreground subtraction step. Additionally, the sky
-varies with LST as the galaxy and strong point sources
+varies with LST as the galaxy and other sources
 rise and set over an observation. In some places, particularly at low frequencies, this power
 couples to larger delays, presumably because of
 instrumental spectral structure. The even/odd null test suggests that this
@@ -508,7 +508,7 @@ suggests that the spectral structure is not the same across nominally redundant 
 
 In summary, many of our tests and statistics suggest that non-redundant
 information contaminates the nominally redundant PAPER
-baselines: the distribution of modified z-scores in
+baselines --- the distribution of modified z-scores in
 Figure~\ref{fig:mod_z_score_avg}, the presence
 of power in the imaginary component of the power
 spectrum, and the non-null results from multiple null tests all indicate that the
@@ -517,27 +517,27 @@ than what is expected from thermal noise.
 
 \subsection{Possible Future Directions}
 
-It is clear that additional jackknife tests would help reveal more specific origins of our systematics. For example, more jackknife tests along LST could be used to identify and possibly remove residual RFI, along with night-to-night variations as identified in the even/odd null test. Because the variation we detected is significant enough to be observable after differencing data averaged over the entire season, a single culprit could potentially be further tracked down by performing tests with smaller sets of binned days (or by performing a null test that differences data from the first and second half of the observing season). This would provide information about the stability of antennas and observations over the life of the PAPER experiment. Unfortunately, returning to the raw visibility data set is outside the scope of this analysis.
+It is clear that additional jackknife tests would help reveal more specific origins of our systematics. For example, more jackknife tests along LST could be used to identify and possibly remove residual RFI, along with night-to-night variations as identified in the even/odd null test. Because the variation we detected is significant enough to be observable after differencing data averaged over the entire season, a single culprit could potentially be further tracked down by performing tests with smaller sets of binned days (or by performing a null test that differences data from the first and second half of the observing season). This would provide information about the stability of antennas and the observations over the life of the PAPER experiment. Unfortunately, returning to the raw visibility data set is outside the scope of this analysis.
 
 While we have identified non-redundancies as a likely cause of our failed null tests, their exact origins have not been pinpointed. Two obvious ways for non-redundancies to happen are variations in antenna positions and variations in beam patterns. In theory, an element like PAPER should produce a symmetric beam, though this is not true in practice. One simple test for non-redundancy due to beam differences would be to test for deviations from symmetry by recording observations with antennas rotated by 180\arcdeg. Differencing the 0\arcdeg and 180\arcdeg data sets would highlight abnormalities in the beam response to the sky. For an ideal, symmetric beam, all sky signal will cancel and leave thermal noise fluctuations at all times; however imperfections in beam responses will not cancel, resulting in a net signal in the visibility data and constraints on the level of beam-to-beam variation. We leave these possible tests as suggested future work for upcoming analyses.
 
 \section{21\,cm Upper Limits}
 \label{sec:upperlims}
 
-We use the PAPER-64 data to place upper limits on the 21\,cm signal using the
+Finally, we use the PAPER-64 data to place upper limits on the 21\,cm signal using the
 dimensionless power spectrum: $\Delta^{2}(k)= \frac{|k|^{3}}{2\pi^{2}}P(|k|)$. To convert from
-interferometric delay to cosmological co-moving wavenumber, we assume WMAP-9 year cosmology in "little-h'' units ($ H_{0}=100 $ $ h\, $km/s/Mpc). These power spectra are shown in Figure~\ref{fig:pspec_delta2}.
+interferometric delay to cosmological co-moving wavenumber, we assume WMAP-9 year cosmology in "little-h" units ($ H_{0}=100 $ $ h\, $km/s/Mpc). These power spectra are shown in Figure~\ref{fig:pspec_delta2}.
 
-As a summary and comparison of progress across the field, we also report from each published power spectrum the lowest upper limits achieved by various instruments in the $k$-ranges reported by each instrument (Figure \ref{fig:eor_summary}). To encapsulate the results of this work, the most sensitive limit is reported from
+As a summary and comparison of progress across the field, we also report from each published power spectrum the lowest upper limits achieved by various instruments in the $k$-ranges reported by each instrument (Figure \ref{fig:eor_summary}). To encapsulate the results of the work in this chapter, the most sensitive limit is reported from
 the range $0.3 <  k < 0.6\ \hMpci$, where both null tests
 pass for most $k$-modes in each redshift bin.
 These limits on the 21\,cm power spectrum
 from reionization are \upperlims.
 
-Our results represent increased upper limits compared to prior limits published by the PAPER instrument (a factor of $\sim10$ in mK). They also exceed the expected
+Our results represent increased (less stringent) upper limits compared to prior limits published by the PAPER instrument (by a factor of $\sim10$ in mK). They also exceed the expected
 amplitude of a fiducial \texttt{21CMFAST}\footnote{\url{github.com/andreimesinger/21cmFAST}}
  model by a factor of $\sim100$ in mK \citep{mesinger_et_al2011}. However, these results represent the
-most robust results from the PAPER experiment, replacing results both from PAPER-32 \citep{parsons_et_al2014,jacobs_et_al2015,moore_et_al2017},
+most robust results from the PAPER experiment, replacing results from both PAPER-32 \citep{parsons_et_al2014,jacobs_et_al2015,moore_et_al2017},
 which used a different covariance estimation technique
  but have not been subjected to a rigorous re-analysis
 \`{a} la Chapter \ref{c.PSA64}, and
@@ -553,8 +553,8 @@ at levels similar to the original results of \citetalias{ali_et_al2015}.
 \begin{figure*}[tp]
 \centering
 \includegraphics[width=\textwidth]{plots/pspec_flagged_ants_delta2.pdf}
-\caption{The dimensionless power spectrum $\Delta^{2}(k)$ and their uncertainties derived from the PAPER-64 observations (black).
-All error bars represent $ 2\sigma $ uncertainties. Also plotted are theoretical thermal noise limits estimated from Equation \eqref{eq:sense} (solid green) and a foreground-dependent variance estimate (dashed green and gray shaded; Kolopanis et al. (\textit{in prep.}).
+\caption{The dimensionless power spectrum $\Delta^{2}(k)$ derived from the PAPER-64 observations (black).
+All error bars represent $ 2\sigma $ uncertainties. Also plotted are theoretical thermal noise limits estimated from Equation \eqref{eq:sense} (solid green) and a foreground-dependent variance estimate (dashed green and gray shaded; derived in Kolopanis et al. (\textit{in prep.}).
 The black solid line represents a fiducial \texttt{21cmFAST} model of reionization.
 The horizon line (vertical dotted black) has been transformed from the maximum
 signal delay between antennas to cosmological co-moving scales using Equations 12 and 13  of \citet{liu_et_al2014a}. }
@@ -574,13 +574,13 @@ and PAPER (diamonds; this work).
 We include the $z=8.37$ redshift bin analyzed in \citet{ali_et_al2015}, although
 it is worth noting this redshift bin is not entirely independent
 from the $z=8.13$ and $8.68$ bins, as can be inferred from the
-overlapping window functions from Figure~\ref{fig:freq_select}.
+overlapping window functions in Figure~\ref{fig:freq_select}.
 For reasons described throughout this thesis,
 these PAPER results supersede all previous PAPER limits.
 \label{fig:eor_summary}}
 \end{figure*}
 
-In conclusion, we have re-analyzed the PAPER-64 data first presented in \citetalias{ali_et_al2015},
+In conclusion, we have re-analyzed the PAPER-64 data first presented in \citetalias{ali_et_al2015}
  and presented 21\,cm
 power spectra and uncertainties in five independent (six total) redshift bins. These estimates
 are made using an independently developed pipeline
@@ -588,7 +588,7 @@ which skips foreground subtraction and simplifies time-averaging. Simulations
 of noise and foregrounds are used to build a basic picture of
 internal consistency. The resulting power spectra are consistent with noise
 across much of the spectrum, but above redshift $9$ (below $130$\,MHz) they demonstrate
-a statistically significant excess of power. Null-tests support a picture where
+a statistically significant excess of power. Null tests support a picture where
 power spectrum detections are caused by foregrounds modulated by
 spectrally dependent deviations from redundancy or calibration error.
 In particular, the z-scores and imaginary power tests suggest that residuals
