@@ -319,12 +319,207 @@ power spectrum estimates.
 \label{fig:mod_z_score_avg}
 \end{figure}
 
-\section{Multi-Redshift Power Spectrum Results}
+\section{Multi-Redshift Power Spectrum Results}\label{sec:pspec_results}
 
-In this section, we present power spectrum results for all six of our redshift bands. We show three principal products: our observed data, a simulated observation, and a noise-only simulation. Broadly speaking, the simulated observation is created using the simulator PRISim \citep{Thyagarajan_et_al2015a, Thyagarajan_et_al2015b}, which performs a full-sky visibility calculation matching the observing parameters of PAPER's LST-binned data set. For more details about the construction and accuracy of the sky simulation, we refer the reader to Kolopanis et al. (\textit{in prep.}). Power spectra of the other two products, data and noise-only, are produced similarly to those in Chapter \ref{c.PSA64}, but with an unweighted, non-lossy estimator.
+In this section, we present power spectrum results for all six of our redshift bands. We show three principal products: our observed data, a simulated foreground observation, and a noise-only simulation. Broadly speaking, the simulated foreground observation is created using the simulator PRISim \citep{Thyagarajan_et_al2015a, Thyagarajan_et_al2015b}, which performs a full-sky visibility calculation matching the observing parameters of PAPER's LST-binned data set. For more details about the construction and accuracy of the sky simulation, we refer the reader to Kolopanis et al. (\textit{in prep.}). Power spectra of the other two products, data and noise-only, are produced similarly to those in Chapter \ref{c.PSA64}, but with an unweighted, non-lossy estimator.
 
-% FLESH OUT HERE!
+\begin{figure*}[tp]
+\centering
+\includegraphics[width=\textwidth]{plots/pspec_pk_vs_sim.pdf}
+\caption{Power spectrum estimates computed for
+the observed data (black), simulated noise (orange), and simulated foreground observation (blue).
+Error bars on data points are the bootstrapped $2\sigma$ uncertainty.
+The solid green line indicates the theoretical thermal
+noise estimate for each redshift bin, and the dashed
+green line includes a modeled foreground error (Kolopanis et al. (\textit{in prep.})).
+Gray shaded regions are the foreground dependent uncertainties plotted around each data point.
+The vertical black dotted lines indicate the horizon/wedge/light travel time for a 30~m
+baseline. We find that the simulated noise is consistent with
+the theoretical thermal noise predictions (orange vs. solid green).
+At delay $\tau = 0$\,ns, both the data and foreground simulation
+show good agreement in the total power observed;
+generally, the power at all delays inside the horizon agrees between the two simulations within a factor of $ \sim5 $. The simulated data set also shows some
+power leakage outside the horizon,
+consistent with the power observed by PAPER out to $ \sim 400$\,ns. The PAPER data also show numerous statistically significant detections beyond 400\,ns, however, which are not predicted by the foreground simulation.
+To investigate the origin of these signals, multiple jackknives and null tests are performed.}
+\label{fig:pspec_vs_sim}
+\end{figure*}
 
+Figure~\ref{fig:pspec_vs_sim} shows the delay power spectrum estimates for our three products: the observed data (black),
+the PRISim simulated foreground observation (blue), and the noise-only simulation (orange).
+Within delay modes between $ \sim\pm 400 $~ns, both the observed and simulated data illustrate
+similar shapes. This suggests that the statistically significant detections of power
+observed in PAPER immediately outside the horizon limits
+are consistent with foreground signals (as suggested by the study of foreground subtraction applied to PAPER data in \citealt{kerrigan_et_al2018}). At larger delays, however, the PAPER power spectra are a mix of statistically significant detections and null results. The most statistically significant detections at high delays are seen to occur at the lowest frequencies. In the next few subsections, we present several analyses designed to help determine the cause of the statistically significant detections at high delays seen in the PAPER observations.
+
+\begin{figure*}[tp]
+\centering
+\includegraphics[width=\textwidth]{plots/pspec_real_imag.pdf}
+\caption{The real (black) and imaginary (red) components of the
+power spectrum. The red shaded region is the 
+foreground dependent theoretical error drawn around the 
+imaginary components; all other lines are the same as in Figure~\ref{fig:pspec_vs_sim}. There are statistically significant imaginary components at
+$ |\tau| < 400 $~ns, generally at a power level
+which is $ \sim 20\% $ of the real components at the same delay.
+This may result from non-redundancies in calibration or baseline orientation. At delay modes $ |\tau| > 400 $~ns, the imaginary
+component of the power spectrum displays comparable power to the 
+real part. This is especially prominent in, but not isolated to, the two lowest redshift bins. The statistically significant imaginary power is indicative of some non-redundant information 
+during power spectrum estimation, systematic biases introduced during data analysis or calibration, 
+or residual contaminants like improperly flagged RFI.
+}
+\label{fig:real_imag}
+\end{figure*}
+
+\subsection{Investigation of High Delay Detections}
+
+The power spectrum is computed by cross-multiplying
+different baseline pairs within redundant baseline groups.
+Ideally, this cross-multiplication of complex-valued
+delay spectra will result in any sky-like power being confined to the real part in the power spectrum, leaving the imaginary part dominated by noise.
+However, effects can leak real sky power into the
+imaginary part of the spectrum.
+A perfectly calibrated array with non-redundant baselines
+--- for example, with slightly different antenna positions ---
+will cause two nominally ``redundant'' baselines to have slightly different phases.
+The imaginary parts of these cross-multiplied visibilities will therefore not cancel out, and non-zero power will be seen in the imaginary component of the power spectrum estimate.
+The same effect would come from a perfectly redundant but imperfectly calibrated array.
+%It is also important to note that because of the foreground-dependent error bars derived in Section~\ref{sec:FG_err},
+%imaginary power should increase at low delay, though continue to be consistent with zero.
+In a sense, the amount of statistically significant power in the imaginary component of the power spectrum, compared to power in the real part, is a measure of the net redundancy and calibration quality of the array.
+
+A comparison of the real and imaginary parts of the power spectrum
+is shown in Figure~\ref{fig:real_imag}.
+The statistically significant imaginary components at
+$ |\tau| < 400 $~ns (red) are generally at a power level
+which is $ \sim 20\% $ of the real components (black) at the same delay.
+This may result from non-redundancies in calibration or baseline orientation.
+
+At delay modes $ |\tau| > 400 $~ns, the imaginary
+component of the power spectrum displays comparable power to the 
+real part. This is especially prominent in the two lowest redshift bins, but is observable across the entire band.
+The disagreement between the imaginary component (red) and the estimated foreground error (dashed green) is indicative of some non-redundant information, systematic biases introduced by data analysis or calibration steps, or residual contaminants like improperly flagged RFI.
+
+\begin{figure*}[tp]
+\centering
+\includegraphics[width=\textwidth]{plots/pspec_lst_null_test.pdf}
+\caption{Null tests constructed by splitting the LST range ($[00^{h}30^{m}00^{s}, 08^{h}36^{m}00^{s}) $) in half (at $04^{h}30^{m}$), making two
+power spectrum estimates and differencing the result. Real (black) and imaginary (red) parts are both shown, along with the null test results
+when applied to the simulated data (blue). All noise estimates shown are as described in Figure~\ref{fig:pspec_vs_sim}.
+Such a null test should remove
+isotropic cosmological signals, leaving behind anything with dependence on sidereal time. Statistically significant detections in the real part suggest power varying across the sky while significant imaginary power suggests a time dependence to phase calibration errors. The observed variations are consistent with the simulation up to delays of 400\,ns.
+The detections at higher delay modes indicate a large 
+LST dependence which is inconsistent with cosmological power.}
+\label{fig:lst_null_test}
+\end{figure*}
+
+\begin{figure*}[tp]
+\centering
+\includegraphics[width=\textwidth]{plots/pspec_even_odd_null_test.pdf}
+\caption{Jackknife test constructed by splitting the data set by even and odd Julian day. Plotted here is the difference between the power spectra from these two sets. We use the same color scheme as Figure~\ref{fig:lst_null_test}. While the largest difference in the LST null test
+(Figure \ref{fig:lst_null_test}) was on the order of 10\% of the measured value, here differences are less than 1\% at delays less than 400\,ns, and the imaginary points are nearly all consistent with predicted error bars. At delays larger than 400\,ns, statistically significant detections
+in the three highest redshift bands are at comparable
+levels to the power spectrum values in Figure~\ref{fig:pspec_vs_sim}.
+This may be the result of contamination in only one set of the even or odd data (positive value for even, negative values for odd) which are mitigated during the cross-multiplication of these sets during power spectrum estimation.}
+\label{fig:even_odd_null_test}
+\end{figure*}
+
+\subsection{Null Tests}\label{sec:nulls}
+
+While the presence of imaginary power suggests at least some presence of calibration error or non-redundancy, it does not fully explain the origin of the excess power at delays greater than 400\,ns. Calibration errors, as long as they do not introduce
+spectral structure, should not necessarily scatter power to high delays. Null tests --- i.e., differences between
+power spectra of different data selections --- can provide hints at the origin of these detections (Chapter \ref{sec:JackknifeOverview}).
+
+For example, differencing the power spectra of two distinct ranges of sidereal time will remove
+isotropic cosmological signals but leave behind signals with strong dependence on sidereal time (like foregrounds).
+Dividing our data set in half by LST into ranges $ [00^{h}30^{m}00^{s}, 04^{h}30^{m}00^{s}) $
+and $ [04^{h}30^{m}00^{s}, 08^{h}36^{m}00^{s}) $ creates two sets of roughly equal sensitivity.
+The resulting differenced power spectrum is shown in Figure~\ref{fig:lst_null_test}, along with a matching calculation for the foreground simulation.
+The two are broadly consistent at
+delays less than 400\,ns, i.e., they have the same sign and a
+similar amplitude. Galactic synchrotron emission and bright point sources (like Fornax A
+and Pictor A) are the most obvious contenders for strong variability. We also see that the significant power seen in modes well beyond the horizon (for example, the strong positive offset at redshift 9.93 seen in the Figure~\ref{fig:pspec_vs_sim} power spectrum) is reflected in this null test.
+
+Additionally, we see that the imaginary component of the power spectrum null test is comparable to the real component at most delay modes across all redshifts. 
+This suggests a sidereal time dependence of phase differences between baselines. In particular, note that the strong bias seen at redshift 9.93 is associated with a strong imaginary bias, implying a phase rotation between baselines. Such an LST dependence of the imaginary component might be expected for non-redundancy (slightly different sky seen by nominally redundant baselines) or repeatable differences in calibration which depend on the sky configuration (for example, one calibration solution when Fornax is transiting and a different one for when Pictor dominates). This kind of variation in redundant calibration with sky flux density was shown in \citet{joseph_et_al2018}. This picture of non-redundancy strengthens the earlier hints provided by the z-score analysis in Section~\ref{sec:redundancy}, which suggested that redundancy was particularly low around $120$-$130$\,MHz (redshifts 9 and 10).
+
+A second easily constructed null test is to difference
+power spectra made from only the even and odd binned data sets.
+Recall that these sets were constructed by separating even and odd
+numbered days during LST-binning. A significant difference in this test would therefore be suggestive of
+a variation at the night-to-night level,
+as these two sets are otherwise
+expected to have identical sky signals
+with different realizations of noise.
+
+The resulting even/odd differenced power spectra for each redshift band
+are shown in Figure~\ref{fig:even_odd_null_test}.
+Across all redshifts, there are points well beyond the
+horizon which are inconsistent with both the analytic thermal noise
+and the propagated uncertainty. However there are two important differences
+from the LST null test. First, the overall amplitude of the differenced power spectrum is much less. Within the wedge, the
+difference in amplitude is at most a few $\times 10^{13}$, or less than 0.1\% of the original power spectrum amplitude.
+Second, the imaginary power spectrum is consistent with
+noise across most modes. This is particularly notable within the wedge where even a small percent difference would drive a significant deviation. This
+ suggests that whatever causes the small but detectable difference between
+ even and odd is not attributable to a phase difference between baselines.
+
+The two highest redshift
+bins again show the most significant differences at high delay; for example, the high delay modes at redshift 9.93 reach $ 10\%$-$20\% $ of the power spectrum amplitude and the imaginary leakage is 10\% of that. This suggests the presence of a signal contaminating a single day which is averaged into the LST-binned data set.
+Examples of such a systematic are improperly flagged RFI, a low amplitude signal not detected before cross-multiplication, or large transient gain isolated to a single night.
+
+Finally, another interesting feature can be seen in the redshift 8.68 bin in Figure~\ref{fig:even_odd_null_test}.
+There we see a consistent bias which was not present in the mean power spectrum (Figure~\ref{fig:pspec_vs_sim}).  However, there is a similarly shaped bias in the \emph{imaginary} part of the mean power spectrum. A plausible hypothesis
+is that, in this part of the spectrum, phase error between baselines is larger in one of the even or odd LST-binned sets than the other. However, there is no clear significant difference in redundancy seen in the z-score/MAD analysis, so further evidence would be required to support this conclusion.
+
+\subsection{Null Test Discussion}
+
+Our two null tests provide evidence that the foregrounds,
+which vary significantly as a function of LST, are likely the cause of
+some of the residual power detected at high delays. There is also some
+evidence that suggests significant phase differences exist between
+nominally redundant baselines, which introduce non-redundant signals
+into the power spectrum estimates.
+
+The presence of highly significant detections in the
+even/odd null test also suggests
+there may be some net non-redundant signal between the
+two LST-binned data sets. These detections are significant
+compared to the propagated error bar ($ \sim10\sigma $ to $ \sim100\sigma $ inside the horizon) but
+represent a small fraction of the total power observed ($ \leq 1\% $ of the power in Figure~\ref{fig:pspec_vs_sim}).
+However the agreement between the
+imaginary part of the power spectrum with the
+foreground-dependent error suggests that each of the even/odd sets
+has internally redundant baselines but the
+data sets themselves are slightly different.
+
+Both the null tests discussed in this work, along with the
+presence of a significant fraction ($ \sim20\% $)
+of power leaking from the real to imaginary component of
+the power spectrum, indicate the presence of
+non-redundant and non-isotropic signals. The latter
+is not surprising since this analysis is performed
+on data without a foreground subtraction step. Additionally, the sky
+varies with LST as the galaxy and strong point sources
+rise and set over an observation. In some places, particularly at low frequencies, this power
+couples to larger delays, presumably because of
+instrumental spectral structure. The even/odd null test suggests that this
+spectral structure potentially varies in time while the imaginary component
+suggests that the spectral structure is not the same across nominally redundant baselines.
+
+In summary, many of our tests and statistics suggest that non-redundant
+information contaminates the nominally redundant PAPER
+baselines: the distribution of modified z-scores in
+Figure~\ref{fig:mod_z_score_avg}, the presence
+of power in the imaginary component of the power
+spectrum, and the non-null results from multiple null tests all indicate that the
+data varies between baselines at a level larger
+than what is expected from thermal noise.
+
+\subsection{Possible Future Directions}
+
+It is clear that additional jackknife tests would help reveal more specific origins of our systematics. For example, more jackknife tests along LST could be used to identify and possibly remove residual RFI, along with night-to-night variations as identified in the even/odd null test. Because the variation we detected is significant enough to be observable after differencing data averaged over the entire season, a single culprit could potentially be further tracked down by performing tests with smaller sets of binned days (or by performing a null test that differences data from the first and second half of the observing season). This would provide information about the stability of antennas and observations over the life of the PAPER experiment. Unfortunately, returning to the raw visibility data set is outside the scope of this analysis.
+
+While we have identified non-redundancies as a likely cause of our failed null tests, their exact origins have not been pinpointed. Two obvious ways for non-redundancies to happen are variations in antenna positions and variations in beam patterns. In theory, an element like PAPER should produce a symmetric beam, though this is not true in practice. One simple test for non-redundancy due to beam differences would be to test for deviations from symmetry by recording observations with antennas rotated by 180\arcdeg. Differencing the 0\arcdeg and 180\arcdeg data sets would highlight abnormalities in the beam response to the sky. For an ideal, symmetric beam, all sky signal will cancel and leave thermal noise fluctuations at all times; however imperfections in beam responses will not cancel, resulting in a net signal in the visibility data and constraints on the level of beam-to-beam variation. We leave these possible tests as suggested future work for upcoming analyses.
 
 \section{21\,cm Upper Limits}
 \label{sec:upperlims}
@@ -334,7 +529,7 @@ dimensionless power spectrum: $\Delta^{2}(k)= \frac{|k|^{3}}{2\pi^{2}}P(|k|)$. T
 interferometric delay to cosmological co-moving wavenumber, we assume WMAP-9 year cosmology in ``little-h'' units ($ H_{0}=100 $ $ h\, $km/s/Mpc). These power spectra are shown in Figure~\ref{fig:pspec_delta2}.
 
 As a summary and comparison of progress across the field, we also report from each published power spectrum the lowest upper limits achieved by various instruments in the $k$-ranges reported by each instrument (Figure \ref{fig:eor_summary}). To encapsulate the results of this work, the most sensitive limit is reported from
-the range $0.3 <  k < 0.6\ \hMpci$, where both null-tests
+the range $0.3 <  k < 0.6\ \hMpci$, where both null tests
 pass for most $k$-modes in each redshift bin.
 These limits on the 21\,cm power spectrum
 from reionization are \upperlims.
@@ -359,7 +554,7 @@ at levels similar to the original results of \citetalias{ali_et_al2015}.
 \centering
 \includegraphics[width=\textwidth]{plots/pspec_flagged_ants_delta2.pdf}
 \caption{The dimensionless power spectrum $\Delta^{2}(k)$ and their uncertainties derived from the PAPER-64 observations (black).
-All error bars represent $ 2\sigma $ uncertainties. Also plotted are theoretical thermal noise limits estimated from Equation \eqref{eq:sense} (solid green and shaded gray on the data points) and a foreground-dependent variance estimate (Kolopanis et al. (\textit{in prep.}).
+All error bars represent $ 2\sigma $ uncertainties. Also plotted are theoretical thermal noise limits estimated from Equation \eqref{eq:sense} (solid green) and a foreground-dependent variance estimate (dashed green and gray shaded; Kolopanis et al. (\textit{in prep.}).
 The black solid line represents a fiducial \texttt{21cmFAST} model of reionization.
 The horizon line (vertical dotted black) has been transformed from the maximum
 signal delay between antennas to cosmological co-moving scales using Equations 12 and 13  of \citet{liu_et_al2014a}. }
