@@ -61,7 +61,7 @@ the final power spectrum estimation stage, here the intermediate stages (like fo
 We expand the subset of data analyzed in Chapter \ref{c.PSA64} to the full PAPER-64 data set as used in \citetalias{ali_et_al2015} in order to make our revised power spectrum analysis. Data collection and processing steps prior to LST-binning remain identical to previous analyses (see Chapters \ref{sec:PSA64_observations} and \ref{sec:PSA64_processing}). We analyze the same three $\sim$ 30\,m baselines as in \citetalias{ali_et_al2015} and form estimates for five independent (and six total) redshift bands. In selecting our bands, we note that a practical limitation in selection
 comes from a desire to avoid including channels with significant RFI flagging.
 Bands with the most continuous spectral sampling span the redshift range $7.5$ to $11$, and we select redshift ranges that are approximately coeval, i.e., bandwidths over which limited evolution of the 21\,cm signal is expected.
-Constraints from EDGES \emph{high} suggest that the evolution is probably slower than a $dz$ (total change in
+Constraints from EDGES \emph{high} suggest that the evolution is probably slower than a $\Delta z$ (total change in
 redshift) of 1-2 \citep{monsalve_et_al2017} 
 which corresponds to a spectral width of $ 26 $~MHz at frequency 200MHz and 
 $12$~MHz at frequency 100MHz.  We adopt a band size of $10$~MHz as a conservative size.
@@ -131,9 +131,9 @@ This function is defined as a filter in fringe-rate space
 (the Fourier dual to time) which can be tuned to maximize sensitivity to sky-like modes and exclude slowly varying systematics.
 \cite{parsons_backer2009} show that
 a fringe-rate corresponds to sky-like rates of motion which map geometrically to
-a great circle on the sky.
+rings on the sky.
 \cite{parsons_et_al2016} then show that a fringe-rate filter (FRF) can be defined with weights corresponding
-to the instrument's primary beam power integrated along the line of constant fringe-rate. Applying an FRF with this weighting provides the longest possible coherent integration in time for a baseline of a given length.
+to the instrument's primary beam power integrated along the line of constant fringe-rate. Applying an FRF with this weighting provides an optimal coherent integration in time for a baseline of a given length.
 
 Previous PAPER analyses have used variations on such a filter.  For example, \citetalias{ali_et_al2015}
 formed the beam-weighted filter, fit a Gaussian
@@ -148,8 +148,8 @@ analysis (i.e., the optimal filter was used).
 
 However, as can be seen in the right panel of Figure \ref{fig:FRF_response}, this filter is frequency dependent.
 In particular, the maximum fringe-rate range probed by a baseline increases linearly with frequency.
-This spectral dependence may introduce additional structure during the delay transform; further investigation is needed to find the best approach for mitigating this effect.
-We also recall that the use of these "aggressive" fringe-rate filters is shown to contribute to signal loss
+This spectral dependence is inherently smooth; however in implementation this filter may introduce additional structure during the delay transform; further investigation is needed to find the best approach for mitigating this effect.
+We also recall that the use of these "aggressive" fringe-rate filters is shown to contribute to signal loss when used in combination with certain weighting techniques
 (Chapter \ref{sec:toymodel_frf}).
 
 Therefore, as a simplification to avoid potential signal loss
@@ -161,12 +161,11 @@ by the highest frequency
 included in the data set; the lowest fringe-rate is chosen to exclude known common mode signals with zero fringe
 rates.
 
-Common mode signals are those which vary on time scales longer than would be expected from an ideal interferometer \citep{ali_et_al2015}.
+Common mode signals are sky signals which vary on time scales longer than would be expected from an ideal interferometer \citep{ali_et_al2015}.
 Such common modes were previously referred to as
 	"crosstalk" --- however, these signals may not
-	necessarily result from signals observed in one antenna and leaked to another
-	(a time-delayed sky signal) but rather any time-independent signal which is observed by all antennas. We exclude common mode signals here by setting the minimum fringe-rate included in the filter to $3.5\times10^{-5}$~Hz; this
-excludes all modes with periods longer than $\sim$45 minutes.
+	necessarily result from signals observed in one antenna and leaked to another but rather any time-independent signal which is observed by all antennas. We exclude common mode signals here by setting the minimum fringe-rate included in the filter to $3.5\times10^{-5}$~Hz; this
+excludes all modes with periods longer than $\sim$45 minutes. We also filter out all negative fringe-rates.
 
 %Suppressing slowly or negatively fringing sources will suppress sources with 
 %elevations at or below the South Celestial
@@ -198,7 +197,7 @@ The WIDA was used in \citet{parsons_et_al2012b}, \citet{parsons_et_al2014}, \cit
 We choose to omit this filtering technique in our simplified analysis. While the technique should not
 affect cosmological signals outside the user-defined
 range of delays to clean (\citealt{parsons_backer2009, parsons_et_al2012b, parsons_et_al2014}, and explored further in \citealt{kerrigan_et_al2018}),
-recent works have also shown that the use of this filter does not produce
+recent works have also shown that the use of this filter, in certain situations, does not produce
 statistically significant reduction of power at
 high delay modes \citep{kerrigan_et_al2018}.
 Since our analysis aims to focus on upper limits set
@@ -244,8 +243,7 @@ flagging include previously known spectral instability (19, 37, and 50), low num
 
 We have described how we simplified both the time-averaging and foreground filtering steps of our pipeline. Finally, before estimating the power spectrum of our data, we conduct statistical tests on our observations to determine the degree to which
 our baselines are redundant.
-We do this because the per-baseline delay spectrum
-estimation technique described in \citet{parsons_et_al2012b}
+We do this because the per-baseline delay spectra described in \citet{parsons_et_al2012b}
 can be averaged across all baseline cross-multiples only for
 perfectly redundant baselines. While it is unrealistic to assume
 the PAPER baselines are perfectly redundant, this analysis can
@@ -321,7 +319,7 @@ power spectrum estimates.
 
 \section{Multi-Redshift Power Spectrum Results}\label{sec:pspec_results}
 
-In this section, we present power spectrum results for all six of our redshift bands. We show three principal products in our figures: our observed data, a simulated foreground observation, and a noise-only simulation. Broadly speaking, the simulated foreground observation is created using the simulator PRISim \citep{Thyagarajan_et_al2015b, Thyagarajan_et_al2015a}, which performs a full-sky visibility calculation matching the observing parameters of PAPER's LST-binned data set. For more details about the construction and accuracy of the sky simulation, we refer the reader to Kolopanis et al. (\textit{in prep.}). Power spectra of the other two products, data and noise-only, are produced similarly to those in Chapter \ref{c.PSA64}, but with an unweighted, non-lossy estimator.
+In this section, we present power spectrum results for all six of our redshift bands. We show three principal products in our figures: our observed data, a simulated foreground observation, and a noise-only simulation. As a high level overview, the simulated foreground observation is created using the simulator PRISim \citep{Thyagarajan_et_al2015b, Thyagarajan_et_al2015a}, which performs a full-sky visibility calculation matching the observing parameters of PAPER's LST-binned data set. For more details about the construction and accuracy of the sky simulation, we refer the reader to Kolopanis et al. (\textit{in prep.}). Power spectra of the other two products, data and noise-only, are produced similarly to those in Chapter \ref{c.PSA64}, but with an unweighted, non-lossy estimator.
 
 \begin{figure*}[tp]
 \centering
@@ -419,7 +417,7 @@ LST dependence which is inconsistent with cosmological power.}
 (Figure \ref{fig:lst_null_test}) was on the order of 10\% of the measured value, here differences are less than 1\% at delays less than 400\,ns, and the imaginary points are nearly all consistent with predicted error bars. At delays larger than 400\,ns, statistically significant detections
 in the three highest redshift bands are at comparable
 levels to the power spectrum values in Figure~\ref{fig:pspec_vs_sim}.
-This may be the result of contamination in only one set of the even or odd data (positive value for even, negative values for odd) which are mitigated during the cross-multiplication of these sets during power spectrum estimation.}
+This may be the result of a corrupt day of data that is present in only one set of the even or odd data (positive value for even, negative values for odd), which is mitigated during the cross-multiplication of these sets during power spectrum estimation.}
 \label{fig:even_odd_null_test}
 \end{figure*}
 
@@ -440,7 +438,7 @@ similar amplitude. Galactic synchrotron emission and bright point sources (like 
 and Pictor A) are the most obvious contenders for strong variability. We also see that the significant power seen in modes well beyond the horizon (for example, the strong positive offset at redshift 9.93 seen in the Figure~\ref{fig:pspec_vs_sim} power spectrum) is reflected in this null test.
 
 Additionally, we see that the imaginary component of the power spectrum null test is comparable to the real component at most delay modes across all redshifts. 
-This suggests a sidereal time dependence of phase differences between baselines. In particular, note that the strong bias seen at redshift 9.93 is associated with a strong imaginary bias, implying a phase rotation between baselines. Such an LST dependence of the imaginary component might be expected for non-redundancy (slightly different sky seen by nominally redundant baselines) or repeatable differences in calibration which depend on the sky configuration (for example, obtaining one calibration solution when Fornax is transiting and a different one for when Pictor dominates). This kind of variation in redundant calibration with sky flux density is shown in \citet{joseph_et_al2018}. We note that this picture of non-redundancy strengthens the earlier hints provided by the z-score analysis in Section~\ref{sec:redundancy}, which suggested that redundancy was particularly low around $120$-$130$\,MHz (redshifts 9 and 10).
+This suggests a sidereal time dependence of phase differences between baselines. In particular, note that the strong bias seen at redshift 9.93 is associated with a strong imaginary bias, implying a phase difference between baselines. Such an LST dependence of the imaginary component might be expected for non-redundancy (slightly different sky seen by nominally redundant baselines) or repeatable differences in calibration which depend on the sky configuration (for example, obtaining one calibration solution when Fornax is transiting and a different one for when Pictor dominates). This kind of variation in redundant calibration with sky flux density is shown in \citet{joseph_et_al2018}. We note that this picture of non-redundancy strengthens the earlier hints provided by the z-score analysis in Section~\ref{sec:redundancy}, which suggested that redundancy was particularly low around $120$-$130$\,MHz (redshifts 9 and 10).
 
 A second easily constructed null test is to difference
 power spectra made from only the even and odd binned data sets.
@@ -464,7 +462,7 @@ noise across most modes. This is particularly notable within the wedge where eve
  even and odd is not attributable to a phase difference between baselines.
 
 The two highest redshift
-bins again show the most significant differences at high delay; for example, the high delay modes at redshift 9.93 reach $ 10\%$-$20\% $ of the power spectrum amplitude and the imaginary leakage is 10\% of that. This suggests the presence of a signal contaminating a single day which is averaged into the LST-binned data set.
+bins again show the most significant differences at high delay; for example, the high delay modes at redshift 9.93 reach $ 10\%$-$20\% $ of the power spectrum amplitude. This suggests the presence of a signal contaminating a single day which is averaged into the LST-binned data set.
 Examples of such a systematic are improperly flagged RFI, a low amplitude signal not detected before cross-multiplication, or large transient gain isolated to a single night.
 
 Finally, another interesting feature can be seen in the redshift 8.68 bin in Figure~\ref{fig:even_odd_null_test}.
